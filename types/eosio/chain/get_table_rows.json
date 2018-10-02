@@ -1,0 +1,9 @@
+{
+    "rows": [{
+        "proposal_name": "havefunornot",
+        "title": "The fun dilemma",
+        "proposal_json": "{\"type\": \"bps-proposal-v1\", \"content\": \"# The question\\n\\nShould we have fun?\\n\\n# The context\\n\\nIt's all about fun, all around the world, at the same time.\\n\\n# The vote\\n\\nAnswering `true` means we should have fun, answering `false` means we should *not* have fun.\\n\\nFor your vote to be valid, you must include a SHA-256 hash of the `title` concatenated with the `proposal_json` of this proposal.\\n\\n# The tally\\n\\nVotes will be tallied according to the principle of Archimedes, which will be tweaked until it makes sense.\\n\\n# The timing\\n\\nThe voting period ends at block 8,000,000 (inclusively). Any votes cast after that willnot be counted. You also need to fill in the whole circle with your pen.\\n\"}"
+        }
+    ],
+    "more": false
+}

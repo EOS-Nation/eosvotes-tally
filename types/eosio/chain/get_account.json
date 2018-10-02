@@ -1,0 +1,177 @@
+{
+    "account_name": "eosnationftw",
+    "head_block_num": 10968780,
+    "head_block_time": "2018-08-13T20:24:29.000",
+    "privileged": false,
+    "last_code_update": "1970-01-01T00:00:00.000",
+    "created": "2018-06-10T13:06:43.500",
+    "core_liquid_balance": "1595.4721 EOS",
+    "ram_quota": 8192,
+    "net_weight": 5000,
+    "cpu_weight": 200000,
+    "net_limit": {
+        "used": 105,
+        "available": 340749,
+        "max": 340854
+    },
+    "cpu_limit": {
+        "used": 9140,
+        "available": 320812,
+        "max": 329952
+    },
+    "ram_usage": 7403,
+    "permissions": [
+        {
+            "perm_name": "active",
+            "parent": "owner",
+            "required_auth": {
+                "threshold": 1,
+                "keys": [],
+                "accounts": [
+                    {
+                        "permission": {
+                            "actor": "eosnmultisig",
+                            "permission": "active"
+                        },
+                        "weight": 1
+                    }
+                ],
+                "waits": []
+            }
+        },
+        {
+            "perm_name": "claimer",
+            "parent": "active",
+            "required_auth": {
+                "threshold": 1,
+                "keys": [
+                    {
+                        "key": "EOS4uP4oHhtVyZAQze1qMY7ZKqof3y26L6bvnr2FfpMJhhvAnEr1v",
+                        "weight": 1
+                    }
+                ],
+                "accounts": [],
+                "waits": []
+            }
+        },
+        {
+            "perm_name": "eosfilestore",
+            "parent": "active",
+            "required_auth": {
+                "threshold": 1,
+                "keys": [
+                    {
+                        "key": "EOS7KAhQHY747pZDetiJbGvqBF7871ewkjCJGt4jrrk371RCagzFt",
+                        "weight": 1
+                    }
+                ],
+                "accounts": [],
+                "waits": []
+            }
+        },
+        {
+            "perm_name": "owner",
+            "parent": "",
+            "required_auth": {
+                "threshold": 4,
+                "keys": [],
+                "accounts": [
+                    {
+                        "permission": {
+                            "actor": "daverexeosn1",
+                            "permission": "owner"
+                        },
+                        "weight": 1
+                    },
+                    {
+                        "permission": {
+                            "actor": "deniscarrier",
+                            "permission": "owner"
+                        },
+                        "weight": 1
+                    },
+                    {
+                        "permission": {
+                            "actor": "elgee1eosnpb",
+                            "permission": "owner"
+                        },
+                        "weight": 1
+                    },
+                    {
+                        "permission": {
+                            "actor": "eosnationdan",
+                            "permission": "owner"
+                        },
+                        "weight": 1
+                    },
+                    {
+                        "permission": {
+                            "actor": "eosnmultisig",
+                            "permission": "owner"
+                        },
+                        "weight": 3
+                    },
+                    {
+                        "permission": {
+                            "actor": "larosenonaka",
+                            "permission": "owner"
+                        },
+                        "weight": 1
+                    },
+                    {
+                        "permission": {
+                            "actor": "stephanebiss",
+                            "permission": "owner"
+                        },
+                        "weight": 1
+                    },
+                    {
+                        "permission": {
+                            "actor": "vincentgeosn",
+                            "permission": "owner"
+                        },
+                        "weight": 1
+                    }
+                ],
+                "waits": []
+            }
+        },
+        {
+            "perm_name": "producerjson",
+            "parent": "active",
+            "required_auth": {
+                "threshold": 1,
+                "keys": [
+                    {
+                        "key": "EOS5Qyj7BbGHmBs62rxw3S1PVw85zrqcVrxQEY3QVzaQqKnDYqqRB",
+                        "weight": 1
+                    }
+                ],
+                "accounts": [],
+                "waits": []
+            }
+        }
+    ],
+    "total_resources": {
+        "owner": "eosnationftw",
+        "net_weight": "0.5000 EOS",
+        "cpu_weight": "20.0000 EOS",
+        "ram_bytes": 8192
+    },
+    "self_delegated_bandwidth": {
+        "from": "eosnationftw",
+        "to": "eosnationftw",
+        "net_weight": "0.5000 EOS",
+        "cpu_weight": "20.0000 EOS"
+    },
+    "refund_request": null,
+    "voter_info": {
+        "owner": "eosnationftw",
+        "proxy": "eosnproxvote",
+        "producers": [],
+        "staked": 255000,
+        "last_vote_weight": "105173761661.59071350097656250",
+        "proxied_vote_weight": "0.00000000000000000",
+        "is_proxy": 0
+    }
+}
