@@ -34,6 +34,5 @@ $ npm start
 
 ## Scoped API
 
-- [https://api.eosvotes.io/proposal/{proposer}](https://api.eosvotes.io/proposal/eostribeprod)
-- [https://api.eosvotes.io/proposal/{proposer}/{proposal_name}](https://api.eosvotes.io/proposal/eostribeprod/bpminpayment)
-- [https://api.eosvotes.io/voter/{voter}](https://api.eosvotes.io/voter/eostribeprod)
+- [https://api.eosvotes.io/proposal/{proposal_name}](https://api.eosvotes.io/proposal/testforumnow)
+- [https://api.eosvotes.io/voter/{voter}](https://api.eosvotes.io/voter/whenfunstops)
