@@ -83,8 +83,8 @@ export async function getTableRows<T = any>(code: string, scope: string, table: 
     const params: any = {code, scope, table, json: true};
 
     // optional parameters
-    if (options.lower_bound) { params.lower_bound = params.lower_bound; }
-    if (options.upper_bound) { params.upper_bound = params.upper_bound; }
+    if (options.lower_bound) { params.lower_bound = options.lower_bound; }
+    if (options.upper_bound) { params.upper_bound = options.upper_bound; }
     if (options.limit) { params.limit = options.limit; }
 
     try {
@@ -160,7 +160,23 @@ export function voteWeightToday(): number {
     return Math.pow(yearsSinceY2K, 2);
 }
 
+export const TIMESTAMP_EPOCH = 946684800;
+
+/**
+ * Calculate EOS from votes
+ *
+ * https://github.com/CryptoLions/EOS-Network-monitor
+ *
+ * @param {string} votes Votes
+ * @returns {}
+ */
+export function calculateEosFromVotes(votes: string) {
+    const date = Date.now() / 1000 - TIMESTAMP_EPOCH;
+    const weight = parseInt(String(date / (86400 * 7)), 10) / 52; // 86400 = seconds per day 24*3600
+    return Number(votes) / 2 ** weight / 10000;
+}
+
 // (async () => {
-//     const stats = await getCurrencyStats("eosio.token", "EOS");
-//     console.log(stats);
+//     const votes = await calculateEosFromVotes("354577725331301.81250000000000000");
+//     console.log(votes);
 // })();

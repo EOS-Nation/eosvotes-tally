@@ -10,7 +10,8 @@
         "variable-name": false,
         "ordered-imports": false,
         "max-line-length": false,
-        "interface-name": false
+        "interface-name": false,
+        "no-var-require": false
     },
     "rulesDirectory": []
 }
