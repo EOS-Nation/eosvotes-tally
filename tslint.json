@@ -11,7 +11,7 @@
         "ordered-imports": false,
         "max-line-length": false,
         "interface-name": false,
-        "no-var-require": false
+        "no-var-requires": false
     },
     "rulesDirectory": []
 }
