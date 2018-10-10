@@ -1,4 +1,5 @@
 import axios from "axios";
+import Long from "long";
 import { EOSForumProposeJSON, EOSForumTableProposal, GetAccount, GetTableRows, CurrencyStats } from "../types";
 import * as config from "./config";
 
@@ -69,14 +70,14 @@ export async function getAccount(account_name: string, maxRetries = 5): Promise<
  * @param {string} scope Provide the account name
  * @param {string} table Provide the table name
  * @param {object} [options={}] Optional parameters
- * @param {number} [options.lower_bound] Provide the lower bound
- * @param {number} [options.upper_bound] Provide the upper bound
+ * @param {number|string} [options.lower_bound] Provide the lower bound
+ * @param {number|string} [options.upper_bound] Provide the upper bound
  * @param {number} [options.limit] Provide the limit
  * @returns {object} Table Rows
  */
 export async function getTableRows<T = any>(code: string, scope: string, table: string, options: {
-    lower_bound?: number,
-    upper_bound?: number,
+    lower_bound?: string,
+    upper_bound?: string,
     limit?: number,
 } = {}) {
     const url = config.EOSIO_API + "/v1/chain/get_table_rows";
@@ -162,6 +163,16 @@ export function voteWeightToday(): number {
 
 export const TIMESTAMP_EPOCH = 946684800;
 
+const charmap = ".12345abcdefghijklmnopqrstuvwxyz";
+function charidx(ch: string) {
+  const idx = charmap.indexOf(ch);
+  if (idx === -1) {
+    throw new TypeError(`Invalid character: '${ch}'`);
+  }
+
+  return idx;
+}
+
 /**
  * Calculate EOS from votes
  *
@@ -175,6 +186,53 @@ export function calculateEosFromVotes(votes: string) {
     const weight = parseInt(String(date / (86400 * 7)), 10) / 52; // 86400 = seconds per day 24*3600
     return Number(votes) / 2 ** weight / 10000;
 }
+
+/**
+ * Encode a name (a base32 string) to a number.
+ * For performance reasons, the blockchain uses the numerical encoding of strings
+ * for very common types like account names.
+ * @see types.hpp string_to_name
+ * @arg {string} name - A string to encode, up to 12 characters long.
+ * @return {string<uint64>} - compressed string (from name arg).  A string is
+ *   always used because a number could exceed JavaScript's 52 bit limit.
+ */
+export function encodeName(name: string, littleEndian = true) {
+    if (typeof name !== "string") {
+      throw new TypeError("name parameter is a required string");
+    }
+
+    if (name.length > 12) {
+      throw new TypeError("A name can be up to 12 characters long");
+    }
+
+    let bitstr = "";
+    for (let i = 0; i <= 12; i++) { // process all 64 bits (even if name is short)
+      const c = i < name.length ? charidx(name[i]) : 0;
+      const bitlen = i < 12 ? 5 : 4;
+      let bits = Number(c).toString(2);
+      if (bits.length > bitlen) {
+        throw new TypeError("Invalid name " + name);
+      }
+      bits = "0".repeat(bitlen - bits.length) + bits;
+      bitstr += bits;
+    }
+
+    const value = Long.fromString(bitstr, true, 2);
+
+    // convert to LITTLE_ENDIAN
+    let leHex = "";
+    const bytes = littleEndian ? value.toBytesLE() : value.toBytesBE();
+    for (const b of bytes) {
+      const n = Number(b).toString(16);
+      leHex += (n.length === 1 ? "0" : "") + n;
+    }
+
+    const ulName = Long.fromString(leHex, true, 16).toString();
+
+    // console.log('encodeName', name, value.toString(), ulName.toString(), JSON.stringify(bitstr.split(/(.....)/).slice(1)))
+
+    return ulName.toString();
+  }
 
 // (async () => {
 //     const votes = await calculateEosFromVotes("354577725331301.81250000000000000");

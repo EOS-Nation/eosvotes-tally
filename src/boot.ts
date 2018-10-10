@@ -1,56 +1,83 @@
-import { getAccount, getTableRows } from "./utils";
-import { Voters, Vote } from "../types";
-import * as EosioTable from "eosws/types/eosio/table";
-
-const eosjs = require("eosjs");
-const encodeName = eosjs.modules.format.encodeName;
+import { getAccount, getTableRows, getProposal } from "./utils";
+import { Votes, Voters, Vote, Proposals, Proposal } from "../types";
 
 /**
- * Initial Boot to load all voters from `eosforumrcpp` vote table
- *
- * @returns {object}
+ * Get all unique voters
  */
-async function boot() {
-    const { rows, more } = await getTableRows<Vote>("eosforumrcpp", "eosforumrcpp", "vote", { limit: 99999 });
-    if (more) { throw new Error("implement better `getTableRows` solution ;("); }
-
+async function getVoters(votes: Votes) {
     const voters: Voters = {};
 
-    // for (const vote of rows) {
-    //     const { voter, proposal_name } = vote;
-    //     votes[voter]
-    // }
-}
+    for (const vote of votes) {
+        const account_name = vote.voter;
 
-// boot();
+        // Get Voter Info
+        if (!voters[account_name]) {
+            const account = await getAccount(account_name);
+            if (account) voters[account_name] = account.voter_info;
+            else throw new Error(`${account_name} is missing`);
+        }
+    }
+    return voters;
+}
 
 /**
- * Get all voters
- *
- * @param {object} [options={}] Optional parameters
+ * Get all votes from `eosforumrcpp`
  */
-async function getVoters(options: {
-    lower_bound?: number,
-    limit?: number,
-} = {}) {
-    const lower_bound = options.lower_bound ? options.lower_bound : 0;
-    const limit = options.limit ? options.limit : 500;
-    const { rows, more } = await getTableRows<EosioTable.Voters>("eosio", "eosio", "voters", { limit, lower_bound });
+async function getVotes() {
+    // Params
+    const limit = 500;
+    let lower_bound: string = "0";
 
-    // if (limit !== rows.length && more === true) { throw new Error(`[${limit}, ${rows.length}] limit mismatch with row length`); }
+    // Data Containers
+    const votes: Votes = [];
 
-    const voters: { [owner: string]: EosioTable.Voters } = {};
-    let lastOwner = "";
+    // Iterate over `voters` table
+    while (true) {
+        const { rows, more } = await getTableRows<Vote>("eosforumrcpp", "eosforumrcpp", "vote", { limit, lower_bound });
 
-    for (const row of rows) {
-        const { owner } = row;
-        voters[owner] = row;
-        lastOwner = owner;
+        // Iterate over each vote and store results
+        for (const row of rows) {
+            lower_bound = String(row.id);
+            votes.push(row);
+        }
+        // Stop loop
+        if (more === false) { break; }
     }
-    console.log("Last Owner", encodeName(lastOwner));
-    if (more) {
-        getVoters({lower_bound: encodeName(lastOwner) });
-    }
+    return votes;
 }
 
-getVoters();
+/**
+ * Get all proposals from `eosforumrcpp`
+ */
+async function getProposals() {
+    // Params
+    const limit = 99999;
+    let lower_bound: string = "0";
+
+    // Data Containers
+    const proposals: Proposals = [];
+
+    // Iterate over `voters` table
+    while (true) {
+        const { rows, more } = await getTableRows<Proposal>("eosforumrcpp", "eosforumrcpp", "proposal", { limit, lower_bound });
+
+        // Iterate over each vote and store results
+        for (const row of rows) {
+            lower_bound = String(row.proposal_name);
+            proposals.push(row);
+        }
+        // TO-DO
+        if (more === true) throw new Error("TO-DO: [lower_bound] not implemented yet");
+
+        // Stop loop
+        if (more === false) break;
+    }
+    return proposals;
+}
+
+(async () => {
+    // const votes = await getVotes();
+    // const voters = await getVoters(votes);
+    const proposals = await getProposals();
+    console.log(proposals);
+})();

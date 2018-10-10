@@ -20,6 +20,7 @@
     "devDependencies": {
         "@types/dotenv": "*",
         "@types/express": "*",
+        "@types/long": "*",
         "@types/ws": "*",
         "tslint": "*",
         "typescript": "*"
@@ -27,10 +28,10 @@
     "dependencies": {
         "axios": "*",
         "dotenv": "*",
-        "eosjs": "16.x",
-        "eosjs2": "*",
+        "eosjs": "20.0.0-beta1",
         "eosws": "*",
         "express": "*",
+        "long": "*",
         "ws": "*"
     }
 }

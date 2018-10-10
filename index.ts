@@ -16,6 +16,7 @@ app.use((req, res, next) => {
 // Full API
 app.get("/", (req, res) => res.json(state));
 app.get("/proposals(.json)?$", (req, res) => res.json(state.proposals));
+app.get("/votes(.json)?$", (req, res) => res.json(state.votes));
 app.get("/voters(.json)?$", (req, res) => res.json(state.voters));
 app.get("/global(.json)?$", (req, res) => res.json(state.global));
 
@@ -23,8 +24,8 @@ app.get("/global(.json)?$", (req, res) => res.json(state.global));
 app.get("/voter/:voter", (req, res) => res.json(state.voters[req.params.voter] || {}));
 app.get("/proposal/:proposal_name", (req, res) => {
     const { proposal_name } = req.params;
-    if (state.proposals[proposal_name]) { res.json(state.proposals[proposal_name]);
-    } else { res.json({}); }
+    if (state.proposals[proposal_name]) res.json(state.proposals[proposal_name]);
+    else res.json({});
 });
 
 app.listen(config.EOSVOTES_PORT, () => console.log(`EOS Votes listening on port ${config.EOSVOTES_PORT}!`));
