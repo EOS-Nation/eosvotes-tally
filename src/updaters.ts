@@ -1,9 +1,8 @@
 import { BlockInfo, Delegatebw, Payload, State, Tally, TallySummary, Vote } from "../types";
 import { EOSForumPropose, EOSForumProposeJSON, EOSForumExpire, EOSForumVote, EOSForumUnvote, EOSForumCleanProposal } from "../types";
-import { EOSVOTES_CODE } from "./config";
 import { logError } from "./logging";
 import { defaultTally } from "./state";
-import { getAccount, getProposal, parseJSON, parseTokenString } from "./utils";
+import { getAccount, parseJSON, parseTokenString } from "./utils";
 
 /**
  * Propose - creation of new proposal based on proposal_name

@@ -1,6 +1,7 @@
 import express from "express";
 import { state } from "./src/state";
 import * as config from "./src/config";
+import { boot } from "./src/boot";
 
 // Expose State via simple HTTP express app
 const app = express();
@@ -29,3 +30,4 @@ app.get("/proposal/:proposal_name", (req, res) => {
 });
 
 app.listen(config.EOSVOTES_PORT, () => console.log(`EOS Votes listening on port ${config.EOSVOTES_PORT}!`));
+boot();

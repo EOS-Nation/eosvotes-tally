@@ -10,5 +10,3 @@ export * from "./post";
 export * from "./unpost";
 export * from "./status";
 
-// Tables
-export * from "./tables";

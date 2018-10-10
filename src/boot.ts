@@ -1,4 +1,5 @@
-import { getAccount, getTableRows, getProposal } from "./utils";
+import { state } from "./state";
+import { getAccount, getTableRows } from "./utils";
 import { Votes, Voters, Vote, Proposals, Proposal } from "../types";
 
 /**
@@ -75,9 +76,16 @@ async function getProposals() {
     return proposals;
 }
 
-(async () => {
-    // const votes = await getVotes();
-    // const voters = await getVoters(votes);
+/**
+ * Initial Boot
+ */
+export async function boot() {
+    const votes = await getVotes();
+    const voters = await getVoters(votes);
     const proposals = await getProposals();
-    console.log(proposals);
-})();
+
+    // Update State
+    state.proposals = proposals;
+    state.voters = voters;
+    state.votes = votes;
+}

@@ -1,6 +1,7 @@
 import axios from "axios";
 import Long from "long";
-import { EOSForumProposeJSON, EOSForumTableProposal, GetAccount, GetTableRows, CurrencyStats } from "../types";
+import { GetAccount, GetTableRows } from "../types";
+import { CurrencyStats } from "../types/eosio.token/table/CurrencyStats";
 import * as config from "./config";
 
 /**
@@ -94,35 +95,6 @@ export async function getTableRows<T = any>(code: string, scope: string, table: 
     } catch (e) {
         throw new Error(e);
     }
-}
-
-/**
- * Get `eosio.forum` Proposal
- * @example
- * const proposal = await getProposal("eosforumdap", "eostribeprod")
- */
-export async function getProposal(code: string, proposal_name: string): Promise<EOSForumProposeJSON|null> {
-    // TO-DO handle greater then 50 proposals
-    console.log("TO-DO Implement better `getProposal`");
-    const limit = 50;
-    while (true) {
-        const table = await getTableRows<EOSForumTableProposal>(code, code, "proposal", {limit});
-        for (const row of table.rows) {
-            // Match exact proposal_name
-            if (row.proposal_name === proposal_name) {
-                return {
-                    proposer: row.proposer,
-                    proposal_name: row.proposal_name,
-                    title: row.title,
-                    expires_at: row.expires_at,
-                    proposal_json: parseJSON(row.proposal_json),
-                };
-            }
-        }
-        // End of Table
-        if (table.more === false) { break; }
-    }
-    return null;
 }
 
 /**

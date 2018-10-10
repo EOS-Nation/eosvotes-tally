@@ -4,7 +4,9 @@ import { State, Tally, TallySummary } from "../types";
  * Initial State
  */
 export const state: State = {
-    proposals: {},
+    proposals: [],
+    tallies: {},
+    votes: [],
     voters: {},
     indexState: {
         blockNumber: 0,
