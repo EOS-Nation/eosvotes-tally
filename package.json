@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "axios": "*",
+        "chalk": "*",
         "dotenv": "*",
         "eosjs": "20.0.0-beta1",
         "eosws": "*",

@@ -1,5 +1,6 @@
 import axios from "axios";
 import Long from "long";
+import chalk from "chalk";
 import { GetAccount, GetTableRows } from "../types/eosio";
 import { CurrencyStats } from "../types/eosio.token";
 import * as config from "./config";
@@ -56,7 +57,6 @@ export async function getAccount(account_name: string, maxRetries = 5): Promise<
         const {data} = await axios.post<GetAccount>(url, {account_name});
         return data;
     } catch (e) {
-        console.error(e);
         if (maxRetries > 0) {
             return await getAccount(account_name, maxRetries - 1);
         }
@@ -201,8 +201,6 @@ export function encodeName(name: string, littleEndian = true) {
 
     const ulName = Long.fromString(leHex, true, 16).toString();
 
-    // console.log('encodeName', name, value.toString(), ulName.toString(), JSON.stringify(bitstr.split(/(.....)/).slice(1)))
-
     return ulName.toString();
 }
 
@@ -210,8 +208,12 @@ export function log(message: object) {
     process.stdout.write(JSON.stringify(message) + "\n");
 }
 
+export function warning(message: object) {
+    process.stdout.write(chalk.yellow(JSON.stringify(message) + "\n"));
+}
+
 export function error(message: object) {
-    process.stderr.write(JSON.stringify(message) + "\n");
+    process.stderr.write(chalk.red(JSON.stringify(message) + "\n"));
 }
 
 // (async () => {

@@ -30,7 +30,6 @@ export default function listener() {
         //     log({type: "listener", message: "voters", voters});
         // }
         if (vote) {
-            log({type: "listener", message: "vote", vote});
             updateVote(vote.data.row);
             updateBlockNumber(vote.data.block_num);
         }

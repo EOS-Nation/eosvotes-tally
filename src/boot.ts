@@ -1,26 +1,7 @@
 import { state } from "./state";
-import { getAccount, getTableRows, log, error } from "./utils";
+import { getAccount, getTableRows, log, warning, error } from "./utils";
 import { Votes, Voters, Vote, Proposals, Proposal } from "../types/state";
-import { updateTally } from "./updaters";
-
-/**
- * Get all unique voters
- */
-async function getVoters(votes: Votes) {
-    const voters: Voters = {};
-
-    for (const vote of votes) {
-        const account_name = vote.voter;
-
-        // Get Voter Info
-        if (!voters[account_name]) {
-            const account = await getAccount(account_name);
-            if (account) voters[account_name] = account.voter_info;
-            else error({type: "boot", message: `${account_name} is missing`});
-        }
-    }
-    return voters;
-}
+import { updateTally, updateVoter } from "./updaters";
 
 /**
  * Get all votes from `eosforumrcpp`
@@ -45,7 +26,24 @@ async function getVotes() {
         // Stop loop
         if (more === false) { break; }
     }
-    return votes;
+    // Update votes state
+    log({type: "boot::updateVotes", message: `votes: ${votes.length}`});
+    state.votes = votes;
+}
+
+/**
+ * Update voters
+ */
+async function getVoters() {
+    const voters: Voters = {};
+
+    for (const vote of state.votes) {
+        const account_name = vote.voter;
+        if (!voters[account_name]) await updateVoter(account_name);
+    }
+    // Update voters state
+    log({type: "boot::updateVoters", message: `voters: ${Object.keys(state.voters).length}`});
+    state.voters = voters;
 }
 
 /**
@@ -69,30 +67,21 @@ async function getProposals() {
             proposals.push(row);
         }
         // TO-DO
-        if (more === true) error({type: "boot", message: `"TO-DO: [lower_bound] not implemented yet"`});
+        if (more === true) error({error: 500, type: "boot::getProposals", message: `"TO-DO: [lower_bound] not implemented yet"`});
 
         // Stop loop
         if (more === false) break;
     }
-    return proposals;
+    log({type: "boot::updateProposals", message: `proposals: ${proposals.length}`});
+    state.proposals = proposals;
 }
 
 /**
  * Initial Boot
  */
 export default async function boot() {
-    const votes = await getVotes();
-    log({type: "boot", message: `votes: ${votes.length}`});
-
-    const voters = await getVoters(votes);
-    log({type: "boot", message: `voters: ${Object.keys(voters).length}`});
-
-    const proposals = await getProposals();
-    log({type: "boot", message: `proposals: ${proposals.length}`});
-
-    // Update State
-    state.proposals = proposals;
-    state.voters = voters;
-    state.votes = votes;
-    updateTally();
+    await getVotes();
+    await getVoters();
+    await getProposals();
+    await updateTally();
 }
