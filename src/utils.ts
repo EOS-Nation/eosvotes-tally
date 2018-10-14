@@ -1,7 +1,7 @@
 import axios from "axios";
 import Long from "long";
-import { GetAccount, GetTableRows } from "../types";
-import { CurrencyStats } from "../types/eosio.token/table/CurrencyStats";
+import { GetAccount, GetTableRows } from "../types/eosio";
+import { CurrencyStats } from "../types/eosio.token";
 import * as config from "./config";
 
 /**
@@ -204,7 +204,15 @@ export function encodeName(name: string, littleEndian = true) {
     // console.log('encodeName', name, value.toString(), ulName.toString(), JSON.stringify(bitstr.split(/(.....)/).slice(1)))
 
     return ulName.toString();
-  }
+}
+
+export function log(message: object) {
+    process.stdout.write(JSON.stringify(message) + "\n");
+}
+
+export function error(message: object) {
+    process.stderr.write(JSON.stringify(message) + "\n");
+}
 
 // (async () => {
 //     const votes = await calculateEosFromVotes("354577725331301.81250000000000000");

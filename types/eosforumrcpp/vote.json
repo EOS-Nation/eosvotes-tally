@@ -1,6 +1,75 @@
 {
-    "voter": "eoscanadaops",
-    "proposal_name": "testforumnow",
-    "vote": 1,
-    "vote_json": ""
+  "rows": [{
+      "id": 0,
+      "proposal_name": "testforumnow",
+      "voter": "deniscarrier",
+      "vote": 0,
+      "vote_json": "",
+      "updated_at": "2018-09-23T22:39:18"
+    },{
+      "id": 1,
+      "proposal_name": "testforumnow",
+      "voter": "eosnationdan",
+      "vote": 0,
+      "vote_json": "",
+      "updated_at": "2018-09-19T21:53:29"
+    },{
+      "id": 2,
+      "proposal_name": "testforumnow",
+      "voter": "freedomlover",
+      "vote": 0,
+      "vote_json": "",
+      "updated_at": "2018-09-19T03:18:16"
+    },{
+      "id": 3,
+      "proposal_name": "testforumnow",
+      "voter": "testkauffman",
+      "vote": 0,
+      "vote_json": "",
+      "updated_at": "2018-09-19T03:21:00"
+    },{
+      "id": 5,
+      "proposal_name": "testforumnow",
+      "voter": "g4ydcnjxgmge",
+      "vote": 1,
+      "vote_json": "",
+      "updated_at": "2018-09-19T23:49:28"
+    },{
+      "id": 6,
+      "proposal_name": "testforumnow",
+      "voter": "eoshasdoneit",
+      "vote": 1,
+      "vote_json": "",
+      "updated_at": "2018-09-19T08:52:02"
+    },{
+      "id": 7,
+      "proposal_name": "testforumnow",
+      "voter": "gqztsmbuhege",
+      "vote": 1,
+      "vote_json": "",
+      "updated_at": "2018-09-19T13:44:38"
+    },{
+      "id": 8,
+      "proposal_name": "testforumnow",
+      "voter": "guytmobzgige",
+      "vote": 1,
+      "vote_json": "",
+      "updated_at": "2018-09-19T14:53:35"
+    },{
+      "id": 10,
+      "proposal_name": "testforumnow",
+      "voter": "thomasbcox23",
+      "vote": 1,
+      "vote_json": "",
+      "updated_at": "2018-09-19T21:49:55"
+    },{
+      "id": 11,
+      "proposal_name": "testforumnow",
+      "voter": "blockbuilder",
+      "vote": 1,
+      "vote_json": "",
+      "updated_at": "2018-09-20T01:29:31"
+    }
+  ],
+  "more": true
 }

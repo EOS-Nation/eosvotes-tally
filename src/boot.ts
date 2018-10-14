@@ -1,6 +1,7 @@
 import { state } from "./state";
-import { getAccount, getTableRows } from "./utils";
-import { Votes, Voters, Vote, Proposals, Proposal } from "../types";
+import { getAccount, getTableRows, log, error } from "./utils";
+import { Votes, Voters, Vote, Proposals, Proposal } from "../types/state";
+import { updateTally } from "./updaters";
 
 /**
  * Get all unique voters
@@ -15,7 +16,7 @@ async function getVoters(votes: Votes) {
         if (!voters[account_name]) {
             const account = await getAccount(account_name);
             if (account) voters[account_name] = account.voter_info;
-            else throw new Error(`${account_name} is missing`);
+            else error({type: "boot", message: `${account_name} is missing`});
         }
     }
     return voters;
@@ -68,7 +69,7 @@ async function getProposals() {
             proposals.push(row);
         }
         // TO-DO
-        if (more === true) throw new Error("TO-DO: [lower_bound] not implemented yet");
+        if (more === true) error({type: "boot", message: `"TO-DO: [lower_bound] not implemented yet"`});
 
         // Stop loop
         if (more === false) break;
@@ -79,13 +80,19 @@ async function getProposals() {
 /**
  * Initial Boot
  */
-export async function boot() {
+export default async function boot() {
     const votes = await getVotes();
+    log({type: "boot", message: `votes: ${votes.length}`});
+
     const voters = await getVoters(votes);
+    log({type: "boot", message: `voters: ${Object.keys(voters).length}`});
+
     const proposals = await getProposals();
+    log({type: "boot", message: `proposals: ${proposals.length}`});
 
     // Update State
     state.proposals = proposals;
     state.voters = voters;
     state.votes = votes;
+    updateTally();
 }

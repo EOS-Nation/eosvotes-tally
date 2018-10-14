@@ -33,11 +33,4 @@ export interface State {
      * Global
      */
     global: Global;
-    /**
-     * Demux Index State
-     */
-    indexState: {
-        blockNumber: number,
-        blockHash: string,
-    };
 }

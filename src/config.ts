@@ -12,6 +12,10 @@ export const EOSIO_API = process.env.EOSIO_API || "https://api.eosn.io";
 // EOS Votes configurations
 export const EOSVOTES_PORT = process.env.EOSVOTES_PORT || 3000;
 
+// EOS Votes configurations
+export const EOSWS_API_KEY = process.env.EOSWS_API_KEY;
+if (!EOSWS_API_KEY) throw new Error("EOSWS_API_KEY is missing in `.env`");
+
 // Save .env if does not exist
 if (!fs.existsSync(envPath)) {
     fs.writeFileSync(envPath, `# EOSIO

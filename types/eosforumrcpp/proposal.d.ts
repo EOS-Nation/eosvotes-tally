@@ -4,12 +4,7 @@
 //
 //   "Set quicktype target language"
 
-export interface Table {
-    rows: Row[];
-    more: boolean;
-}
-
-export interface Row {
+export interface Proposal {
     proposal_name: string;
     proposer:      string;
     title:         string;

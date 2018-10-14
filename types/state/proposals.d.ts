@@ -1,4 +1,4 @@
-import { Row as Proposal } from "../eosforumrcpp/table/proposal";
+import { Proposal } from "../eosforumrcpp/proposal";
 
 export type Proposals = Proposal[];
 export { Proposal };

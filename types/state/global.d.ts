@@ -11,4 +11,8 @@ export interface Global {
    * @default 3774551190700
    */
   total_activated_stake: number;
+  /**
+   * Current Block Number
+   */
+  block_num: number;
 }

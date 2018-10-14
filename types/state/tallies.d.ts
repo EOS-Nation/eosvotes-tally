@@ -1,4 +1,4 @@
-import { EOSForumProposeJSON } from "../eosforumrcpp";
+import { Proposal } from "../eosforumrcpp/proposal";
 
 export interface Tallies {
     /**
@@ -7,7 +7,12 @@ export interface Tallies {
     [proposal_name: string]: Tally,
 }
 
-export interface TallySummary {
+export interface Tally {
+    summary: Summary;
+    proposal: Proposal;
+}
+
+export interface Summary {
     /**
      * total amount of votes
      */
@@ -29,33 +34,13 @@ export interface TallySummary {
         [vote: number]: number
         total: number,
     };
-}
-
-export interface Tally extends EOSForumProposeJSON, TallySummary {
     /**
-     * Proposal active or not
+     * total `last_vote_weight` in EOS (includes vote decay)
      */
-    active: boolean;
-    /**
-     * Last Block Number
-     */
-    blockNumber: number;
-    /**
-     * Last Block Hash
-     */
-    blockHash: string;
-    /**
-     * First Block Number
-     */
-    firstBlockNumber: number;
-    /**
-     * First Block Hash
-     */
-    firstBlockHash: string;
-    /**
-     * Vote Participation
-     */
-    voteParticipation: VoteParticipation
+    last_vote_weight_eos: {
+        [vote: number]: number
+        total: number,
+    };
 }
 
 /**
@@ -63,7 +48,7 @@ export interface Tally extends EOSForumProposeJSON, TallySummary {
  *
  * Token holders with no less than 15% vote participation
  */
-export interface VoteParticipation {
+export interface Stats {
     /**
      * Vote Participation: Percentage (EOS staked / Total EOS Supply "1B")
      */

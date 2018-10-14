@@ -1,4 +1,4 @@
-import { State, Tally, TallySummary } from "../types";
+import { State, Tally, Summary } from "../types/state";
 
 /**
  * Initial State
@@ -8,11 +8,8 @@ export const state: State = {
     tallies: {},
     votes: [],
     voters: {},
-    indexState: {
-        blockNumber: 0,
-        blockHash: "",
-    },
     global: {
+        block_num: 0,
         supply: "1000000000.0000 EOS",
         total_activated_stake: 3774551190700,
     },
@@ -21,29 +18,24 @@ export const state: State = {
 /**
  * Default Tally
  */
-export function defaultTally(blockNumber: number, blockHash: string): Tally {
-    return Object.assign({
-        proposer: "",
-        proposal_name: "",
-        title: "",
-        proposal_json: {},
-        active: true,
-        expires_at: "",
-        blockNumber,
-        blockHash,
-        firstBlockNumber: blockNumber,
-        firstBlockHash: blockHash,
-        voteParticipation: {
-            supply: 0,
-            total_activated_stake: 0,
+export function defaultTally(): Tally {
+    return {
+        proposal: {
+            proposal_name: "",
+            proposer: "",
+            title: "",
+            proposal_json: "",
+            created_at: "",
+            expires_at: "",
         },
-    }, defaultTallySummary());
+        summary: defaultSummary(),
+    };
 }
 
 /**
  * Default Tally Summary
  */
-export function defaultTallySummary(): TallySummary {
+export function defaultSummary(): Summary {
     return {
         votes: {
             total: 0,
@@ -52,6 +44,9 @@ export function defaultTallySummary(): TallySummary {
             total: 0,
         },
         last_vote_weight: {
+            total: 0,
+        },
+        last_vote_weight_eos: {
             total: 0,
         },
     };

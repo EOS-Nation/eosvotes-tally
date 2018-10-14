@@ -1,7 +1,0 @@
-{
-    "proposer": "eoscanadaops",
-    "proposal_name": "testforumnow",
-    "title": "EOS Canada invites you to test the Release Candidate forum",
-    "proposal_json": "{\"content\":\"# eosio.forum Release Candidate\\nThis is a test proposal.\"}",
-    "expires_at": "2018-09-25T00:00:00"
-}
