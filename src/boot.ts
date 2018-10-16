@@ -1,5 +1,5 @@
 import { state } from "./state";
-import { getAccount, getTableRows, log, warning, error } from "./utils";
+import { getTableRows, log, error } from "./utils";
 import { Votes, Voters, Vote, Proposals, Proposal } from "../types/state";
 import { updateTally, updateVoter } from "./updaters";
 
@@ -43,7 +43,6 @@ async function getVoters() {
     }
     // Update voters state
     log({type: "boot::updateVoters", message: `voters: ${Object.keys(state.voters).length}`});
-    state.voters = voters;
 }
 
 /**

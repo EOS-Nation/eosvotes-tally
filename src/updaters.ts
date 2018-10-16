@@ -36,7 +36,6 @@ export async function updateVoter(account_name: string) {
         state.voters[account_name] = account.voter_info;
         log({type: "updaters::updateVoter", message: `updated voter_info for [${account_name}]`});
     }
-
 }
 
 /**
@@ -64,6 +63,13 @@ export async function updateTally() {
         if (!tallies[proposal_name]) return error({error: 500, type: "updaters::updateTally", message: `[${proposal_name}] proposal not found in [tallies]`});
         if (!voter_info) return error({error: 500, type: "updaters::updateTally", message: `[${voter}] is missing in [state.voters]`});
 
+        // Update tallies to zero if no record
+        if (!tallies[proposal_name].summary.last_vote_weight[vote]) tallies[proposal_name].summary.last_vote_weight[vote] = 0;
+        if (!tallies[proposal_name].summary.last_vote_weight_eos[vote]) tallies[proposal_name].summary.last_vote_weight_eos[vote] = 0;
+        if (!tallies[proposal_name].summary.staked[vote]) tallies[proposal_name].summary.staked[vote] = 0;
+        if (!tallies[proposal_name].summary.votes[vote]) tallies[proposal_name].summary.votes[vote] = 0;
+
+        // Add vote weights
         tallies[proposal_name].summary.last_vote_weight[vote] += Number(voter_info.last_vote_weight);
         tallies[proposal_name].summary.last_vote_weight_eos[vote] += calculateEosFromVotes(voter_info.last_vote_weight);
         tallies[proposal_name].summary.staked[vote] += Number(voter_info.staked);

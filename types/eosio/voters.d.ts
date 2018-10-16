@@ -4,12 +4,7 @@
 //
 //   "Set quicktype target language"
 
-export interface Table {
-    rows: Row[];
-    more: boolean;
-}
-
-export interface Row {
+export interface Voters {
     owner:               string;
     proxy:               string;
     producers:           string[];

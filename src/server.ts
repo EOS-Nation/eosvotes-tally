@@ -21,6 +21,7 @@ export default function server() {
 
         // Full API
         app.get("/", (req, res) => res.json(state));
+        app.get("/tallies(.json)?$", (req, res) => res.json(state.tallies));
         app.get("/proposals(.json)?$", (req, res) => res.json(state.proposals));
         app.get("/votes(.json)?$", (req, res) => res.json(state.votes));
         app.get("/voters(.json)?$", (req, res) => res.json(state.voters));
@@ -28,11 +29,7 @@ export default function server() {
 
         // Scoped API
         app.get("/voter/:voter", (req, res) => res.json(state.voters[req.params.voter] || {}));
-        app.get("/proposal/:proposal_name", (req, res) => {
-            const { proposal_name } = req.params;
-            if (state.proposals[proposal_name]) res.json(state.proposals[proposal_name]);
-            else res.json({});
-        });
+        app.get("/tallies/:proposal_name", (req, res) => res.json(state.tallies[req.params.proposal_name] || {}));
 
         app.listen(config.EOSVOTES_PORT, () => {
             log({type: "server", message: `api.eosvotes.io listening on port ${config.EOSVOTES_PORT}!`});
