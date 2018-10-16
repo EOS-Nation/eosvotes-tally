@@ -1,4 +1,4 @@
-import { State, Tally, Summary } from "../types/state";
+import { State, Tally, Stats } from "../types/state";
 
 /**
  * Initial State
@@ -28,14 +28,14 @@ export function defaultTally(): Tally {
             created_at: "",
             expires_at: "",
         },
-        summary: defaultSummary(),
+        stats: defaultStats(),
     };
 }
 
 /**
  * Default Tally Summary
  */
-export function defaultSummary(): Summary {
+export function defaultStats(): Stats {
     return {
         votes: {
             total: 0,
@@ -43,10 +43,7 @@ export function defaultSummary(): Summary {
         staked: {
             total: 0,
         },
-        last_vote_weight: {
-            total: 0,
-        },
-        last_vote_weight_eos: {
+        proxies: {
             total: 0,
         },
     };

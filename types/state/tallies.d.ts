@@ -8,53 +8,42 @@ export interface Tallies {
 }
 
 export interface Tally {
-    summary: Summary;
+    stats: Stats;
     proposal: Proposal;
 }
 
-export interface Summary {
+export interface Stats {
     /**
-     * total amount of votes
+     * Votes
+     *
+     * Total amount of votes per account
+     *  - includes proxies & accounts
      */
     votes: {
         [vote: number]: number
         total: number,
     };
     /**
-     * total `staked` votes (divide by 10000 for EOS precision)
+     * Staked
+     *
+     * Calculates the sum of `net_weight` + `cpu_weight` within `self_delegated_bandwidth` in EOS
+     *  - excludes proxies
      */
     staked: {
         [vote: number]: number
         total: number,
     };
     /**
-     * total `last_vote_weight` votes
+     * Proxies
+     *
+     * Calculates the total of `last_vote_weight` or `proxied_vote_weight` in EOS
+     *  - includes vote decay
+     *  - includes proxies
+     *  - excludes voters `last_vote_weight` if voted via proxy
+     *  - excludes voters without `vote_info` table
      */
-    last_vote_weight: {
+    proxies: {
         [vote: number]: number
         total: number,
     };
-    /**
-     * total `last_vote_weight` in EOS (includes vote decay)
-     */
-    last_vote_weight_eos: {
-        [vote: number]: number
-        total: number,
-    };
-}
-
-/**
- * Vote Participation
- *
- * Token holders with no less than 15% vote participation
- */
-export interface Stats {
-    /**
-     * Vote Participation: Percentage (EOS staked / Total EOS Supply "1B")
-     */
-    supply: number,
-    /**
-     * Vote Participation: Percentage (EOS staked / Total Activated Stake )
-     */
-    total_activated_stake: number,
 }
