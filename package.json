@@ -1,8 +1,8 @@
 {
     "private": true,
-    "name": "eosvotes-tally-eosws",
+    "name": "eosvotes-tally",
     "version": "0.1.0",
-    "description": "EOSVotes Tally using EOSWS",
+    "description": "EOSVotes Tally",
     "main": "index.js",
     "scripts": {
         "start": "tsc && node index.js",

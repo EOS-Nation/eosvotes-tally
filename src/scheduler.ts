@@ -8,5 +8,5 @@ export default function scheduler() {
     // Update globals every 5 minutes
     const updateInfo = new CronJob("*/5 * * * *", async () => {
         await updateGlobal();
-    }, () => {}, true, "America/Toronto");
+    }, undefined, true, "America/Toronto");
 }

@@ -132,9 +132,9 @@ export function encodeName(name: string, littleEndian = true) {
 }
 
 interface Message {
-    ref: string,
-    message: string
-};
+    ref: string;
+    message: string;
+}
 
 function formatMessage(message: Message, type: string): string {
     return `${new Date().toUTCString()}\t${type}\t${message.ref}\t${message.message}\n`;
