@@ -1,9 +1,5 @@
-import axios from "axios";
 import Long from "long";
 import chalk from "chalk";
-import { GetAccount, GetTableRows } from "../types/eosio";
-import { CurrencyStats } from "../types/eosio.token";
-import * as config from "./config";
 
 /**
  * Parse Token String
@@ -46,76 +42,6 @@ export function parseJSON(str: string | undefined): object {
         }
     }
     return {};
-}
-
-/**
- * Get Account
- */
-export async function getAccount(account_name: string, maxRetries = 5): Promise<GetAccount | null> {
-    const url = config.EOSIO_API + "/v1/chain/get_account";
-    try {
-        const {data} = await axios.post<GetAccount>(url, {account_name});
-        return data;
-    } catch (e) {
-        if (maxRetries > 0) {
-            return await getAccount(account_name, maxRetries - 1);
-        }
-        return null;
-    }
-}
-
-/**
- * Get Table Rows
- *
- * @param {string} code Provide the smart contract name
- * @param {string} scope Provide the account name
- * @param {string} table Provide the table name
- * @param {object} [options={}] Optional parameters
- * @param {number|string} [options.lower_bound] Provide the lower bound
- * @param {number|string} [options.upper_bound] Provide the upper bound
- * @param {number} [options.limit] Provide the limit
- * @returns {object} Table Rows
- */
-export async function getTableRows<T = any>(code: string, scope: string, table: string, options: {
-    lower_bound?: string,
-    upper_bound?: string,
-    limit?: number,
-} = {}) {
-    const url = config.EOSIO_API + "/v1/chain/get_table_rows";
-    const params: any = {code, scope, table, json: true};
-
-    // optional parameters
-    if (options.lower_bound) { params.lower_bound = options.lower_bound; }
-    if (options.upper_bound) { params.upper_bound = options.upper_bound; }
-    if (options.limit) { params.limit = options.limit; }
-
-    try {
-        const {data} = await axios.post<GetTableRows<T>>(url, params);
-        return data;
-    } catch (e) {
-        throw new Error(e);
-    }
-}
-
-/**
- * Get Currency Stats
- * @example
- *
- * const stats = await getCurrencyStats("eosio.token", "EOS");
- * { EOS:
- *   {
- *     supply: '1010557418.3311 EOS',
- *     max_supply: '10000000000.0000 EOS',
- *     issuer: 'eosio'
- *   }
- *  }
- */
-export async function getCurrencyStats(code: string, symbol = "EOS") {
-    const url = config.EOSIO_API + "/v1/chain/get_currency_stats";
-    const params = {code, symbol};
-
-    const {data} = await axios.post<CurrencyStats>(url, params);
-    return data;
 }
 
 /**
@@ -203,20 +129,24 @@ export function encodeName(name: string, littleEndian = true) {
 
     return ulName.toString();
 }
+type Object = {[key: string]: any};
 
-export function log(message: object) {
-    process.stdout.write(JSON.stringify(message) + "\n");
+function formatMessage(message: Object): string {
+    return `${new Date().toUTCString()}\t${JSON.stringify(message) + "\n"}`;
 }
 
-export function warning(message: object) {
-    process.stdout.write(chalk.yellow(JSON.stringify(message) + "\n"));
+export function log(message: Object) {
+    process.stdout.write(formatMessage(message));
 }
 
-export function error(message: object) {
-    process.stderr.write(chalk.red(JSON.stringify(message) + "\n"));
+export function success(message: Object) {
+    process.stdout.write(chalk.green(formatMessage(message)));
 }
 
-// (async () => {
-//     const votes = await calculateEosFromVotes("354577725331301.81250000000000000");
-//     console.log(votes);
-// })();
+export function warning(message: Object) {
+    process.stdout.write(chalk.yellow(formatMessage(message)));
+}
+
+export function error(message: Object) {
+    process.stderr.write(chalk.red(formatMessage(message)));
+}

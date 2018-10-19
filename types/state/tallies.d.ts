@@ -17,7 +17,7 @@ export interface Stats {
      * Votes
      *
      * Total amount of votes per account
-     *  - includes proxies & accounts
+     *  - includes proxies & voters
      */
     votes: {
         [vote: number]: number

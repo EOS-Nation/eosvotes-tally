@@ -1,4 +1,5 @@
 {
+    "private": true,
     "name": "eosvotes-tally-eosws",
     "version": "0.1.0",
     "description": "EOSVotes Tally using EOSWS",
@@ -7,32 +8,27 @@
         "start": "tsc && node index.js",
         "test": "tslint --project ."
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/EOS-Nation/eosvotes-tally-eosws.git"
-    },
     "author": "Denis Carriere <denis@eosnation.io>",
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/EOS-Nation/eosvotes-tally-eosws/issues"
-    },
-    "homepage": "https://github.com/EOS-Nation/eosvotes-tally-eosws",
     "devDependencies": {
+        "@types/cron": "*",
         "@types/dotenv": "*",
         "@types/express": "*",
         "@types/long": "*",
+        "@types/node-fetch": "*",
         "@types/ws": "*",
         "tslint": "*",
         "typescript": "*"
     },
     "dependencies": {
-        "axios": "*",
         "chalk": "*",
+        "cron": "*",
         "dotenv": "*",
         "eosjs": "20.0.0-beta1",
         "eosws": "*",
         "express": "*",
         "long": "*",
+        "node-fetch": "*",
         "ws": "*"
     }
 }

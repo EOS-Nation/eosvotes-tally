@@ -1,21 +1,27 @@
 // import { BlockInfo, Delegatebw, Payload, State, Tally, TallySummary, Vote } from "../types";
-import { Vote } from "../types/eosforumrcpp";
+import { Vote, Proposal } from "../types/eosforumrcpp";
+import { GetAccount } from "../types/eosio";
 import { Tallies } from "../types/state";
+import { rpc } from "./config";
 import { state, defaultStats } from "./state";
-import { getAccount, log, warning, error, calculateEosFromVotes, parseTokenString } from "./utils";
+import { log, warning, error, calculateEosFromVotes, parseTokenString } from "./utils";
 import { SelfDelegatedBandwidth, VoterInfo } from "../types/eosio";
+import { CurrencyStats } from "../types/eosio.token";
 
 /**
- * Vote - voter casts registers his vote on proposal
+ * Vote - update `state.votes` & fetches account `voter_info`
  */
 export async function updateVote(vote: Vote) {
-    // Add Vote to State
-    state.votes.push(vote);
-
-    // Update `voter_info` details
+    state.votes[vote.id] = vote;
     await updateVoter(vote.voter);
+    await updateTally();
+}
 
-    // Update Tally Count
+/**
+ * Proposal - update `state.proposal`
+ */
+export async function updateProposal(proposal: Proposal) {
+    state.proposals[proposal.proposal_name] = proposal;
     await updateTally();
 }
 
@@ -25,7 +31,7 @@ export async function updateVote(vote: Vote) {
  * @param {string} account_name Account Name
  */
 export async function updateVoter(account_name: string) {
-    const account = await getAccount(account_name);
+    const account: GetAccount = await rpc.get_account(account_name);
 
     // Asserts
     if (account === null) return error({error: 404, type: "updaters::updateVoter", message: `[${account_name}] account does not exist`});
@@ -50,16 +56,17 @@ export async function updateTally() {
     const tallies: Tallies = {};
 
     // Load proposals in tallies
-    state.proposals.forEach((proposal) => {
-        const {proposal_name} = proposal;
+    for (const proposal_name of Object.keys(state.proposals)) {
+        const proposal = state.proposals[proposal_name];
         tallies[proposal_name] = {
             proposal,
             stats: defaultStats(),
         };
-    });
+    }
 
     // Add votes to summary
-    state.votes.forEach((voteRow) => {
+    for (const vote_id of Object.keys(state.votes)) {
+        const voteRow = state.votes[vote_id];
         const { voter, proposal_name, vote } = voteRow;
         const { voter_info, self_delegated_bandwidth } = state.voters[voter];
 
@@ -81,10 +88,34 @@ export async function updateTally() {
         tallies[proposal_name].stats.proxies[vote] += proxies;
         tallies[proposal_name].stats.staked[vote] += staked;
         tallies[proposal_name].stats.votes[vote] += 1;
-    });
+    }
+
     // Finish
     state.tallies = tallies;
-    log({type: "updaters::updateTally", message: "completed updating [state.tallies]"});
+    log({type: "updaters::updateTally", message: "update completed [state.tallies]"});
+}
+
+export async function updateGlobal() {
+    // eosio::global
+    const global = await rpc.get_table_rows({code: "eosio", scope: "eosio", table: "global"});
+    if (global && global.rows.length) {
+        const { total_activated_stake } = global.rows[0];
+        state.global.total_activated_stake = total_activated_stake;
+        log({type: "updaters::updateGlobal", message: "update completed [state.global.total_activated_stake]"});
+    }
+    // eosio.token::stat
+    const currencyStats: CurrencyStats = await rpc.get_currency_stats("eosio.token", "EOS");
+    if (currencyStats && currencyStats.EOS) {
+        const { supply } = currencyStats.EOS;
+        state.global.supply = supply;
+        log({type: "updaters::updateGlobal", message: "update completed [state.global.supply]"});
+    }
+    // eosio
+    const getInfo = await rpc.get_info();
+    if (getInfo) {
+        state.global.block_num = getInfo.head_block_num;
+        log({type: "updaters::updateGlobal", message: "update completed [state.global.block_num]"});
+    }
 }
 
 export function countStaked(self_delegated_bandwidth: SelfDelegatedBandwidth) {
@@ -106,3 +137,7 @@ export function countProxies(voter_info: VoterInfo) {
 export function updateBlockNumber(block_num: number) {
     state.global.block_num = block_num;
 }
+
+(async () => {
+    await updateGlobal();
+})();

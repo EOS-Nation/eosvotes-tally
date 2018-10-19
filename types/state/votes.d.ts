@@ -1,4 +1,6 @@
 import { Vote } from "../eosforumrcpp/vote"
-
-export type Votes = Vote[];
 export { Vote }
+
+export interface Votes {
+    [vote_id: string]: Vote
+}

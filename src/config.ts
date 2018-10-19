@@ -1,6 +1,8 @@
-import dotenv from "dotenv";
 import * as fs from "fs";
 import * as path from "path";
+import fetch from "node-fetch";
+import eosjs from "eosjs";
+import dotenv from "dotenv";
 
 // parse .env file
 const envPath = path.join(__dirname, "..", ".env");
@@ -24,3 +26,9 @@ EOSVOTES_PORT=${EOSVOTES_PORT}
 EOSWS_API_KEY=
 `);
 }
+
+// Typescript issues
+const args: any = { fetch };
+
+// eosjs
+export const rpc = new eosjs.Rpc.JsonRpc(EOSIO_API, args);
