@@ -1,7 +1,7 @@
 import WebSocket from "ws";
 import { parse_table_rows, get_table_rows, get_actions } from "eosws";
 import { updateVote, updateBlockNumber, updateVoter, updateProposal, updateTally } from "./updaters";
-import { EOSWS_API_KEY } from "./config";
+import { DFUSE_IO_API_KEY } from "./config";
 import { log } from "./utils";
 import { Vote, Proposal } from "../types/eosforumrcpp";
 import { Voters } from "../types/eosio";
@@ -14,10 +14,10 @@ import { state } from "./state";
  */
 export default function listener() {
     const origin = "https://api.eosvotes.io2";
-    const ws = new WebSocket(`wss://mainnet.eos.dfuse.io/v1/stream?token=${EOSWS_API_KEY}`, {origin});
+    const ws = new WebSocket(`wss://mainnet.eos.dfuse.io/v1/stream?token=${DFUSE_IO_API_KEY}`, {origin});
 
     ws.onopen = async () => {
-        log({type: "listener", message: "connection open"});
+        log({ref: "listener::open", message: "connection open"});
         const start_block = state.global.block_num;
         if (!start_block) throw new Error("[start_block] is required");
 
@@ -35,7 +35,7 @@ export default function listener() {
         if (voters) {
             const owner = voters.data.data.owner;
             if (state.voters[owner]) {
-                log({type: "listener::eosio::voters", message: voters.data.data.owner});
+                log({ref: "listener::eosio::voters", message: voters.data.data.owner});
                 updateVoter(voters.data.data.owner);
                 updateBlockNumber(voters.data.block_num);
                 updateTally();
@@ -43,14 +43,14 @@ export default function listener() {
         }
         // eosforumrcpp::vote
         if (vote) {
-            log({type: "listener::eosforumrcpp::vote", message: vote.data.data.proposal_name});
+            log({ref: "listener::eosforumrcpp::vote", message: vote.data.data.proposal_name});
             updateVote(vote.data.data);
             updateBlockNumber(vote.data.block_num);
             updateTally();
         }
         // eosforumrcpp::proposal
         if (proposal) {
-            log({type: "listener::eosforumrcpp::proposal", message: proposal.data.data.proposal_name});
+            log({ref: "listener::eosforumrcpp::proposal", message: proposal.data.data.proposal_name});
             updateProposal(proposal.data.data);
             updateBlockNumber(proposal.data.block_num);
             updateTally();
@@ -58,7 +58,7 @@ export default function listener() {
     };
 
     ws.onclose = () => {
-        log({type: "listener", message: "connection closed"});
+        log({ref: "listener", message: "connection closed"});
         listener();
     };
 }

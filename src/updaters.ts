@@ -34,18 +34,18 @@ export async function updateVoter(account_name: string) {
     const account: GetAccount = await rpc.get_account(account_name);
 
     // Asserts
-    if (account === null) return error({error: 404, type: "updaters::updateVoter", message: `[${account_name}] account does not exist`});
+    if (account === null) return error({ref: "updaters::updateVoter", message: `[${account_name}] account does not exist`});
 
     // Handle missing voter_info table
-    if (!account.voter_info) warning({warning: 404, type: "updaters::updateVoter", message: `[${account_name}] account is missing [voter_info]`});
-    if (!account.self_delegated_bandwidth) warning({warning: 404, type: "updaters::updateVoter", message: `[${account_name}] account is missing [self_delegated_bandwidth]`});
+    if (!account.voter_info) warning({ref: "updaters::updateVoter", message: `[${account_name}] account is missing [voter_info]`});
+    if (!account.self_delegated_bandwidth) warning({ref: "updaters::updateVoter", message: `[${account_name}] account is missing [self_delegated_bandwidth]`});
 
     // Update voter
     state.voters[account_name] = {
         self_delegated_bandwidth: account.self_delegated_bandwidth,
         voter_info: account.voter_info,
     };
-    log({type: "updaters::updateVoter", message: `updated voter_info for [${account_name}]`});
+    log({ref: "updaters::updateVoter", message: `updated voter_info for [${account_name}]`});
 }
 
 /**
@@ -71,9 +71,9 @@ export async function updateTally() {
         const { voter_info, self_delegated_bandwidth } = state.voters[voter];
 
         // Asserts
-        if (!tallies[proposal_name]) return error({error: 500, type: "updaters::updateTally", message: `[${proposal_name}] proposal not found in [tallies]`});
-        if (!voter_info) warning({warning: 404, type: "updaters::updateTally", message: `[${voter}] is missing [voter_info]`});
-        if (!self_delegated_bandwidth) warning({warning: 404, type: "updaters::updateTally", message: `[${voter}] is missing [self_delegated_bandwidth]`});
+        if (!tallies[proposal_name]) return error({ref: "updaters::updateTally", message: `[${proposal_name}] proposal not found in [tallies]`});
+        if (!voter_info) warning({ref: "updaters::updateTally", message: `[${voter}] is missing [voter_info]`});
+        if (!self_delegated_bandwidth) warning({ref: "updaters::updateTally", message: `[${voter}] is missing [self_delegated_bandwidth]`});
 
         // Update tallies to zero if no records were found
         if (!tallies[proposal_name].stats.staked[vote]) tallies[proposal_name].stats.staked[vote] = 0;
@@ -92,7 +92,7 @@ export async function updateTally() {
 
     // Finish
     state.tallies = tallies;
-    log({type: "updaters::updateTally", message: "update completed [state.tallies]"});
+    log({ref: "updaters::updateTally", message: "update completed [state.tallies]"});
 }
 
 export async function updateGlobal() {
@@ -101,20 +101,20 @@ export async function updateGlobal() {
     if (global && global.rows.length) {
         const { total_activated_stake } = global.rows[0];
         state.global.total_activated_stake = total_activated_stake;
-        log({type: "updaters::updateGlobal", message: "update completed [state.global.total_activated_stake]"});
+        log({ref: "updaters::updateGlobal", message: "update completed [state.global.total_activated_stake]"});
     }
     // eosio.token::stat
     const currencyStats: CurrencyStats = await rpc.get_currency_stats("eosio.token", "EOS");
     if (currencyStats && currencyStats.EOS) {
         const { supply } = currencyStats.EOS;
         state.global.supply = supply;
-        log({type: "updaters::updateGlobal", message: "update completed [state.global.supply]"});
+        log({ref: "updaters::updateGlobal", message: "update completed [state.global.supply]"});
     }
     // eosio
     const getInfo = await rpc.get_info();
     if (getInfo) {
         state.global.block_num = getInfo.head_block_num;
-        log({type: "updaters::updateGlobal", message: "update completed [state.global.block_num]"});
+        log({ref: "updaters::updateGlobal", message: "update completed [state.global.block_num]"});
     }
 }
 

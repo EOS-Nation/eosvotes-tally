@@ -32,7 +32,7 @@ export default function server() {
         app.get("/tallies/:proposal_name", (req, res) => res.json(state.tallies[req.params.proposal_name] || {}));
 
         app.listen(config.EOSVOTES_PORT, () => {
-            log({type: "server", message: `api.eosvotes.io listening on port ${config.EOSVOTES_PORT}!`});
+            log({ref: "server::listen", message: `api.eosvotes.io listening on port ${config.EOSVOTES_PORT}!`});
             return resolve(true);
         });
     });

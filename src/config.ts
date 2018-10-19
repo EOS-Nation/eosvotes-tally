@@ -15,15 +15,19 @@ export const EOSIO_API = process.env.EOSIO_API || "https://api.eosn.io";
 export const EOSVOTES_PORT = process.env.EOSVOTES_PORT || 3000;
 
 // EOS Votes configurations
-export const EOSWS_API_KEY = process.env.EOSWS_API_KEY;
-if (!EOSWS_API_KEY) throw new Error("EOSWS_API_KEY is missing in `.env`");
+export const DFUSE_IO_API_KEY = process.env.DFUSE_IO_API_KEY;
+if (!DFUSE_IO_API_KEY) throw new Error("DFUSE_IO_API_KEY is missing in `.env`");
+
+// Optional Logging configs
+export const LOGGING = process.env.LOGGING || "error,log,warning";
 
 // Save .env if does not exist
 if (!fs.existsSync(envPath)) {
     fs.writeFileSync(envPath, `# EOSIO
-EOSIO_API=${EOSIO_API}
 EOSVOTES_PORT=${EOSVOTES_PORT}
-EOSWS_API_KEY=
+EOSVOTES_LOGGING="log,warning,error"
+EOSIO_API=${EOSIO_API}
+DFUSE_IO_API_KEY=
 `);
 }
 

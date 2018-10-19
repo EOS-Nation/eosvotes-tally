@@ -28,7 +28,7 @@ async function getVotes() {
         if (more === false) { break; }
     }
     // Update votes state
-    log({type: "boot::updateVotes", message: `votes: ${Object.keys(votes).length}`});
+    log({ref: "boot::updateVotes", message: `votes: ${Object.keys(votes).length}`});
     state.votes = votes;
 }
 
@@ -43,7 +43,7 @@ async function getVoters() {
         if (!voters[voter]) await updateVoter(voter);
     }
     // Update voters state
-    log({type: "boot::updateVoters", message: `voters: ${Object.keys(state.voters).length}`});
+    log({ref: "boot::updateVoters", message: `voters: ${Object.keys(state.voters).length}`});
 }
 
 /**
@@ -67,12 +67,12 @@ async function getProposals() {
             proposals[row.proposal_name] = row;
         }
         // TO-DO
-        if (more === true) error({error: 500, type: "boot::getProposals", message: `"TO-DO: [lower_bound] not implemented yet"`});
+        if (more === true) error({ref: "boot::getProposals", message: `"TO-DO: [lower_bound] not implemented yet"`});
 
         // Stop loop
         if (more === false) break;
     }
-    log({type: "boot::updateProposals", message: `proposals: ${Object.keys(proposals).length}`});
+    log({ref: "boot::updateProposals", message: `proposals: ${Object.keys(proposals).length}`});
     state.proposals = proposals;
 }
 

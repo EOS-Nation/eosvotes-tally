@@ -3,7 +3,7 @@ import { updateGlobal } from "./updaters";
 import { log } from "./utils";
 
 export default function scheduler() {
-    log({type: "scheduler", message: "scheduler activated"});
+    log({ref: "scheduler", message: "scheduler activated which updates [state.global]"});
 
     // Update globals every 5 minutes
     const updateInfo = new CronJob("*/5 * * * *", async () => {

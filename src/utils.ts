@@ -129,24 +129,23 @@ export function encodeName(name: string, littleEndian = true) {
 
     return ulName.toString();
 }
-type Object = {[key: string]: any};
+interface Message {
+    ref: string,
+    message: string
+};
 
-function formatMessage(message: Object): string {
-    return `${new Date().toUTCString()}\t${JSON.stringify(message) + "\n"}`;
+function formatMessage(message: Message, type: string): string {
+    return `${new Date().toUTCString()}\t${type}\n${JSON.stringify(message) + "\n"}`;
 }
 
-export function log(message: Object) {
-    process.stdout.write(formatMessage(message));
+export function log(message: Message) {
+    process.stdout.write(formatMessage(message, "log"));
 }
 
-export function success(message: Object) {
-    process.stdout.write(chalk.green(formatMessage(message)));
+export function warning(message: Message) {
+    process.stdout.write(chalk.yellow(formatMessage(message, "warning")));
 }
 
-export function warning(message: Object) {
-    process.stdout.write(chalk.yellow(formatMessage(message)));
-}
-
-export function error(message: Object) {
-    process.stderr.write(chalk.red(formatMessage(message)));
+export function error(message: Message) {
+    process.stderr.write(chalk.red(formatMessage(message, "error")));
 }
