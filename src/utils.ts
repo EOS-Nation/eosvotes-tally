@@ -1,5 +1,6 @@
 import Long from "long";
 import chalk from "chalk";
+import { EOSVOTES_LOGGING } from "./config";
 
 /**
  * Parse Token String
@@ -129,23 +130,24 @@ export function encodeName(name: string, littleEndian = true) {
 
     return ulName.toString();
 }
+
 interface Message {
     ref: string,
     message: string
 };
 
 function formatMessage(message: Message, type: string): string {
-    return `${new Date().toUTCString()}\t${type}\n${JSON.stringify(message) + "\n"}`;
+    return `${new Date().toUTCString()}\t${type}\t${message.ref}\t${message.message}\n`;
 }
 
 export function log(message: Message) {
-    process.stdout.write(formatMessage(message, "log"));
+    if (EOSVOTES_LOGGING.indexOf("log") !== -1) process.stdout.write(formatMessage(message, "log"));
 }
 
 export function warning(message: Message) {
-    process.stdout.write(chalk.yellow(formatMessage(message, "warning")));
+    if (EOSVOTES_LOGGING.indexOf("warning") !== -1) process.stdout.write(chalk.yellow(formatMessage(message, "warning")));
 }
 
 export function error(message: Message) {
-    process.stderr.write(chalk.red(formatMessage(message, "error")));
+    if (EOSVOTES_LOGGING.indexOf("error") !== -1) process.stderr.write(chalk.red(formatMessage(message, "error")));
 }

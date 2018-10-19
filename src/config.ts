@@ -19,7 +19,7 @@ export const DFUSE_IO_API_KEY = process.env.DFUSE_IO_API_KEY;
 if (!DFUSE_IO_API_KEY) throw new Error("DFUSE_IO_API_KEY is missing in `.env`");
 
 // Optional Logging configs
-export const LOGGING = process.env.LOGGING || "error,log,warning";
+export const EOSVOTES_LOGGING = (process.env.EOSVOTES_LOGGING || "").split(",") || ["error", "log", "warning"];
 
 // Save .env if does not exist
 if (!fs.existsSync(envPath)) {
