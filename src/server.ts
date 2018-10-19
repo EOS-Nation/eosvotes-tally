@@ -28,7 +28,8 @@ export default function server() {
         app.get("/global(.json)?$", (req, res) => res.json(state.global));
 
         // Scoped API
-        app.get("/voter/:voter", (req, res) => res.json(state.voters[req.params.voter] || {}));
+        app.get("/voters/:voter", (req, res) => res.json(state.voters[req.params.voter] || {}));
+        app.get("/proposals/:proposal_name", (req, res) => res.json(state.proposals[req.params.proposal_name] || {}));
         app.get("/tallies/:proposal_name", (req, res) => res.json(state.tallies[req.params.proposal_name] || {}));
 
         app.listen(config.EOSVOTES_PORT, () => {
