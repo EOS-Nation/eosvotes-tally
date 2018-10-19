@@ -16,7 +16,7 @@ export const EOSVOTES_PORT = process.env.EOSVOTES_PORT || 3000;
 
 // EOS Votes configurations
 export const DFUSE_IO_API_KEY = process.env.DFUSE_IO_API_KEY;
-if (!DFUSE_IO_API_KEY) throw new Error("DFUSE_IO_API_KEY is missing in `.env`");
+if (!DFUSE_IO_API_KEY) console.log("DFUSE_IO_API_KEY is missing in `.env`");
 
 // Optional Logging configs
 export const EOSVOTES_LOGGING = (process.env.EOSVOTES_LOGGING || "").split(",") || ["error", "log", "warning"];
