@@ -18,6 +18,8 @@ $ npm install
 $ npm start
 ```
 
+Open your favorite browser to [localhost:3000](http://localhost:3000)
+
 ## Full API
 
 - [https://api.eosvotes.io](https://api.eosvotes.io)
