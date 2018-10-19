@@ -1,5 +1,6 @@
 # Typescript
 *.js
+!ecosystem.config.js
 
 # Logs
 logs
