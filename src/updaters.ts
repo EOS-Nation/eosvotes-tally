@@ -68,10 +68,18 @@ export async function updateTally() {
     for (const vote_id of Object.keys(state.votes)) {
         const voteRow = state.votes[vote_id];
         const { voter, proposal_name, vote } = voteRow;
-        const { voter_info, self_delegated_bandwidth } = state.voters[voter];
+        const account = state.voters[voter];
+        if (!account) {
+            error({ref: "updaters::updateTally", message: `[${voter}] voter does not exist in [state.voters]`});
+            continue;
+        }
+        const { voter_info, self_delegated_bandwidth } = account;
 
         // Asserts
-        if (!tallies[proposal_name]) return error({ref: "updaters::updateTally", message: `[${proposal_name}] proposal not found in [tallies]`});
+        if (!tallies[proposal_name]) {
+            error({ref: "updaters::updateTally", message: `[${proposal_name}] proposal not found in [tallies]`});
+            continue;
+        }
         if (!voter_info) warning({ref: "updaters::updateTally", message: `[${voter}] is missing [voter_info]`});
         if (!self_delegated_bandwidth) warning({ref: "updaters::updateTally", message: `[${voter}] is missing [self_delegated_bandwidth]`});
 
