@@ -2,7 +2,9 @@
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/EOS-Nation/eosvotes-tally-eosws/master/LICENSE)
 
-EOS Votes tally is leveraging [dfuse.io](https://dfuse.io), quickly retrieve all proposals and total votes tally from [`eosforumrcpp`](https://github.com/eoscanada/eosio.forum).
+EOS Votes tally quickly retrieves all proposals and votes from [`eosforumrcpp`](https://github.com/eoscanada/eosio.forum) and generate a simple to understand voting tally statistics in JSON format.
+
+> Leveraging [dfuse.io](https://dfuse.io) under the hood to easily handle table deltas via their [WebSocket API](https://github.com/dfuse-io/eosws-js).
 
 ## Install
 
