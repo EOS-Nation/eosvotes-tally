@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import { log } from "./utils";
 import { state } from "./state";
 import * as config from "./config";
@@ -10,14 +11,14 @@ export default function server() {
     return new Promise((resolve, reject) => {
         // Expose State via simple HTTP express app
         const app = express();
+        app.use(cors());
         app.set("json spaces", 2);
 
-        // Allow CORS
-        app.use((req, res, next) => {
-            // res.header("Access-Control-Allow-Origin", "*");
-            res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-            next();
-        });
+        // // Allow CORS
+        // app.use((req, res, next) => {
+        //     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        //     next();
+        // });
 
         // Full API
         app.get("/", (req, res) => res.json(state));

@@ -11,6 +11,7 @@
     "author": "Denis Carriere <denis@eosnation.io>",
     "license": "MIT",
     "devDependencies": {
+        "@types/cors": "*",
         "@types/cron": "*",
         "@types/dotenv": "*",
         "@types/express": "*",
@@ -22,6 +23,7 @@
     },
     "dependencies": {
         "chalk": "*",
+        "cors": "*",
         "cron": "*",
         "dotenv": "*",
         "eosjs": "20.0.0-beta1",
