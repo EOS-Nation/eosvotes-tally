@@ -14,12 +14,6 @@ export default function server() {
         app.use(cors());
         app.set("json spaces", 2);
 
-        // // Allow CORS
-        // app.use((req, res, next) => {
-        //     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-        //     next();
-        // });
-
         // Full API
         app.get("/", (req, res) => res.json(state));
         app.get("/tallies(.json)?$", (req, res) => res.json(state.tallies));
