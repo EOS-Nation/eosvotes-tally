@@ -1,8 +1,9 @@
 import WebSocket from "ws";
-import { parse_table_rows, get_table_rows } from "eosws";
+import { parse_table_rows, get_table_rows, get_actions, parse_actions } from "eosws";
 import { updateVote, updateBlockNumber, updateVoter, updateProposal, updateTally, updateSelfDelegatedBandwidth, updateVoterInfo } from "./updaters";
 import { DFUSE_IO_API_KEY } from "./config";
-import { log } from "./utils";
+import { log, error } from "./utils";
+import { getVotes } from "./boot";
 import { Vote, Proposal } from "../types/eosforumrcpp";
 import { Voters, Delband } from "../types/eosio";
 import { state } from "./state";
@@ -13,7 +14,7 @@ import { state } from "./state";
  * @returns {void}
  */
 export default function listener() {
-    const origin = "https://api.eosvotes.io2";
+    const origin = "https://api.eosvotes.io";
     const ws = new WebSocket(`wss://mainnet.eos.dfuse.io/v1/stream?token=${DFUSE_IO_API_KEY}`, {origin});
 
     ws.onopen = async () => {
@@ -21,21 +22,29 @@ export default function listener() {
         const start_block = state.global.block_num;
         if (!start_block) throw new Error("[start_block] is required");
 
-        ws.send(get_table_rows("eosio", "eosio", "voters", { req_id: "eosio::voters", start_block }));
-        ws.send(get_table_rows("eosforumrcpp", "eosforumrcpp", "vote", { req_id: "eosforumrcpp::vote", start_block }));
-        ws.send(get_table_rows("eosforumrcpp", "eosforumrcpp", "proposal", { req_id: "eosforumrcpp::proposal", start_block }));
+        // Listen on Table Rows
+        ws.send(get_table_rows({code: "eosio", scope: "eosio", table_name: "voters"}, { req_id: "eosio::voters", start_block }));
+        ws.send(get_table_rows({code: "eosforumrcpp", scope: "eosforumrcpp", table_name: "vote"}, { req_id: "eosforumrcpp::vote", start_block }));
+        ws.send(get_table_rows({code: "eosforumrcpp", scope: "eosforumrcpp", table_name: "proposal"}, { req_id: "eosforumrcpp::proposal", start_block }));
+
+        // Listen on Actions
+        ws.send(get_actions({account: "eosforumrcpp", action_name: "unvote"}, { req_id: "eosforumrcpp::unvote", start_block }));
 
         // Listen on Self Delegated Bandwidth of all users
         for (const account_name of Object.keys(state.voters)) {
-            ws.send(get_table_rows("eosio", account_name, "delband", { req_id: "eosio::delband", start_block }));
+            ws.send(get_table_rows({code: "eosio", scope: account_name, table_name: "delband"}, { req_id: "eosio::delband", start_block }));
         }
     };
 
     ws.onmessage = async (message) => {
+        const messageJSON = JSON.parse(message.data.toString());
+        if (messageJSON.type === "error") error({ref: "listener", message: JSON.stringify(messageJSON.data)});
+
         const delband = parse_table_rows<Delband>(message.data, "eosio::delband");
         const voters = parse_table_rows<Voters>(message.data, "eosio::voters");
         const vote = parse_table_rows<Vote>(message.data, "eosforumrcpp::vote");
         const proposal = parse_table_rows<Proposal>(message.data, "eosforumrcpp::proposal");
+        const unvote = parse_actions<any>(message.data, "eosforumrcpp::unvote");
 
         // eosio::voters
         if (voters) {
@@ -62,13 +71,13 @@ export default function listener() {
             }
         }
         // eosforumrcpp::vote
-        if (vote) {
+        if (vote && vote.data.data) {
             const { voter, proposal_name } = vote.data.data;
             log({ref: "listener::eosforumrcpp::vote", message: `${voter} voted for ${proposal_name}`});
 
             // Register new accounts to `delband` websocket
             if (!state.voters[voter]) {
-                ws.send(get_table_rows("eosio", voter, "delband", { req_id: "eosio::delband" }));
+                ws.send(get_table_rows({code: "eosio", scope: voter, table_name: "delband"}, { req_id: "eosio::delband" }));
                 await updateVoter(voter);
             }
             updateVote(vote.data.data);
@@ -81,6 +90,12 @@ export default function listener() {
             updateProposal(proposal.data.data);
             updateTally();
             updateBlockNumber(proposal.data.block_num);
+        }
+
+        // eosforumcpp::unvote
+        if (unvote) {
+            await getVotes();
+            updateTally();
         }
     };
 

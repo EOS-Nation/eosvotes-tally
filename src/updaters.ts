@@ -1,4 +1,3 @@
-// import { BlockInfo, Delegatebw, Payload, State, Tally, TallySummary, Vote } from "../types";
 import { Vote, Proposal } from "../types/eosforumrcpp";
 import { GetAccount } from "../types/eosio";
 import { Tallies } from "../types/state";

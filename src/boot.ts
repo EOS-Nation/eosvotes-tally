@@ -7,7 +7,7 @@ import { rpc } from "./config";
 /**
  * Get all votes from `eosforumrcpp`
  */
-async function getVotes() {
+export async function getVotes() {
     // Params
     const limit = 500;
     let lower_bound: string = "0";
@@ -35,7 +35,7 @@ async function getVotes() {
 /**
  * Update voters
  */
-async function getVoters() {
+export async function getVoters() {
     const voters: Voters = {};
 
     for (const vote_id of Object.keys(state.votes)) {
@@ -49,7 +49,7 @@ async function getVoters() {
 /**
  * Get all proposals from `eosforumrcpp`
  */
-async function getProposals() {
+export async function getProposals() {
     // Params
     const limit = 99999;
     let lower_bound: string = "0";
