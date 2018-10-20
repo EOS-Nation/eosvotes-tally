@@ -5,24 +5,47 @@ import { Tallies } from "../types/state";
 import { rpc } from "./config";
 import { state, defaultStats } from "./state";
 import { log, warning, error, calculateEosFromVotes, parseTokenString } from "./utils";
-import { SelfDelegatedBandwidth, VoterInfo } from "../types/eosio";
+import { SelfDelegatedBandwidth, VoterInfo, Delband } from "../types/eosio";
 import { CurrencyStats } from "../types/eosio.token";
 
 /**
  * Vote - update `state.votes` & fetches account `voter_info`
  */
-export async function updateVote(vote: Vote) {
+export function updateVote(vote: Vote) {
+    log({ref: "updaters::updateVote", message: `${vote.voter} voted for ${vote.proposal_name} using ${vote.vote}`});
     state.votes[vote.id] = vote;
-    await updateVoter(vote.voter);
-    await updateTally();
 }
 
 /**
  * Proposal - update `state.proposal`
  */
-export async function updateProposal(proposal: Proposal) {
+export function updateProposal(proposal: Proposal) {
+    log({ref: "updaters::updateProposal", message: `${proposal.proposal_name} updated`});
     state.proposals[proposal.proposal_name] = proposal;
-    await updateTally();
+}
+
+/**
+ * Update `self_delegated_bandwidth`
+ */
+export function updateSelfDelegatedBandwidth(account_name: string, self_delegated_bandwidth: Delband) {
+    log({ref: "updaters::updateSelfDelegatedBandwidth", message: `${account_name} updated`});
+    state.voters[account_name].self_delegated_bandwidth = self_delegated_bandwidth;
+}
+
+/**
+ * Update `voter_info`
+ */
+export function updateVoterInfo(account_name: string, voter_info: VoterInfo) {
+    log({ref: "updaters::updateVoterInfo", message: `${account_name} updated`});
+    state.voters[account_name].voter_info = voter_info;
+}
+
+/**
+ * Update Block Number
+ */
+export function updateBlockNumber(block_num: number) {
+    log({ref: "updaters::updateBlockNumber", message: `${block_num} updated`});
+    state.global.block_num = block_num;
 }
 
 /**
@@ -143,14 +166,3 @@ export function countProxies(voter_info: VoterInfo) {
     if (voter_info.is_proxy) return calculateEosFromVotes(voter_info.proxied_vote_weight);
     return calculateEosFromVotes(voter_info.last_vote_weight);
 }
-
-/**
- * Update Block Number
- */
-export function updateBlockNumber(block_num: number) {
-    state.global.block_num = block_num;
-}
-
-(async () => {
-    await updateGlobal();
-})();
