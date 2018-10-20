@@ -8,7 +8,7 @@ import { Voters } from "../types/eosio";
 import { state } from "./state";
 
 /**
- * Listen to table deltas via EOS Canada's WebSocket API
+ * Listens to EOSIO table rows via dfuse.io WebSocket API
  *
  * @returns {void}
  */
