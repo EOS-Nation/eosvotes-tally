@@ -80,6 +80,11 @@ export async function updateTally() {
         if (!tallies[proposal_name].stats.proxies[vote]) tallies[proposal_name].stats.proxies[vote] = 0;
         if (!tallies[proposal_name].stats.votes[vote]) tallies[proposal_name].stats.votes[vote] = 0;
 
+        // Zero totals
+        if (!tallies[proposal_name].stats.staked.total) tallies[proposal_name].stats.staked.total = 0;
+        if (!tallies[proposal_name].stats.proxies.total) tallies[proposal_name].stats.proxies.total = 0;
+        if (!tallies[proposal_name].stats.votes.total) tallies[proposal_name].stats.votes.total = 0;
+
         // Count voting weights
         const staked = countStaked(self_delegated_bandwidth);
         const proxies = countProxies(voter_info);
