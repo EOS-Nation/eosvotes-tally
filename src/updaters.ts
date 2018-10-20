@@ -88,6 +88,11 @@ export async function updateTally() {
         tallies[proposal_name].stats.proxies[vote] += proxies;
         tallies[proposal_name].stats.staked[vote] += staked;
         tallies[proposal_name].stats.votes[vote] += 1;
+
+        // Update totals
+        tallies[proposal_name].stats.proxies.total += proxies;
+        tallies[proposal_name].stats.staked.total += staked;
+        tallies[proposal_name].stats.votes.total += 1;
     }
 
     // Finish
