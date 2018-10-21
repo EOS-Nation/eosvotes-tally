@@ -11,7 +11,7 @@ import { CurrencyStats } from "../types/eosio.token";
  * Vote - update `state.votes` & fetches account `voter_info`
  */
 export function updateVote(vote: Vote) {
-    log({ref: "updaters::updateVote", message: JSON.stringify(vote) });
+    log({ref: "updaters::updateVote", message: `${vote.voter} voted for ${vote.proposal_name} using ${vote.vote}`});
     state.votes[vote.id] = vote;
 }
 
@@ -19,7 +19,7 @@ export function updateVote(vote: Vote) {
  * Proposal - update `state.proposal`
  */
 export function updateProposal(proposal: Proposal) {
-    log({ref: "updaters::updateProposal", message: JSON.stringify(proposal) });
+    log({ref: "updaters::updateProposal", message: `${proposal.proposal_name} updated`});
     state.proposals[proposal.proposal_name] = proposal;
 }
 
@@ -27,7 +27,7 @@ export function updateProposal(proposal: Proposal) {
  * Update `self_delegated_bandwidth`
  */
 export function updateSelfDelegatedBandwidth(account_name: string, self_delegated_bandwidth: Delband) {
-    log({ref: "updaters::updateSelfDelegatedBandwidth", message: JSON.stringify({account_name, self_delegated_bandwidth}) });
+    log({ref: "updaters::updateSelfDelegatedBandwidth", message: `${account_name} updated`});
     state.voters[account_name].self_delegated_bandwidth = self_delegated_bandwidth;
 }
 
@@ -35,7 +35,7 @@ export function updateSelfDelegatedBandwidth(account_name: string, self_delegate
  * Update `voter_info`
  */
 export function updateVoterInfo(account_name: string, voter_info: VoterInfo) {
-    log({ref: "updaters::updateVoterInfo", message: JSON.stringify({account_name, voter_info}) });
+    log({ref: "updaters::updateVoterInfo", message: `${account_name} updated`});
     state.voters[account_name].voter_info = voter_info;
 }
 
@@ -43,7 +43,7 @@ export function updateVoterInfo(account_name: string, voter_info: VoterInfo) {
  * Update Block Number
  */
 export function updateBlockNumber(block_num: number) {
-    log({ref: "updaters::updateBlockNumber", message: JSON.stringify({block_num}) });
+    log({ref: "updaters::updateBlockNumber", message: `${block_num} updated`});
     state.global.block_num = block_num;
 }
 
@@ -67,7 +67,7 @@ export async function updateVoter(account_name: string) {
         self_delegated_bandwidth: account.self_delegated_bandwidth,
         voter_info: account.voter_info,
     };
-    log({ref: "updaters::updateVoter", message: JSON.stringify({account_name}) });
+    log({ref: "updaters::updateVoter", message: `updated voter_info for [${account_name}]`});
 }
 
 /**
