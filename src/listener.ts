@@ -48,52 +48,56 @@ export default function listener() {
 
         // eosio::voters
         if (voters) {
-            const voter_info = voters.data.data;
-            const { owner } = voter_info;
+            const { data, block_num } = voters.data;
+            const { owner } = data;
 
             if (state.voters[owner]) {
-                log({ref: "listener::eosio::voters", message: owner});
-                updateVoterInfo(owner, voter_info);
-                updateBlockNumber(voters.data.block_num);
+                log({ref: "listener::eosio::voters", message: JSON.stringify(data)});
+                updateVoterInfo(owner, data);
+                updateBlockNumber(block_num);
                 updateTally();
             }
         }
         // eosio::delband
         if (delband) {
-            const self_delegated_bandwidth = delband.data.data;
-            const { from } = self_delegated_bandwidth;
+            const { data, block_num } = delband.data;
+            const { from } = data;
 
             if (state.voters[from]) {
-                log({ref: "listener::eosio::delband", message: from});
-                updateSelfDelegatedBandwidth(from, self_delegated_bandwidth);
-                updateBlockNumber(delband.data.block_num);
+                log({ref: "listener::eosio::delband", message: JSON.stringify(data)});
+                updateSelfDelegatedBandwidth(from, data);
+                updateBlockNumber(block_num);
                 updateTally();
             }
         }
         // eosforumrcpp::vote
         if (vote && vote.data.data) {
-            const { voter, proposal_name } = vote.data.data;
-            log({ref: "listener::eosforumrcpp::vote", message: `${voter} voted for ${proposal_name}`});
+            const { data, block_num } = vote.data;
+            const { voter } = data;
+
+            log({ref: "listener::eosforumrcpp::vote", message: JSON.stringify(data)});
 
             // Register new accounts to `delband` websocket
             if (!state.voters[voter]) {
                 ws.send(get_table_rows({code: "eosio", scope: voter, table_name: "delband"}, { req_id: "eosio::delband" }));
                 await updateVoter(voter);
             }
-            updateVote(vote.data.data);
-            updateBlockNumber(vote.data.block_num);
+            updateVote(data);
+            updateBlockNumber(block_num);
             updateTally();
         }
         // eosforumrcpp::proposal
         if (proposal) {
-            log({ref: "listener::eosforumrcpp::proposal", message: proposal.data.data.proposal_name});
-            updateProposal(proposal.data.data);
+            const { data, block_num } = proposal.data;
+            log({ref: "listener::eosforumrcpp::proposal", message: JSON.stringify(data)});
+            updateProposal(data);
             updateTally();
-            updateBlockNumber(proposal.data.block_num);
+            updateBlockNumber(block_num);
         }
 
         // eosforumcpp::unvote
         if (unvote) {
+            log({ref: "listener::eosforumrcpp::unvote", message: JSON.stringify(unvote.data.trace.act.data)});
             await getVotes();
             updateTally();
         }
