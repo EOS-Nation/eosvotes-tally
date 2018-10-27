@@ -1,7 +1,5 @@
 import Long from "long";
 import chalk from "chalk";
-import fetch from "node-fetch";
-import qs from "querystring";
 import { EOSVOTES_LOGGING } from "./config";
 
 /**
@@ -131,27 +129,6 @@ export function encodeName(name: string, littleEndian = true) {
     const ulName = Long.fromString(leHex, true, 16).toString();
 
     return ulName.toString();
-}
-
-/**
- * Get Snapshot
- */
-export async function getSnapshot(options: {
-    block_num: number,
-    account: string,
-    scope: string,
-    table: string,
-    json?: boolean,
-    key_type?: string,
-    with_block_num?: boolean,
-}) {
-    if (options.json === undefined) { options.json = true; }
-    if (options.key_type === undefined) { options.key_type = "intstr"; }
-    if (options.with_block_num === undefined && options.block_num) { options.with_block_num = true; }
-
-    const url = `http://35.203.38.11/v1/read?${qs.stringify(options)}`;
-    const data = await fetch(url);
-    return await data.json();
 }
 
 interface Message {

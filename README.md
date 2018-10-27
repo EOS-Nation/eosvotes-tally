@@ -22,18 +22,25 @@ $ npm start
 
 Open your favorite browser to [localhost:3000](http://localhost:3000)
 
-## Full API
+## Main API
 
 - [https://api.eosvotes.io](https://api.eosvotes.io)
+
+## Data API
+
 - [https://api.eosvotes.io/tallies](https://api.eosvotes.io/tallies)
 - [https://api.eosvotes.io/proposals](https://api.eosvotes.io/proposals)
 - [https://api.eosvotes.io/votes](https://api.eosvotes.io/voters)
 - [https://api.eosvotes.io/voters](https://api.eosvotes.io/voters)
 - [https://api.eosvotes.io/global](https://api.eosvotes.io/global)
 
-
 ## Scoped API
 
 - `https://api.eosvotes.io/tallies/{proposal_name}`
 - `https://api.eosvotes.io/proposal/{proposal_name}`
 - `https://api.eosvotes.io/voters/{voter}`
+
+## Snapshots API (not implemented)
+
+- `https://api.eosvotes.io/snapshots/eosio/voters/{block_number}`
+- `https://api.eosvotes.io/snapshots/eosforumrcpp/vote/{block_number}`

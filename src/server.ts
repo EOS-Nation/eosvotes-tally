@@ -14,24 +14,24 @@ export default function server() {
         app.use(cors());
         app.set("json spaces", 2);
 
-        // Full API
+        // Main API
         app.get("/", (req, res) => res.json(state.tallies));
 
         // Data API
-        app.get("/data/global(.json)?$", (req, res) => res.json(state.global));
-        app.get("/data/tallies(.json)?$", (req, res) => res.json(state.tallies));
-        app.get("/data/proposals(.json)?$", (req, res) => res.json(state.proposals));
-        app.get("/data/votes(.json)?$", (req, res) => res.json(state.votes));
-        app.get("/data/voters(.json)?$", (req, res) => res.json(state.voters));
+        app.get("/global(.json)?$", (req, res) => res.json(state.global));
+        app.get("/tallies(.json)?$", (req, res) => res.json(state.tallies));
+        app.get("/proposals(.json)?$", (req, res) => res.json(state.proposals));
+        app.get("/votes(.json)?$", (req, res) => res.json(state.votes));
+        app.get("/voters(.json)?$", (req, res) => res.json(state.voters));
 
         // Scoped Data API
-        app.get("/data/voters/:voter", (req, res) => res.json(state.voters[req.params.voter] || {}));
-        app.get("/data/proposals/:proposal_name", (req, res) => res.json(state.proposals[req.params.proposal_name] || {}));
-        app.get("/data/tallies/:proposal_name", (req, res) => res.json(state.tallies[req.params.proposal_name] || {}));
+        app.get("/voters/:voter", (req, res) => res.json(state.voters[req.params.voter] || {}));
+        app.get("/proposals/:proposal_name", (req, res) => res.json(state.proposals[req.params.proposal_name] || {}));
+        app.get("/tallies/:proposal_name", (req, res) => res.json(state.tallies[req.params.proposal_name] || {}));
 
         // Snapshot/Historical Data API
-        app.get("/snapshots/eosio/voters/:block_number(.json)?$", (req, res) => res.json(state.global));
-        app.get("/snapshots/eosforumrcpp/voter/:block_number(.json)?$", (req, res) => res.json(state.global));
+        app.get("/snapshots/eosio/voters/:block_number(.json)?$", (req, res) => res.json({foo: "bar"}));
+        app.get("/snapshots/eosforumrcpp/voter/:block_number(.json)?$", (req, res) => res.json({foo: "bar"}));
 
         app.listen(config.EOSVOTES_PORT, () => {
             log({ref: "server::listen", message: `api.eosvotes.io listening on port ${config.EOSVOTES_PORT}!`});

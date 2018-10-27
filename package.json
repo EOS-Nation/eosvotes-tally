@@ -29,6 +29,7 @@
         "eosjs": "20.0.0-beta1",
         "eosws": "*",
         "express": "*",
+        "load-json-file": "*",
         "long": "*",
         "node-fetch": "*",
         "write-json-file": "*",

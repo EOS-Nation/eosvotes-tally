@@ -2,6 +2,9 @@
 *.js
 !ecosystem.config.js
 
+# Tally
+snapshots/*
+
 # Logs
 logs
 *.log
