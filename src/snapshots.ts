@@ -1,4 +1,5 @@
 import qs from "querystring";
+import os from "os";
 import path from "path";
 import fetch from "node-fetch";
 import * as fs from "fs";
@@ -7,9 +8,7 @@ import { Vote } from "../types/eosforumrcpp";
 import { log, warning } from "./utils";
 import { Userres } from "../types/eosio";
 import { Snapshot } from "../types/snapshot";
-
-// Snapshot folder structure
-const baseDir = path.join(__dirname, "..", "snapshots");
+import * as json2csv from "json2csv";
 
 /**
  * Get Snapshot
@@ -42,7 +41,7 @@ export async function fetchUserresSnapshot(block_num: number, votes: Snapshot<Vo
     };
     for (const row of votes.rows) {
         const {voter} = row.json;
-        const snapshot = await fetchSnapshot<Userres>(block_num, "eosio", voter, "userres", false);
+        const snapshot = await fetchSnapshot<Userres>(block_num, "eosio", voter, "userres");
         if (snapshot && snapshot.rows.length) userres.rows.push(snapshot.rows[0]);
     }
     return userres;
@@ -51,20 +50,34 @@ export async function fetchUserresSnapshot(block_num: number, votes: Snapshot<Vo
 /**
  * Fetch Snapshot
  */
-export async function fetchSnapshot<T>(block_num: number, account: string, scope: string, table: string, save = true) {
-    const filepath = path.join(baseDir, account, table, `${block_num}.json`);
-    const latestPath = path.join(baseDir, account, table, "latest.json");
+export async function fetchSnapshot<T>(block_num: number, account: string, scope: string, table: string, options: {
+    save?: boolean,
+    csv?: boolean,
+} = {}) {
+    // Snapshot folder structure
+    const baseDir = path.join(__dirname, "..", "snapshots", account, scope, table) + path.sep;
+    const filepath = baseDir + `${block_num}.json`;
+
+    // Names
     const ref = "snapshots::fetchSnapshot";
     const name = `snapshot ${account}::${scope}::${table} ${block_num}`;
 
     if (!fs.existsSync(filepath)) {
         const snapshot = await getSnapshot<T>({block_num, account, scope, table});
+        const json = snapshot.rows.map((row) => row.json);
 
-        // Save JSON files
-        if (save) {
-            write.sync(latestPath, snapshot);
-            write.sync(filepath, snapshot);
-            log({ref, message: `${name} created`});
+        // Save JSON/CSV files
+        if (options.save) {
+            write.sync(baseDir + "latest.json", json);
+            write.sync(filepath, json);
+            log({ref, message: `${name} JSON created`});
+
+            if (options.csv) {
+                const csv = json2csv.parse(json);
+                fs.writeFileSync(baseDir + "latest.csv", csv);
+                fs.writeFileSync(baseDir + `${block_num}.csv`, csv);
+                log({ref, message: `${name} CSV created`});
+            }
         }
         return snapshot;
     } else warning({ref, message: `${name} already exists`});
