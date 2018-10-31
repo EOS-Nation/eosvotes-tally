@@ -1,7 +1,7 @@
 import qs from "querystring";
 import path from "path";
 import fetch from "node-fetch";
-import * as fs from "fs";
+import * as fs from "fs-extra";
 import * as write from "write-json-file";
 import { Vote } from "../types/eosforumrcpp";
 import { log, warning } from "./utils";
@@ -68,6 +68,7 @@ export async function fetchScopedSnapshot<T>(block_num: number, account: string,
  */
 export function saveSnapshot<T>(snapshot: Snapshot<T>, block_num: number, account: string, table: string, options: {
     csv?: boolean,
+    jsonl?: boolean,
 } = {}) {
     const baseDir = defaultBaseDir(account, table);
 
@@ -75,17 +76,24 @@ export function saveSnapshot<T>(snapshot: Snapshot<T>, block_num: number, accoun
     const ref = "snapshots::saveSnapshot";
     const name = `snapshot ${account}::${table} ${block_num}`;
 
-    // Save Streaming Data as newline delimited json
-    const latestStream = fs.createWriteStream(baseDir + "latest.json");
-    const blockNumStream = fs.createWriteStream(baseDir + `${block_num}.json`);
-    log({ref, message: `${name} created write streams`});
-
-    for (const row of snapshot.rows) {
-        const str = JSON.stringify(row);
-        latestStream.write(str + "\n");
-        blockNumStream.write(str + "\n");
-    }
+    // Save as JSON (Default)
+    const json = snapshotToJSON(snapshot);
+    write.sync(baseDir + "latest.json", json);
+    write.sync(baseDir + `${block_num}.json`, json);
     log({ref, message: `${name} JSON saved`});
+
+    // Save Streaming Data as newline delimited json
+    if (options.jsonl) {
+        const latestStream = fs.createWriteStream(baseDir + "latest.jsonl");
+        const blockNumStream = fs.createWriteStream(baseDir + `${block_num}.jsonl`);
+        log({ref, message: `${name} created write streams`});
+
+        for (const row of json) {
+            const str = JSON.stringify(row);
+            latestStream.write(str + "\n");
+            blockNumStream.write(str + "\n");
+        }
+    }
 }
 
 export function defaultBaseDir(account: string, table: string) {

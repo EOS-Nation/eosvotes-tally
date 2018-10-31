@@ -13,7 +13,7 @@ export default async function scheduler() {
 
     // 30 minute delay from LIB & rounded to 7200 (hourly)
     const block_num = Math.round((info.last_irreversible_block_num - 3600) / 7200) * 7200;
-    const options = {save: true, csv: true, overwrite: false};
+    const options = {save: true, csv: false, jsonl: true, overwrite: false};
 
     // eosioforumrcpp::vote
     const votes = await fetchSnapshot<Vote>(block_num, "eosforumrcpp", "eosforumrcpp", "vote", options);
