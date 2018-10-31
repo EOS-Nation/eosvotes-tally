@@ -1,5 +1,4 @@
 import qs from "querystring";
-import os from "os";
 import path from "path";
 import fetch from "node-fetch";
 import * as fs from "fs";
@@ -8,10 +7,11 @@ import { Vote } from "../types/eosforumrcpp";
 import { log, warning } from "./utils";
 import { Userres } from "../types/eosio";
 import { Snapshot } from "../types/snapshot";
+import { SNAPSHOT_URL } from "./config";
 import * as json2csv from "json2csv";
 
 /**
- * Get Snapshot
+ * Get snapshot via HTTP GET request
  */
 export async function getSnapshot<T>(options: {
     block_num: number,
@@ -26,59 +26,101 @@ export async function getSnapshot<T>(options: {
     if (options.key_type === undefined) { options.key_type = "intstr"; }
     if (options.with_block_num === undefined && options.block_num) { options.with_block_num = true; }
 
-    const url = `http://35.203.38.11/v1/read?${qs.stringify(options)}`;
+    const url = `${SNAPSHOT_URL}/v1/read?${qs.stringify(options)}`;
+    log({ref: "snapshots::getSnapshot", message: url});
     const data = await fetch(url);
     return await data.json();
 }
 
 /**
- * Fetch eosio::userres Snapshot
+ * Fetch Scoped Snapshot & save to JSON
  */
-export async function fetchUserresSnapshot(block_num: number, votes: Snapshot<Vote>) {
-    const userres: Snapshot<Userres> = {
+export async function fetchScopedSnapshot<T>(block_num: number, account: string, scopes: string[], table: string, options: {
+    save?: boolean,
+    csv?: boolean,
+    overwrite?: boolean,
+} = {}): Promise<Snapshot<T>> {
+    const snapshot: Snapshot<T> = {
         abi: null,
         rows: [],
     };
-    for (const row of votes.rows) {
-        const {voter} = row.json;
-        const snapshot = await fetchSnapshot<Userres>(block_num, "eosio", voter, "userres");
-        if (snapshot && snapshot.rows.length) userres.rows.push(snapshot.rows[0]);
+
+    // Prevent re-downloading snapshot if already exists
+    const filepath = defaultBaseDir(account, table) + `${block_num}.json`;
+    if (options.overwrite && fs.existsSync(filepath)) {
+        warning({ref: "snapshot::fetchScopedSnapshot", message: `snapshot ${account}::${table} ${block_num} already exists`});
+        return snapshot;
     }
-    return userres;
+
+    // Iterate over each account's scope
+    for (const scope of scopes) {
+        const scopedSnapshot = await getSnapshot<T>({block_num, account, scope, table});
+        for (const row of scopedSnapshot.rows) {
+            snapshot.rows.push(row);
+        }
+    }
+    if (options.save) saveSnapshot(snapshot, block_num, account, table, options);
+    return snapshot;
 }
 
 /**
- * Fetch Snapshot
+ * Save snapshot JSON/CSV files
+ */
+export function saveSnapshot<T>(snapshot: Snapshot<T>, block_num: number, account: string, table: string, options: {
+    csv?: boolean,
+} = {}) {
+    const baseDir = defaultBaseDir(account, table);
+
+    // Snapshot folder structure
+    const ref = "snapshots::saveSnapshot";
+    const name = `snapshot ${account}::${table} ${block_num}`;
+
+    // Save Streaming Data as newline delimited json
+    const latestStream = fs.createWriteStream(baseDir + "latest.json");
+    const blockNumStream = fs.createWriteStream(baseDir + `${block_num}.json`);
+    log({ref, message: `${name} created write streams`});
+
+    for (const row of snapshot.rows) {
+        const str = JSON.stringify(row);
+        latestStream.write(str + "\n");
+        blockNumStream.write(str + "\n");
+    }
+    log({ref, message: `${name} JSON saved`});
+}
+
+export function defaultBaseDir(account: string, table: string) {
+    return path.join(__dirname, "..", "snapshots", account, table) + path.sep;
+}
+
+/**
+ * Fetch generic snapshot & save to JSON
  */
 export async function fetchSnapshot<T>(block_num: number, account: string, scope: string, table: string, options: {
     save?: boolean,
     csv?: boolean,
-} = {}) {
-    // Snapshot folder structure
-    const baseDir = path.join(__dirname, "..", "snapshots", account, scope, table) + path.sep;
-    const filepath = baseDir + `${block_num}.json`;
+    overwrite?: boolean,
+} = {}): Promise<Snapshot<T>> {
+    let snapshot: Snapshot<T> = {
+        abi: null,
+        rows: [],
+    };
 
-    // Names
-    const ref = "snapshots::fetchSnapshot";
-    const name = `snapshot ${account}::${scope}::${table} ${block_num}`;
-
-    if (!fs.existsSync(filepath)) {
-        const snapshot = await getSnapshot<T>({block_num, account, scope, table});
-        const json = snapshot.rows.map((row) => row.json);
-
-        // Save JSON/CSV files
-        if (options.save) {
-            write.sync(baseDir + "latest.json", json);
-            write.sync(filepath, json);
-            log({ref, message: `${name} JSON created`});
-
-            if (options.csv) {
-                const csv = json2csv.parse(json);
-                fs.writeFileSync(baseDir + "latest.csv", csv);
-                fs.writeFileSync(baseDir + `${block_num}.csv`, csv);
-                log({ref, message: `${name} CSV created`});
-            }
-        }
+    // Prevent re-downloading snapshot if already exists
+    const filepath = defaultBaseDir(account, table) + `${block_num}.json`;
+    if (options.overwrite && fs.existsSync(filepath)) {
+        warning({ref: "snapshot::fetchSnapshot", message: `snapshot ${account}::${table} ${block_num} already exists`});
         return snapshot;
-    } else warning({ref, message: `${name} already exists`});
+    }
+
+    // Get & Save snapshot
+    snapshot = await getSnapshot<T>({block_num, account, scope, table});
+    if (options.save) saveSnapshot(snapshot, block_num, account, table, options);
+    return snapshot;
+}
+
+/**
+ * Snapshot to JSON
+ */
+export function snapshotToJSON<T>(snapshot: Snapshot<T>): T[] {
+    return snapshot.rows.map((row) => row.json);
 }

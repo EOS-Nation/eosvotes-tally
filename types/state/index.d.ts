@@ -20,9 +20,7 @@ export interface State {
      */
     tallies: Tallies;
     /**
-     * Status of Voters
-     *
-     * Used to track which proposals to update when undelegatebw & delegatebw actions occur
+     * Voter Information
      */
     voters: Voters;
     /**
@@ -30,7 +28,7 @@ export interface State {
      */
     votes: Votes;
     /**
-     * Global
+     * Global Statistics
      */
     global: Global;
 }

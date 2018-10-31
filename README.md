@@ -4,7 +4,7 @@
 
 EOS Votes tally quickly retrieves all proposals and votes from [`eosforumrcpp`](https://github.com/eoscanada/eosio.forum) and generate a simple to understand voting tally statistics in JSON format.
 
-> Leveraging [dfuse.io](https://dfuse.io) under the hood to easily handle table deltas via their [WebSocket API](https://github.com/dfuse-io/eosws-js).
+> Leveraging [dfuse.io](https://dfuse.io) under the hood to easily handle table deltas & snapshots.
 
 ## Install
 
@@ -20,27 +20,33 @@ $ npm install
 $ npm start
 ```
 
-Open your favorite browser to [localhost:3000](http://localhost:3000)
+## AWS S3 Buckets
 
-## Main API
+All the related EOSVotes datasets/snapshots are stored as Amazon S3 buckets.
 
-- [https://api.eosvotes.io](https://api.eosvotes.io)
+All snapshots (historical data) are stored using `block_num % 7200` (every 1 hour).
 
-## Data API
+Use `latest.json` for the latest uploaded dataset.
 
-- [https://api.eosvotes.io/tallies](https://api.eosvotes.io/tallies)
-- [https://api.eosvotes.io/proposals](https://api.eosvotes.io/proposals)
-- [https://api.eosvotes.io/votes](https://api.eosvotes.io/voters)
-- [https://api.eosvotes.io/voters](https://api.eosvotes.io/voters)
-- [https://api.eosvotes.io/global](https://api.eosvotes.io/global)
+### 📊 Schema
 
-## Scoped API
+S3 Bucket URL template
 
-- `https://api.eosvotes.io/tallies/{proposal_name}`
-- `https://api.eosvotes.io/proposal/{proposal_name}`
-- `https://api.eosvotes.io/voters/{voter}`
+- https://s3.amazonaws.com/eos.snapshots/{scope}/{table}/{block_num}.json
 
-## Snapshots API (not implemented)
+`eosio::userres` (staked amount for all voters)
 
-- `https://api.eosvotes.io/snapshots/eosio/voters/{block_number}`
-- `https://api.eosvotes.io/snapshots/eosforumrcpp/vote/{block_number}`
+- https://s3.amazonaws.com/eos.snapshots/eosio/userres/latest.json
+
+`eosio::voters` (entire voters table)
+
+- https://s3.amazonaws.com/eos.snapshots/eosio/voters/latest.json
+
+`eosforumrcpp::vote` (all votes)
+
+- https://s3.amazonaws.com/eos.snapshots/eosforumrcpp/vote/latest.json
+
+`eosforumrcpp::proposal` (all proposals)
+
+- https://s3.amazonaws.com/eos.snapshots/eosforumrcpp/proposal/latest.json
+

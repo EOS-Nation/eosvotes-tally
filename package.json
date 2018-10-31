@@ -33,6 +33,7 @@
         "json2csv": "*",
         "load-json-file": "*",
         "long": "*",
+        "ndjson": "*",
         "node-fetch": "*",
         "write-json-file": "*",
         "ws": "*"

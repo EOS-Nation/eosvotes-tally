@@ -1,0 +1,15 @@
+{
+    "server_version": "99d94446",
+    "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+    "head_block_num": 24235015,
+    "last_irreversible_block_num": 24234679,
+    "last_irreversible_block_id": "0171cab777a61a2598b623d68050f231e33c308bc718b3f2ea95446f396581e0",
+    "head_block_id": "0171cc07ec9da701d6ad390a2eac32bebd9b11c449f2547fa2fd54594c211d6b",
+    "head_block_time": "2018-10-30T01:31:41.500",
+    "head_block_producer": "eosriobrazil",
+    "virtual_block_cpu_limit": 12659019,
+    "virtual_block_net_limit": 1048576000,
+    "block_cpu_limit": 124131,
+    "block_net_limit": 1042656,
+    "server_version_string": "mainnet-1.4.1-dirty"
+  }

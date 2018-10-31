@@ -19,16 +19,18 @@ export function updateVote(vote: Vote) {
  * Proposal - update `state.proposal`
  */
 export function updateProposal(proposal: Proposal) {
-    log({ref: "updaters::updateProposal", message: `${proposal.proposal_name} updated`});
-    state.proposals[proposal.proposal_name] = proposal;
+    throw new Error("TO-DO: must handle proposals differently via snapshots");
+    // log({ref: "updaters::updateProposal", message: `${proposal.proposal_name} updated`});
+    // state.proposals[proposal.proposal_name] = proposal;
 }
 
 /**
  * Update `self_delegated_bandwidth`
  */
 export function updateSelfDelegatedBandwidth(account_name: string, self_delegated_bandwidth: Delband) {
-    log({ref: "updaters::updateSelfDelegatedBandwidth", message: `${account_name} updated`});
-    state.voters[account_name].self_delegated_bandwidth = self_delegated_bandwidth;
+    throw new Error("TO-DO: must handle self_delegated_bandwidth differently via snapshots");
+    // log({ref: "updaters::updateSelfDelegatedBandwidth", message: `${account_name} updated`});
+    // state.voters[account_name].self_delegated_bandwidth = self_delegated_bandwidth;
 }
 
 /**
@@ -62,11 +64,13 @@ export async function updateVoter(account_name: string) {
     if (!account.voter_info) warning({ref: "updaters::updateVoter", message: `[${account_name}] account is missing [voter_info]`});
     if (!account.self_delegated_bandwidth) warning({ref: "updaters::updateVoter", message: `[${account_name}] account is missing [self_delegated_bandwidth]`});
 
-    // Update voter
+    // Update Account
     state.voters[account_name] = {
-        self_delegated_bandwidth: account.self_delegated_bandwidth,
         voter_info: account.voter_info,
+        total_resources: account.total_resources,
+        self_delegated_bandwidth: account.self_delegated_bandwidth,
     };
+
     log({ref: "updaters::updateVoter", message: `updated voter_info for [${account_name}]`});
 }
 
@@ -78,17 +82,16 @@ export async function updateTally() {
     const tallies: Tallies = {};
 
     // Load proposals in tallies
-    for (const proposal_name of Object.keys(state.proposals)) {
-        const proposal = state.proposals[proposal_name];
+    for (const proposalRow of state.proposals) {
+        const { proposal_name } = proposalRow;
         tallies[proposal_name] = {
-            proposal,
+            proposal: proposalRow,
             stats: defaultStats(),
         };
     }
 
     // Add votes to summary
-    for (const vote_id of Object.keys(state.votes)) {
-        const voteRow = state.votes[vote_id];
+    for (const voteRow of state.votes) {
         const { voter, proposal_name, vote } = voteRow;
         const account = state.voters[voter];
         if (!account) {

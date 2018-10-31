@@ -4,9 +4,9 @@ import { State, Tally, Stats } from "../types/state";
  * Initial State
  */
 export const state: State = {
-    proposals: {},
+    proposals: [],
     tallies: {},
-    votes: {},
+    votes: [],
     voters: {},
     global: {
         block_num: -1,

@@ -13,7 +13,7 @@ export async function getVotes() {
     let lower_bound: string = "0";
 
     // Data Containers
-    const votes: Votes = {};
+    const votes: Votes = [];
 
     // Iterate over `voters` table
     while (true) {
@@ -22,7 +22,8 @@ export async function getVotes() {
         // Iterate over each vote and store results
         for (const row of rows) {
             lower_bound = String(row.id);
-            votes[row.id] = row;
+            votes.push(row);
+            throw new Error("TO-DO: prevent duplicate rows must be tested");
         }
         // Stop loop
         if (more === false) { break; }
@@ -38,8 +39,8 @@ export async function getVotes() {
 export async function getVoters() {
     const voters: Voters = {};
 
-    for (const vote_id of Object.keys(state.votes)) {
-        const {voter} = state.votes[vote_id];
+    for (const voteRow of state.votes) {
+        const {voter} = voteRow;
         if (!voters[voter]) await updateVoter(voter);
     }
     // Update voters state
@@ -55,7 +56,7 @@ export async function getProposals() {
     let lower_bound: string = "0";
 
     // Data Containers
-    const proposals: Proposals = {};
+    const proposals: Proposals = [];
 
     // Iterate over `voters` table
     while (true) {
@@ -64,7 +65,8 @@ export async function getProposals() {
         // Iterate over each vote and store results
         for (const row of rows) {
             lower_bound = row.proposal_name;
-            proposals[row.proposal_name] = row;
+            proposals.push(row);
+            throw new Error("TO-DO: prevent duplicate rows must be tested");
         }
         // TO-DO
         if (more === true) error({ref: "boot::getProposals", message: `"TO-DO: [lower_bound] not implemented yet"`});

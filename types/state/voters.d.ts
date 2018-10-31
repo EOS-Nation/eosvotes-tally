@@ -1,11 +1,12 @@
-import { VoterInfo, SelfDelegatedBandwidth } from "../eosio/get_account";
+import { VoterInfo, Userres, Delband } from "../eosio";
 
 export interface Voters {
     /**
-     * Voter Account Name
+     * Voter Information
      */
     [account_name: string]: {
-        self_delegated_bandwidth: SelfDelegatedBandwidth;
-        voter_info: VoterInfo;
+        voter_info?: VoterInfo
+        total_resources?: Userres
+        self_delegated_bandwidth?: Delband
     }
 }
