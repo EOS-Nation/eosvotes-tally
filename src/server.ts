@@ -22,10 +22,10 @@ export default function server() {
         app.get("/tallies(.json)?$", (req, res) => res.json(state.tallies));
         app.get("/proposals(.json)?$", (req, res) => res.json(state.proposals));
         app.get("/votes(.json)?$", (req, res) => res.json(state.votes));
-        app.get("/voters(.json)?$", (req, res) => res.json(state.voters));
+        app.get("/accounts(.json)?$", (req, res) => res.json(state.accounts));
 
         // Scoped Data API
-        app.get("/voters/:voter", (req, res) => res.json(state.voters[req.params.voter] || {}));
+        app.get("/accounts/:voter", (req, res) => res.json(state.accounts[req.params.voter] || {}));
         app.get("/proposals/:proposal_name", (req, res) => res.json(state.proposals[req.params.proposal_name] || {}));
         app.get("/tallies/:proposal_name", (req, res) => res.json(state.tallies[req.params.proposal_name] || {}));
 

@@ -7,7 +7,7 @@ export const state: State = {
     proposals: [],
     tallies: {},
     votes: [],
-    voters: {},
+    accounts: {},
     global: {
         block_num: -1,
         supply: "1000000000.0000 EOS",

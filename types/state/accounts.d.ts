@@ -1,8 +1,8 @@
 import { VoterInfo, Userres, Delband } from "../eosio";
 
-export interface Voters {
+export interface Accounts {
     /**
-     * Voter Information
+     * Account Information
      */
     [account_name: string]: {
         voter_info?: VoterInfo

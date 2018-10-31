@@ -1,32 +1,27 @@
-import { Proposals } from "./proposals";
-import { Voters } from "./voters";
-import { Votes } from "./votes";
-import { Tallies } from "./tallies";
+import { Accounts } from "./accounts";
+import { Vote, Proposal } from "../eosforumrcpp";
+import { Tallies, Tally, Stats } from "./tallies";
 import { Global } from "./global";
 
-export * from "./proposals";
-export * from "./tallies";
-export * from "./voters";
-export * from "./votes";
-export * from "./global";
+export { Global, Tally, Accounts, Tallies, Vote, Proposal, Stats };
 
 export interface State {
     /**
      * Status of all proposals
      */
-    proposals: Proposals;
+    proposals: Proposal[];
     /**
      * Status of all proposals
      */
     tallies: Tallies;
     /**
-     * Voter Information
+     * Account Information
      */
-    voters: Voters;
+    accounts: Accounts;
     /**
      * Status of Votes
      */
-    votes: Votes;
+    votes: Vote[];
     /**
      * Global Statistics
      */

@@ -38,7 +38,7 @@ export function updateSelfDelegatedBandwidth(account_name: string, self_delegate
  */
 export function updateVoterInfo(account_name: string, voter_info: VoterInfo) {
     log({ref: "updaters::updateVoterInfo", message: `${account_name} updated`});
-    state.voters[account_name].voter_info = voter_info;
+    state.accounts[account_name].voter_info = voter_info;
 }
 
 /**
@@ -65,7 +65,7 @@ export async function updateVoter(account_name: string) {
     if (!account.self_delegated_bandwidth) warning({ref: "updaters::updateVoter", message: `[${account_name}] account is missing [self_delegated_bandwidth]`});
 
     // Update Account
-    state.voters[account_name] = {
+    state.accounts[account_name] = {
         voter_info: account.voter_info,
         total_resources: account.total_resources,
         self_delegated_bandwidth: account.self_delegated_bandwidth,
@@ -93,9 +93,9 @@ export async function updateTally() {
     // Add votes to summary
     for (const voteRow of state.votes) {
         const { voter, proposal_name, vote } = voteRow;
-        const account = state.voters[voter];
+        const account = state.accounts[voter];
         if (!account) {
-            error({ref: "updaters::updateTally", message: `[${voter}] voter does not exist in [state.voters]`});
+            error({ref: "updaters::updateTally", message: `[${voter}] voter does not exist in [state.accounts]`});
             continue;
         }
         const { voter_info, self_delegated_bandwidth } = account;
