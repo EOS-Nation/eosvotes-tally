@@ -34,7 +34,7 @@ export function countStaked(delband: Eosio.Delband) {
     return cpu + net;
 }
 
-export function generateAccounts(votes: Vote[], delband: Eosio.Delband[], userres: Eosio.Userres[], voters: Eosio.Voters[], proxies = false): Accounts {
+export function generateAccounts(votes: Vote[], delband: Eosio.Delband[], voters: Eosio.Voters[], proxies = false): Accounts {
     const accounts: Accounts = {};
     const voted = new Set(); // track who has voted
 

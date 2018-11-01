@@ -14,30 +14,19 @@
         "@types/cors": "*",
         "@types/cron": "*",
         "@types/dotenv": "*",
-        "@types/express": "*",
-        "@types/fs-extra": "*",
-        "@types/json2csv": "*",
         "@types/long": "*",
         "@types/node-fetch": "*",
-        "@types/ws": "*",
         "tslint": "*",
         "typescript": "*"
     },
     "dependencies": {
         "chalk": "*",
-        "cors": "*",
         "cron": "*",
         "dotenv": "*",
         "eosjs": "20.0.0-beta1",
-        "eosws": "*",
-        "express": "*",
-        "fs-extra": "*",
-        "json2csv": "*",
         "load-json-file": "*",
         "long": "*",
-        "ndjson": "*",
         "node-fetch": "*",
-        "write-json-file": "*",
-        "ws": "*"
+        "write-json-file": "*"
     }
 }

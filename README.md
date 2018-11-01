@@ -32,21 +32,37 @@ Use `latest.json` for the latest uploaded dataset.
 
 S3 Bucket URL template
 
-- https://s3.amazonaws.com/eos.snapshots/{scope}/{table}/{block_num}.json
+- https://s3.amazonaws.com/api.eosvotes.io/{scope}/{table}/{block_num}.json
 
-`eosio::userres` (staked amount for all voters)
+#### `eosvotes`
 
-- https://s3.amazonaws.com/eos.snapshots/eosio/userres/latest.json
+`eosvotes::tallies` (tallies for `eosio.forum` voters)
 
-`eosio::voters` (entire voters table)
+- https://s3.amazonaws.com/api.eosvotes.io/eosvotes/tallies/latest.json
 
-- https://s3.amazonaws.com/eos.snapshots/eosio/voters/latest.json
+`eosvotes::accounts` (account details for `eosio.forum` voters)
+
+- https://s3.amazonaws.com/api.eosvotes.io/eosvotes/accounts/latest.json
+
+
+#### `eosio`
+
+`eosio::delband` (self delegated bandwidth amount for all `eosio.forum` voters)
+
+- https://s3.amazonaws.com/api.eosvotes.io/eosio/delband/latest.json
+
+`eosio::voters` (complete voters table)
+
+- https://s3.amazonaws.com/api.eosvotes.io/eosio/voters/latest.json
+
+
+#### `eosforumrcpp`
 
 `eosforumrcpp::vote` (all votes)
 
-- https://s3.amazonaws.com/eos.snapshots/eosforumrcpp/vote/latest.json
+- https://s3.amazonaws.com/api.eosvotes.io/eosforumrcpp/vote/latest.json
 
 `eosforumrcpp::proposal` (all proposals)
 
-- https://s3.amazonaws.com/eos.snapshots/eosforumrcpp/proposal/latest.json
+- https://s3.amazonaws.com/api.eosvotes.io/eosforumrcpp/proposal/latest.json
 
