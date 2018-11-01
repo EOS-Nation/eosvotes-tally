@@ -33,7 +33,10 @@ export default async function scheduler() {
 
     // Calculate Tallies
     const accounts = generateAccounts(vote, delband, userres, voters);
-    saveSnapshot(accounts, 24523200, "eosvotes", "accounts");
+    saveSnapshot(accounts, block_num, "eosvotes", "accounts");
+
+    const proxies = generateAccounts(vote, delband, userres, voters, true);
+    saveSnapshot(accounts, block_num, "eosvotes", "accounts");
 }
 
 scheduler();

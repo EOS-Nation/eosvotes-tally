@@ -19,6 +19,10 @@ export interface State {
      */
     accounts: Accounts;
     /**
+     * Proxies Information
+     */
+    proxies: Accounts;
+    /**
      * Status of Votes
      */
     votes: Vote[];

@@ -1,32 +1,78 @@
-import { Tallies, Accounts, Vote, Proposal } from "../types/state";
+import { Accounts, Vote } from "../types/state";
 import * as Eosio from "../types/eosio";
-import { defaultStats } from "./state";
-import { warning, error, log, parseTokenString, calculateEosFromVotes } from "./utils";
 
-export function generateAccounts(votes: Vote[], delband: Eosio.Delband[], userres: Eosio.Userres[], voters: Eosio.Voters[]): Accounts {
+export function generateAccounts(votes: Vote[], delband: Eosio.Delband[], userres: Eosio.Userres[], voters: Eosio.Voters[], proxies = false): Accounts {
     const accounts: Accounts = {};
+    const voted = new Set(); // track who has voted
 
     // Only track accounts who has casted votes
     for (const row of votes) {
-        accounts[row.voter] = {};
-    }
+        if (!accounts[row.voter]) accounts[row.voter] = {};
+        if (!accounts[row.voter].votes) accounts[row.voter].votes = [];
 
-    // Load Delegated Bandwidth
-    for (const row of delband) {
-        if (accounts[row.from]) accounts[row.from].self_delegated_bandwidth = row;
-    }
-
-    // Load User Resources
-    for (const row of userres) {
-        if (accounts[row.owner]) accounts[row.owner].total_resources = row;
+        const account = accounts[row.voter];
+        if (account.votes) account.votes.push(row);
+        voted.add(row.voter);
     }
 
     // Load Voter Information
     for (const row of voters) {
-        if (accounts[row.owner]) accounts[row.owner].voter_info = row;
+        // Voter is only included if voted or proxied to a proxy who has voted
+        if (voted.has(row.owner) || voted.has(row.proxy)) {
+            if (!accounts[row.owner]) accounts[row.owner] = {};
+            accounts[row.owner].voter_info = row;
+        }
     }
+
+    // Load Delegated Bandwidth
+    for (const row of delband) {
+        if (!accounts[row.from]) accounts[row.from] = {};
+        accounts[row.from].self_delegated_bandwidth = row;
+    }
+
+    // Load User Resources
+    for (const row of userres) {
+        if (!accounts[row.owner]) accounts[row.owner] = {};
+        accounts[row.owner].total_resources = row;
+    }
+
+    // Remove/Include proxies
+    for (const owner of Object.keys(accounts)) {
+        const account = accounts[owner];
+
+        // Proxies
+        if (proxies) {
+            if (!account.voter_info) delete accounts[owner];
+            else if (!account.voter_info.is_proxy) delete accounts[owner];
+        // Not Proxies
+        } else {
+            if (account.voter_info && account.voter_info.is_proxy) delete accounts[owner];
+        }
+    }
+
     return accounts;
 }
+
+// export function generateProxies(votes: Vote[], delband: Eosio.Delband[], userres: Eosio.Userres[], voters: Eosio.Voters[]): Accounts {
+//     // Calculate only proxies who have voted on proposals
+//     const proxies = generateAccounts(votes, delband, userres, voters, true);
+
+//     // Re-calculate weights of proxies based on `voter_info.staked`
+//     for (const owner of Object.keys(proxies)) {
+//         let staked = 0;
+//         const proxy = proxies[owner];
+//         if (proxy.voter_info) staked = proxy.voter_info.staked;
+
+//         // Scan all voters
+//         for (const voter of voters) {
+//             if (owner === voter.proxy) staked += voter.staked;
+//         }
+//         // if (proxies[owner].voter_info) {
+//         //     proxies[owner].voter_info.staked = 0;
+//         // }
+//     }
+//     return proxies;
+// }
 
 // /**
 //  * Generate Tallies

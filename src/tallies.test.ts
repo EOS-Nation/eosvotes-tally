@@ -6,6 +6,8 @@ import { Userres, Delband, VoterInfo } from "../types/eosio";
 import { Vote, Proposal } from "../types/eosforumrcpp";
 
 (() => {
+    const block_num = 24523200;
+
     // Load Snapshot Data
     const basedir = path.join(__dirname, "..", "snapshots");
     const votes = load.sync<Vote[]>(path.join(basedir, "eosforumrcpp", "vote", "latest.json"));
@@ -14,7 +16,14 @@ import { Vote, Proposal } from "../types/eosforumrcpp";
     const voters = load.sync<VoterInfo[]>(path.join(basedir, "eosio", "voters", "latest.json"));
     const proposals = load.sync<Proposal[]>(path.join(basedir, "eosforumrcpp", "proposal", "latest.json"));
 
-    // Calculate Tallies
+    // Generate Accounts & Proxies
     const accounts = generateAccounts(votes, delband, userres, voters);
-    saveSnapshot(accounts, 24523200, "eosvotes", "accounts");
+    saveSnapshot(accounts, block_num, "eosvotes", "accounts");
+    console.log("accounts:", Object.keys(accounts).length);
+
+    const proxies = generateAccounts(votes, delband, userres, voters, true);
+    saveSnapshot(proxies, block_num, "eosvotes", "proxies");
+    console.log("proxies:", Object.keys(proxies).length);
+
+    // const tallies = calculateTallies(proposals, votes, )
 })();
