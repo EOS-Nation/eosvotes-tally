@@ -24,6 +24,9 @@ export function defaultStats(): Stats {
         proxies: {
             total: 0,
         },
+        staked: {
+            total: 0,
+        },
     };
 }
 
@@ -99,11 +102,14 @@ export function generateTally(proposal: Proposal, accounts: Accounts, proxies: A
             const { vote } = votes[proposal_name];
             // Set to 0 if undefined
             if (!stats.accounts[vote]) stats.accounts[vote] = 0;
+            if (!stats.staked[vote]) stats.staked[vote] = 0;
             if (!stats.votes[vote]) stats.votes[vote] = 0;
 
             // Add voting weights
             stats.accounts[vote] += staked;
             stats.accounts.total += staked;
+            stats.staked[vote] += staked;
+            stats.staked.total += staked;
 
             // Voting Count
             stats.votes[vote] += 1;
@@ -112,6 +118,7 @@ export function generateTally(proposal: Proposal, accounts: Accounts, proxies: A
         }
     }
     // Calculate proxies's staked
+    // TO-DO: Create a method to support both accounts & proxies staked portion (removes 15 lines of code)
     for (const owner of Object.keys(proxies)) {
         const { staked, votes } = proxies[owner];
 
@@ -119,11 +126,14 @@ export function generateTally(proposal: Proposal, accounts: Accounts, proxies: A
             const { vote } = votes[proposal_name];
             // Set to 0 if undefined
             if (!stats.accounts[vote]) stats.accounts[vote] = 0;
+            if (!stats.staked[vote]) stats.staked[vote] = 0;
             if (!stats.votes[vote]) stats.votes[vote] = 0;
 
             // Add voting weights
             stats.accounts[vote] += staked;
             stats.accounts.total += staked;
+            stats.staked[vote] += staked;
+            stats.staked.total += staked;
 
             // Voting Count
             stats.votes[vote] += 1;
@@ -131,6 +141,7 @@ export function generateTally(proposal: Proposal, accounts: Accounts, proxies: A
             stats.votes.proxies += 1;
         }
     }
+
     // Additional proxied staked weights via account's staked who have no voted
     for (const proxy of Object.keys(proxies)) {
         const proxyAccount = proxies[proxy];
@@ -155,9 +166,12 @@ export function generateTally(proposal: Proposal, accounts: Accounts, proxies: A
 
         // Set to 0 if undefined
         if (!stats.proxies[vote]) stats.proxies[vote] = 0;
+        if (!stats.staked[vote]) stats.staked[vote] = 0;
 
         stats.proxies[vote] += staked;
         stats.proxies.total += staked;
+        stats.staked[vote] += staked;
+        stats.staked.total += staked;
     }
 
     return {

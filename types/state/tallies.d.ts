@@ -40,4 +40,11 @@ export interface Stats {
         [vote: number]: number
         total: number,
     };
+    /**
+     * Total Staked between both accounts & proxies
+     */
+    staked: {
+        [vote: number]: number
+        total: number,
+    };
 }
