@@ -3,7 +3,7 @@ import { getScopedSnapshot, getSnapshot, saveSnapshot, snapshotToJSON } from "./
 import { log } from "./utils";
 import { Userres, Voters, Delband } from "../types/eosio";
 import { Vote, Proposal } from "../types/eosforumrcpp";
-import { generateAccounts, generateTallies } from "./tallies";
+import { generateAccounts, generateTallies, filterVotersByVotes } from "./tallies";
 
 export default async function scheduler() {
     log({ref: "scheduler", message: "activated scheduler"});
@@ -15,29 +15,29 @@ export default async function scheduler() {
     const block_num = Math.round((info.last_irreversible_block_num - 3600) / 7200) * 7200;
 
     // Fetch voters
-    const vote = await getSnapshot<Vote>({block_num, account: "eosforumrcpp", scope: "eosforumrcpp", table: "vote"});
-    const account_names = vote.map((row) => row.voter);
+    const votes = await getSnapshot<Vote>({block_num, account: "eosforumrcpp", scope: "eosforumrcpp", table: "vote"});
+    const account_names = votes.map((row) => row.voter);
 
     // Get Snapshots
-    const proposal = await getSnapshot<Proposal>({block_num, account: "eosforumrcpp", scope: "eosforumrcpp", table: "proposal"});
-    const voters = await getSnapshot<Voters>({block_num, account: "eosio", scope: "eosio", table: "voters"});
+    const proposals = await getSnapshot<Proposal>({block_num, account: "eosforumrcpp", scope: "eosforumrcpp", table: "proposal"});
     const delband = await getScopedSnapshot<Delband>(account_names, {block_num, account: "eosio", table: "delband"});
-
-    // Save Snapshots
-    saveSnapshot(vote, block_num, "eosforumrcpp", "vote");
-    saveSnapshot(proposal, block_num, "eosforumrcpp", "proposal");
-    saveSnapshot(voters, block_num, "eosio", "voters");
-    saveSnapshot(delband, block_num, "eosio", "delband");
+    const voters = filterVotersByVotes(await getSnapshot<Voters>({block_num, account: "eosio", scope: "eosio", table: "voters"}), votes);
 
     // Calculate Tallies
-    const accounts = generateAccounts(vote, delband, voters);
+    const accounts = generateAccounts(votes, delband, voters);
     saveSnapshot(accounts, block_num, "eosvotes", "accounts");
 
-    const proxies = generateAccounts(vote, delband, voters, true);
-    saveSnapshot(accounts, block_num, "eosvotes", "accounts");
+    const proxies = generateAccounts(votes, delband, voters, true);
+    saveSnapshot(proxies, block_num, "eosvotes", "proxies");
 
-    const tallies = generateTallies(proposal, accounts, proxies);
+    const tallies = generateTallies(proposals, accounts, proxies);
     saveSnapshot(tallies, block_num, "eosvotes", "tallies");
+
+    // Save Snapshots
+    saveSnapshot(votes, block_num, "eosforumrcpp", "vote");
+    saveSnapshot(proposals, block_num, "eosforumrcpp", "proposal");
+    saveSnapshot(voters, block_num, "eosio", "voters");
+    saveSnapshot(delband, block_num, "eosio", "delband");
 }
 
 scheduler();

@@ -37,6 +37,24 @@ export function countStaked(delband: Eosio.Delband) {
     return cpu + net;
 }
 
+export function filterVotersByVotes(voters: Eosio.Voters[], votes: Vote[]) {
+    const results: Eosio.Voters[] = [];
+    const voted = new Set();
+
+    // Only track accounts who has casted votes
+    for (const row of votes) {
+        voted.add(row.voter);
+    }
+
+    for (const row of voters) {
+        const owner = row.owner;
+
+        // Voter is only included if voted or proxied to a proxy who has voted
+        if (voted.has(owner) || voted.has(row.proxy)) results.push(row);
+    }
+    return results;
+}
+
 export function generateAccounts(votes: Vote[], delband: Eosio.Delband[], voters: Eosio.Voters[], proxies = false): Accounts {
     const accounts: Accounts = {};
     const voted = new Set(); // track who has voted
