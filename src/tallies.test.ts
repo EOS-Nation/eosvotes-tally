@@ -1,6 +1,6 @@
 import path from "path";
 import * as load from "load-json-file";
-import { generateAccounts } from "./tallies";
+import { generateAccounts, generateTallies } from "./tallies";
 import { saveSnapshot } from "./snapshots";
 import { Userres, Delband, VoterInfo } from "../types/eosio";
 import { Vote, Proposal } from "../types/eosforumrcpp";
@@ -25,5 +25,7 @@ import { Vote, Proposal } from "../types/eosforumrcpp";
     saveSnapshot(proxies, block_num, "eosvotes", "proxies");
     console.log("proxies:", Object.keys(proxies).length);
 
-    // const tallies = calculateTallies(proposals, votes, )
+    const tallies = generateTallies(proposals, accounts, proxies);
+    saveSnapshot(tallies, block_num, "eosvotes", "tallies");
+    console.log("tallies:", Object.keys(tallies).length);
 })();

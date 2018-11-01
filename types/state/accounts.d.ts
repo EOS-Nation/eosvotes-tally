@@ -6,9 +6,11 @@ export interface Accounts {
      * Account Information
      */
     [account_name: string]: {
-        voter_info?: VoterInfo
-        total_resources?: Userres
-        self_delegated_bandwidth?: Delband
-        votes?: Vote[];
+        votes: {
+            [proposal_name: string]: Vote;
+        }
+        staked: number;
+        is_proxy: boolean;
+        proxy: string;
     }
 }

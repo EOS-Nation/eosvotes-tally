@@ -14,33 +14,27 @@ export interface Tally {
 
 export interface Stats {
     /**
-     * Votes
-     *
-     * Total amount of votes per account
-     *  - includes proxies & voters
+     * Total number of votes per account & proxies
      */
     votes: {
         [vote: number]: number
+        proxies: number,
+        accounts: number,
         total: number,
     };
     /**
-     * Staked
+     * Accounts Staked
      *
-     * Calculates the sum of `net_weight` + `cpu_weight` within `self_delegated_bandwidth` in EOS
-     *  - excludes proxies
+     * Staked weight is calculated using `voter_info.staked` or `self_delegated_bandwidth`
      */
-    staked: {
+    accounts: {
         [vote: number]: number
         total: number,
     };
     /**
-     * Proxies
+     * Proxies Staked
      *
-     * Calculates the total of `last_vote_weight` or `proxied_vote_weight` in EOS
-     *  - includes vote decay
-     *  - includes proxies
-     *  - excludes voters `last_vote_weight` if voted via proxy
-     *  - excludes voters without `vote_info` table
+     * Whenever a proxy votes on a proposal, a sum of each account's staked which have NOT voted for a proposal will counted.
      */
     proxies: {
         [vote: number]: number

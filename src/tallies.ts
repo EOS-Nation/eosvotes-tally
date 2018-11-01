@@ -1,5 +1,38 @@
-import { Accounts, Vote } from "../types/state";
+import { Accounts, Vote, Proposal, Tallies, Tally, Stats } from "../types/state";
+import { parseTokenString } from "./utils";
 import * as Eosio from "../types/eosio";
+
+function defaultAccount() {
+    return {
+        votes: {},
+        staked: 0,
+        proxy: "",
+        is_proxy: false,
+    };
+}
+
+export function defaultStats(): Stats {
+    return {
+        votes: {
+            total: 0,
+            proxies: 0,
+            accounts: 0,
+        },
+        accounts: {
+            total: 0,
+        },
+        proxies: {
+            total: 0,
+        },
+    };
+}
+
+export function countStaked(delband: Eosio.Delband) {
+    if (!delband) return 0;
+    const cpu = parseTokenString(delband.cpu_weight).amount;
+    const net = parseTokenString(delband.net_weight).amount;
+    return cpu + net;
+}
 
 export function generateAccounts(votes: Vote[], delband: Eosio.Delband[], userres: Eosio.Userres[], voters: Eosio.Voters[], proxies = false): Accounts {
     const accounts: Accounts = {};
@@ -7,33 +40,31 @@ export function generateAccounts(votes: Vote[], delband: Eosio.Delband[], userre
 
     // Only track accounts who has casted votes
     for (const row of votes) {
-        if (!accounts[row.voter]) accounts[row.voter] = {};
-        if (!accounts[row.voter].votes) accounts[row.voter].votes = [];
+        if (!accounts[row.voter]) accounts[row.voter] = defaultAccount();
 
         const account = accounts[row.voter];
-        if (account.votes) account.votes.push(row);
+        if (account.votes) account.votes[row.proposal_name] = row;
         voted.add(row.voter);
     }
 
     // Load Voter Information
     for (const row of voters) {
+        const owner = row.owner;
+
         // Voter is only included if voted or proxied to a proxy who has voted
-        if (voted.has(row.owner) || voted.has(row.proxy)) {
-            if (!accounts[row.owner]) accounts[row.owner] = {};
-            accounts[row.owner].voter_info = row;
+        if (voted.has(owner) || voted.has(row.proxy)) {
+            if (!accounts[owner]) accounts[owner] = defaultAccount();
+            accounts[owner].staked = row.staked;
+            accounts[owner].is_proxy = Boolean(row.is_proxy);
+            accounts[owner].proxy = row.proxy;
         }
     }
 
-    // Load Delegated Bandwidth
+    // Load Self Delegated Bandwidth
     for (const row of delband) {
-        if (!accounts[row.from]) accounts[row.from] = {};
-        accounts[row.from].self_delegated_bandwidth = row;
-    }
-
-    // Load User Resources
-    for (const row of userres) {
-        if (!accounts[row.owner]) accounts[row.owner] = {};
-        accounts[row.owner].total_resources = row;
+        const owner = row.from;
+        if (!accounts[owner]) accounts[owner] = defaultAccount();
+        if (!accounts[owner].staked) accounts[owner].staked = countStaked(row);
     }
 
     // Remove/Include proxies
@@ -41,107 +72,96 @@ export function generateAccounts(votes: Vote[], delband: Eosio.Delband[], userre
         const account = accounts[owner];
 
         // Proxies
-        if (proxies) {
-            if (!account.voter_info) delete accounts[owner];
-            else if (!account.voter_info.is_proxy) delete accounts[owner];
-        // Not Proxies
-        } else {
-            if (account.voter_info && account.voter_info.is_proxy) delete accounts[owner];
-        }
+        if (proxies !== account.is_proxy) delete accounts[owner];
     }
 
     return accounts;
 }
 
-// export function generateProxies(votes: Vote[], delband: Eosio.Delband[], userres: Eosio.Userres[], voters: Eosio.Voters[]): Accounts {
-//     // Calculate only proxies who have voted on proposals
-//     const proxies = generateAccounts(votes, delband, userres, voters, true);
+export function generateTallies(proposals: Proposal[], accounts: Accounts, proxies: Accounts): Tallies {
+    const tallies: Tallies = {};
 
-//     // Re-calculate weights of proxies based on `voter_info.staked`
-//     for (const owner of Object.keys(proxies)) {
-//         let staked = 0;
-//         const proxy = proxies[owner];
-//         if (proxy.voter_info) staked = proxy.voter_info.staked;
+    for (const proposal of proposals) {
+        tallies[proposal.proposal_name] = generateTally(proposal, accounts, proxies);
+    }
+    return tallies;
+}
 
-//         // Scan all voters
-//         for (const voter of voters) {
-//             if (owner === voter.proxy) staked += voter.staked;
-//         }
-//         // if (proxies[owner].voter_info) {
-//         //     proxies[owner].voter_info.staked = 0;
-//         // }
-//     }
-//     return proxies;
-// }
+export function generateTally(proposal: Proposal, accounts: Accounts, proxies: Accounts): Tally {
+    const { proposal_name } = proposal;
+    const stats = defaultStats();
 
-// /**
-//  * Generate Tallies
-//  */
-// export async function generateTallies(voters: Accounts, votes: Vote[], proposals: Proposal[]) {
-//     // Empty container
-//     const tallies: Tallies = {};
+    // Calculate account's staked
+    for (const owner of Object.keys(accounts)) {
+        const { staked, votes } = accounts[owner];
 
-//     // Load proposals in tallies
-//     for (const proposalRow of proposals) {
-//         const { proposal_name } = proposalRow;
-//         tallies[proposal_name] = {
-//             proposal: proposalRow,
-//             stats: defaultStats(),
-//         };
-//     }
+        if (votes[proposal_name]) {
+            const { vote } = votes[proposal_name];
+            // Set to 0 if undefined
+            if (!stats.accounts[vote]) stats.accounts[vote] = 0;
+            if (!stats.votes[vote]) stats.votes[vote] = 0;
 
-//     // Add votes to summary
-//     for (const voteRow of votes) {
-//         const { voter, proposal_name, vote } = voteRow;
-//         const account = voters[voter];
-//         if (!account) {
-//             error({ref: "updaters::updateTally", message: `[${voter}] voter does not exist in [state.voters]`});
-//             continue;
-//         }
-//         const { voter_info, self_delegated_bandwidth } = account;
+            // Add voting weights
+            stats.accounts[vote] += staked;
+            stats.accounts.total += staked;
 
-//         // Asserts
-//         if (!tallies[proposal_name]) {
-//             error({ref: "updaters::updateTally", message: `[${proposal_name}] proposal not found in [tallies]`});
-//             continue;
-//         }
-//         if (!voter_info) warning({ref: "updaters::updateTally", message: `[${voter}] is missing [voter_info]`});
-//         if (!self_delegated_bandwidth) warning({ref: "updaters::updateTally", message: `[${voter}] is missing [self_delegated_bandwidth]`});
+            // Voting Count
+            stats.votes[vote] += 1;
+            stats.votes.total += 1;
+            stats.votes.accounts += 1;
+        }
+    }
+    // Calculate proxies's staked
+    for (const owner of Object.keys(proxies)) {
+        const { staked, votes } = proxies[owner];
 
-//         // Update tallies to zero if no records were found
-//         if (!tallies[proposal_name].stats.staked[vote]) tallies[proposal_name].stats.staked[vote] = 0;
-//         if (!tallies[proposal_name].stats.proxies[vote]) tallies[proposal_name].stats.proxies[vote] = 0;
-//         if (!tallies[proposal_name].stats.votes[vote]) tallies[proposal_name].stats.votes[vote] = 0;
+        if (votes[proposal_name]) {
+            const { vote } = votes[proposal_name];
+            // Set to 0 if undefined
+            if (!stats.accounts[vote]) stats.accounts[vote] = 0;
+            if (!stats.votes[vote]) stats.votes[vote] = 0;
 
-//         // Count voting weights
-//         const staked = countStaked(self_delegated_bandwidth);
-//         const proxies = countProxies(voter_info);
+            // Add voting weights
+            stats.accounts[vote] += staked;
+            stats.accounts.total += staked;
 
-//         // Update tally stats
-//         tallies[proposal_name].stats.proxies[vote] += proxies;
-//         tallies[proposal_name].stats.staked[vote] += staked;
-//         tallies[proposal_name].stats.votes[vote] += 1;
+            // Voting Count
+            stats.votes[vote] += 1;
+            stats.votes.total += 1;
+            stats.votes.proxies += 1;
+        }
+    }
+    // Additional proxied staked weights via account's staked who have no voted
+    for (const proxy of Object.keys(proxies)) {
+        const proxyAccount = proxies[proxy];
+        // Skip proxy, did not vote for proposal
+        if (!proxyAccount.votes[proposal_name]) continue;
 
-//         // Update totals
-//         tallies[proposal_name].stats.proxies.total += proxies;
-//         tallies[proposal_name].stats.staked.total += staked;
-//         tallies[proposal_name].stats.votes.total += 1;
-//     }
+        const { vote } = proxyAccount.votes[proposal_name];
+        let staked = 0;
 
-//     // Finish
-//     log({ref: "updaters::updateTally", message: "update completed [state.tallies]"});
-//     return tallies;
-// }
+        for (const owner of Object.keys(accounts)) {
+            const account = accounts[owner];
 
-// export function countStaked(self_delegated_bandwidth: Eosio.Delband) {
-//     if (!self_delegated_bandwidth) return 0;
-//     const cpu = parseTokenString(self_delegated_bandwidth.cpu_weight).amount;
-//     const net = parseTokenString(self_delegated_bandwidth.net_weight).amount;
-//     return cpu + net;
-// }
+            // Skip user isn't using this proxy
+            if (account.proxy !== proxy) continue;
 
-// export function countProxies(voter_info: Eosio.VoterInfo) {
-//     if (!voter_info) return 0;
-//     if (voter_info.is_proxy) return calculateEosFromVotes(voter_info.proxied_vote_weight);
-//     return calculateEosFromVotes(voter_info.last_vote_weight);
-// }
+            // Skip user has already voted
+            if (account.votes[proposal_name]) continue;
+
+            // Add user's stake to proxies
+            staked += account.staked;
+        }
+
+        // Set to 0 if undefined
+        if (!stats.proxies[vote]) stats.proxies[vote] = 0;
+
+        stats.proxies[vote] += staked;
+        stats.proxies.total += staked;
+    }
+
+    return {
+        proposal,
+        stats,
+    };
+}
