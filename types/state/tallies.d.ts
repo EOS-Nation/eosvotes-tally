@@ -14,6 +14,18 @@ export interface Tally {
 
 export interface Stats {
     /**
+     * No less than 15% vote participation among tokens
+     */
+    vote_participation: boolean;
+    /**
+     * No fewer than 10% more Yes than No votes (true/false)
+     */
+    more_yes: boolean;
+    /**
+     * Sustained for 30 continuous days within a 120 day period. (true/false)
+     */
+    sustained_days: boolean;
+    /**
      * Total number of votes per account & proxies
      */
     votes: {

@@ -1,7 +1,7 @@
 import { rpc } from "./config";
 import { getScopedSnapshot, getSnapshot, saveSnapshot, snapshotToJSON } from "./snapshots";
-import { log } from "./utils";
-import { Userres, Voters, Delband } from "../types/eosio";
+import { log, getCurrencySupply } from "./utils";
+import { Voters, Delband } from "../types/eosio";
 import { Vote, Proposal } from "../types/eosforumrcpp";
 import { generateAccounts, generateTallies, filterVotersByVotes } from "./tallies";
 
@@ -10,6 +10,7 @@ export default async function scheduler() {
 
     // Get Latest Block
     const info = await rpc.get_info();
+    const currency_supply = await getCurrencySupply();
 
     // 30 minute delay from LIB & rounded to 7200 (hourly)
     const block_num = Math.round((info.last_irreversible_block_num - 3600) / 7200) * 7200;
@@ -30,7 +31,7 @@ export default async function scheduler() {
     const proxies = generateAccounts(votes, delband, voters, true);
     saveSnapshot(proxies, block_num, "eosvotes", "proxies");
 
-    const tallies = generateTallies(proposals, accounts, proxies);
+    const tallies = generateTallies(proposals, accounts, proxies, currency_supply);
     saveSnapshot(tallies, block_num, "eosvotes", "tallies");
 
     // Save Snapshots

@@ -12,16 +12,15 @@ import { Vote, Proposal } from "../types/eosforumrcpp";
     const basedir = path.join(__dirname, "..", "snapshots");
     const votes = load.sync<Vote[]>(path.join(basedir, "eosforumrcpp", "vote", "latest.json"));
     const delband = load.sync<Delband[]>(path.join(basedir, "eosio", "delband", "latest.json"));
-    const userres = load.sync<Userres[]>(path.join(basedir, "eosio", "userres", "latest.json"));
     const voters = load.sync<VoterInfo[]>(path.join(basedir, "eosio", "voters", "latest.json"));
     const proposals = load.sync<Proposal[]>(path.join(basedir, "eosforumrcpp", "proposal", "latest.json"));
 
     // Generate Accounts & Proxies
-    const accounts = generateAccounts(votes, delband, userres, voters);
+    const accounts = generateAccounts(votes, delband, voters);
     saveSnapshot(accounts, block_num, "eosvotes", "accounts");
     console.log("accounts:", Object.keys(accounts).length);
 
-    const proxies = generateAccounts(votes, delband, userres, voters, true);
+    const proxies = generateAccounts(votes, delband, voters, true);
     saveSnapshot(proxies, block_num, "eosvotes", "proxies");
     console.log("proxies:", Object.keys(proxies).length);
 

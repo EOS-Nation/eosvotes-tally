@@ -1,6 +1,7 @@
 import Long from "long";
 import chalk from "chalk";
-import { EOSVOTES_LOGGING } from "./config";
+import { EOSVOTES_LOGGING, rpc } from "./config";
+import { CurrencyStats } from "../types/eosio.token";
 
 /**
  * Parse Token String
@@ -134,6 +135,11 @@ export function encodeName(name: string, littleEndian = true) {
 interface Message {
     ref: string;
     message: string;
+}
+
+export async function getCurrencySupply(code = "eosio.token", symbol = "EOS") {
+    const currency: CurrencyStats = await rpc.get_currency_stats(code, symbol);
+    return parseTokenString(currency.EOS.supply).amount;
 }
 
 function formatMessage(message: Message, type: string): string {

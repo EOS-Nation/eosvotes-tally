@@ -27,6 +27,9 @@ export function defaultStats(): Stats {
         staked: {
             total: 0,
         },
+        vote_participation: false,
+        more_yes: false,
+        sustained_days: false,
     };
 }
 
@@ -99,16 +102,16 @@ export function generateAccounts(votes: Vote[], delband: Eosio.Delband[], voters
     return accounts;
 }
 
-export function generateTallies(proposals: Proposal[], accounts: Accounts, proxies: Accounts): Tallies {
+export function generateTallies(proposals: Proposal[], accounts: Accounts, proxies: Accounts, currency_supply = 1000000000): Tallies {
     const tallies: Tallies = {};
 
     for (const proposal of proposals) {
-        tallies[proposal.proposal_name] = generateTally(proposal, accounts, proxies);
+        tallies[proposal.proposal_name] = generateTally(proposal, accounts, proxies, currency_supply);
     }
     return tallies;
 }
 
-export function generateTally(proposal: Proposal, accounts: Accounts, proxies: Accounts): Tally {
+export function generateTally(proposal: Proposal, accounts: Accounts, proxies: Accounts, currency_supply = 1000000000): Tally {
     const { proposal_name } = proposal;
     const stats = defaultStats();
 
@@ -191,6 +194,22 @@ export function generateTally(proposal: Proposal, accounts: Accounts, proxies: A
         stats.staked[vote] += staked;
         stats.staked.total += staked;
     }
+
+    // Vote percentages based on currenty supply
+    const vote_percentages = {
+        no: Number(((stats.staked[0] || 0) / 10000 / currency_supply).toFixed(6)),
+        yes: Number(((stats.staked[1] || 0) / 10000 / currency_supply).toFixed(6)),
+        total: Number(((stats.staked.total || 0) / 10000 / currency_supply).toFixed(6)),
+    };
+
+    // No less than 15% vote participation among tokens
+    stats.vote_participation = vote_percentages.total > 0.15;
+
+    // No fewer than 10% more Yes than No votes (true/false)
+    stats.more_yes = vote_percentages.yes >= vote_percentages.no * 1.1;
+
+    // Sustained for 30 continuous days within a 120 day period. (true/false)
+    // To-Do
 
     return {
         proposal,
