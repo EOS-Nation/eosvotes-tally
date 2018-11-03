@@ -32,7 +32,7 @@ Use `latest.json` for the latest uploaded dataset.
 
 S3 Bucket URL template
 
-- https://s3.amazonaws.com/api.eosvotes.io/{scope}/{table}/{block_num}.json
+- [https://s3.amazonaws.com/api.eosvotes.io/{scope}/{table}/{block_num}.json](https://s3.amazonaws.com/api.eosvotes.io/eosvotes/tallies/latest.json)
 
 #### `eosvotes`
 
