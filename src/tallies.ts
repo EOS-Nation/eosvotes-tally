@@ -29,7 +29,7 @@ export function defaultStats(): Stats {
         },
         vote_participation: false,
         more_yes: false,
-        sustained_days: false,
+        sustained_days: 0,
     };
 }
 

@@ -24,7 +24,7 @@ export interface Stats {
     /**
      * Sustained for 30 continuous days within a 120 day period. (true/false)
      */
-    sustained_days: boolean;
+    sustained_days: number;
     /**
      * Total number of votes per account & proxies
      */
