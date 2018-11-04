@@ -1,0 +1,890 @@
+[
+	{
+		"cpu_weight": "31.6500 EOS",
+		"net_weight": "0.2000 EOS",
+		"to": "deniscarrier",
+		"from": "deniscarrier"
+	},
+	{
+		"cpu_weight": "9.1000 EOS",
+		"net_weight": "9.1000 EOS",
+		"to": "freedomlover",
+		"from": "freedomlover"
+	},
+	{
+		"cpu_weight": "1.0000 EOS",
+		"net_weight": "0.2000 EOS",
+		"to": "joshkauffman",
+		"from": "testkauffman"
+	},
+	{
+		"cpu_weight": "0.6001 EOS",
+		"net_weight": "0.1001 EOS",
+		"to": "testkauffman",
+		"from": "testkauffman"
+	},
+	{
+		"cpu_weight": "76.0000 EOS",
+		"net_weight": "76.0000 EOS",
+		"to": "g4ydcnjxgmge",
+		"from": "g4ydcnjxgmge"
+	},
+	{
+		"cpu_weight": "0.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "eoshasdoneit",
+		"from": "eoshasdoneit"
+	},
+	{
+		"cpu_weight": "1.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "eosmesodotio",
+		"from": "guytmobzgige"
+	},
+	{
+		"cpu_weight": "4.0000 EOS",
+		"net_weight": "4.0000 EOS",
+		"to": "guytmobzgige",
+		"from": "guytmobzgige"
+	},
+	{
+		"cpu_weight": "25.0000 EOS",
+		"net_weight": "25.0000 EOS",
+		"to": "thomasbcox23",
+		"from": "thomasbcox23"
+	},
+	{
+		"cpu_weight": "6.1000 EOS",
+		"net_weight": "6.1000 EOS",
+		"to": "blockbuilder",
+		"from": "blockbuilder"
+	},
+	{
+		"cpu_weight": "699.1101 EOS",
+		"net_weight": "189.1101 EOS",
+		"to": "geydknzwgqge",
+		"from": "geydknzwgqge"
+	},
+	{
+		"cpu_weight": "3.0000 EOS",
+		"net_weight": "0.2501 EOS",
+		"to": "developjesta",
+		"from": "developjesta"
+	},
+	{
+		"cpu_weight": "430.0000 EOS",
+		"net_weight": "393.0808 EOS",
+		"to": "gq3toojxhage",
+		"from": "gq3toojxhage"
+	},
+	{
+		"cpu_weight": "2.5000 EOS",
+		"net_weight": "2.5000 EOS",
+		"to": "haytinrwg4ge",
+		"from": "haytinrwg4ge"
+	},
+	{
+		"cpu_weight": "1.4500 EOS",
+		"net_weight": "1.0500 EOS",
+		"to": "igazedottech",
+		"from": "igazedottech"
+	},
+	{
+		"cpu_weight": "0.2000 EOS",
+		"net_weight": "0.0000 EOS",
+		"to": "francescoeos",
+		"from": "gyytqnbxhage"
+	},
+	{
+		"cpu_weight": "97.0000 EOS",
+		"net_weight": "3.0000 EOS",
+		"to": "gyytqnbxhage",
+		"from": "gyytqnbxhage"
+	},
+	{
+		"cpu_weight": "3.0000 EOS",
+		"net_weight": "0.6000 EOS",
+		"to": "whenfunstops",
+		"from": "whenfunstops"
+	},
+	{
+		"cpu_weight": "1.0315 EOS",
+		"net_weight": "1.0314 EOS",
+		"to": "g4zdonjxgige",
+		"from": "g4zdonjxgige"
+	},
+	{
+		"cpu_weight": "0.5100 EOS",
+		"net_weight": "0.5100 EOS",
+		"to": "eosdacattack",
+		"from": "gqydeobrgyge"
+	},
+	{
+		"cpu_weight": "152.6458 EOS",
+		"net_weight": "152.6459 EOS",
+		"to": "gqydeobrgyge",
+		"from": "gqydeobrgyge"
+	},
+	{
+		"cpu_weight": "2.0000 EOS",
+		"net_weight": "2.0000 EOS",
+		"to": "cocinero33me",
+		"from": "cocinero33me"
+	},
+	{
+		"cpu_weight": "0.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "blckchndsrvs",
+		"from": "g43dgoigenes"
+	},
+	{
+		"cpu_weight": "3.0000 EOS",
+		"net_weight": "3.0000 EOS",
+		"to": "blockchained",
+		"from": "g43dgoigenes"
+	},
+	{
+		"cpu_weight": "0.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "eosregwallet",
+		"from": "g43dgoigenes"
+	},
+	{
+		"cpu_weight": "0.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "faucetwallet",
+		"from": "g43dgoigenes"
+	},
+	{
+		"cpu_weight": "101.3974 EOS",
+		"net_weight": "100.3972 EOS",
+		"to": "g43dgoigenes",
+		"from": "g43dgoigenes"
+	},
+	{
+		"cpu_weight": "15.0000 EOS",
+		"net_weight": "0.0000 EOS",
+		"to": "igraphenelab",
+		"from": "g43dgoigenes"
+	},
+	{
+		"cpu_weight": "0.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "mrgoxaccount",
+		"from": "g43dgoigenes"
+	},
+	{
+		"cpu_weight": "5.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "rudexgateway",
+		"from": "g43dgoigenes"
+	},
+	{
+		"cpu_weight": "0.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "saynananapls",
+		"from": "g43dgoigenes"
+	},
+	{
+		"cpu_weight": "2.0000 EOS",
+		"net_weight": "0.3000 EOS",
+		"to": "eosimperabpi",
+		"from": "eosimperabpi"
+	},
+	{
+		"cpu_weight": "0.1500 EOS",
+		"net_weight": "0.0500 EOS",
+		"to": "atmosdevfund",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "0.1500 EOS",
+		"net_weight": "0.0500 EOS",
+		"to": "atmosloanfnd",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "490.0000 EOS",
+		"net_weight": "10.0000 EOS",
+		"to": "eosforumanon",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "5.0000 EOS",
+		"net_weight": "0.0000 EOS",
+		"to": "hiimcodeblue",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "6.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "morticiasmor",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "0.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "novuspheredb",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "110.1000 EOS",
+		"net_weight": "10.1000 EOS",
+		"to": "novusphereio",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "130.1401 EOS",
+		"net_weight": "0.5000 EOS",
+		"to": "ha4dmmjqhage",
+		"from": "ha4dmmjqhage"
+	},
+	{
+		"cpu_weight": "235.4187 EOS",
+		"net_weight": "100.0000 EOS",
+		"to": "richcrawford",
+		"from": "richcrawford"
+	},
+	{
+		"cpu_weight": "1.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "corymanthony",
+		"from": "thedeveloper"
+	},
+	{
+		"cpu_weight": "0.2000 EOS",
+		"net_weight": "0.2000 EOS",
+		"to": "cryptogainer",
+		"from": "thedeveloper"
+	},
+	{
+		"cpu_weight": "0.2000 EOS",
+		"net_weight": "0.2000 EOS",
+		"to": "cryptolove42",
+		"from": "thedeveloper"
+	},
+	{
+		"cpu_weight": "88.0000 EOS",
+		"net_weight": "2.7000 EOS",
+		"to": "thedeveloper",
+		"from": "thedeveloper"
+	},
+	{
+		"cpu_weight": "341.6413 EOS",
+		"net_weight": "345.3343 EOS",
+		"to": "anderbergeos",
+		"from": "anderbergeos"
+	},
+	{
+		"cpu_weight": "3468.5645 EOS",
+		"net_weight": "3468.0000 EOS",
+		"to": "g4ztamjwgige",
+		"from": "g4ztamjwgige"
+	},
+	{
+		"cpu_weight": "2.5000 EOS",
+		"net_weight": "2.5000 EOS",
+		"to": "haytinrwg4ge",
+		"from": "haytinrwg4ge"
+	},
+	{
+		"cpu_weight": "56.0341 EOS",
+		"net_weight": "56.0341 EOS",
+		"to": "haztcnzwgene",
+		"from": "haztcnzwgene"
+	},
+	{
+		"cpu_weight": "4501.0000 EOS",
+		"net_weight": "501.0000 EOS",
+		"to": "haztmnbvgyge",
+		"from": "haztmnbvgyge"
+	},
+	{
+		"cpu_weight": "15820.1500 EOS",
+		"net_weight": "15720.0500 EOS",
+		"to": "blueportugal",
+		"from": "blueportugal"
+	},
+	{
+		"cpu_weight": "7.0000 EOS",
+		"net_weight": "3.0000 EOS",
+		"to": "honeydacserv",
+		"from": "honeydacserv"
+	},
+	{
+		"cpu_weight": "8.0000 EOS",
+		"net_weight": "2.0000 EOS",
+		"to": "gqztoojrgmge",
+		"from": "gqztoojrgmge"
+	},
+	{
+		"cpu_weight": "4.5000 EOS",
+		"net_weight": "4.5000 EOS",
+		"to": "basbasbasbas",
+		"from": "basbasbasbas"
+	},
+	{
+		"cpu_weight": "95.0198 EOS",
+		"net_weight": "5.0000 EOS",
+		"to": "gregoryhouse",
+		"from": "gregoryhouse"
+	},
+	{
+		"cpu_weight": "194.0898 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "jbucksteiner",
+		"from": "jbucksteiner"
+	},
+	{
+		"cpu_weight": "130.0000 EOS",
+		"net_weight": "130.0000 EOS",
+		"to": "naturaldrink",
+		"from": "naturaldrink"
+	},
+	{
+		"cpu_weight": "75.0000 EOS",
+		"net_weight": "75.0000 EOS",
+		"to": "costaricamae",
+		"from": "costaricamae"
+	},
+	{
+		"cpu_weight": "1255.0000 EOS",
+		"net_weight": "1255.0000 EOS",
+		"to": "zincographer",
+		"from": "zincographer"
+	},
+	{
+		"cpu_weight": "278.9339 EOS",
+		"net_weight": "55.1351 EOS",
+		"to": "eosramazotti",
+		"from": "eosramazotti"
+	},
+	{
+		"cpu_weight": "12.4217 EOS",
+		"net_weight": "10.5017 EOS",
+		"to": "ha4tgnrxgene",
+		"from": "ha4tgnrxgene"
+	},
+	{
+		"cpu_weight": "1.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "boardgamebox",
+		"from": "gqydoobuhege"
+	},
+	{
+		"cpu_weight": "1.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "cryptopesouy",
+		"from": "gqydoobuhege"
+	},
+	{
+		"cpu_weight": "1.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "cryptovapaee",
+		"from": "gqydoobuhege"
+	},
+	{
+		"cpu_weight": "1.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "eospenalties",
+		"from": "gqydoobuhege"
+	},
+	{
+		"cpu_weight": "1.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "gqydoobuhege",
+		"from": "gqydoobuhege"
+	},
+	{
+		"cpu_weight": "1.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "multicollage",
+		"from": "gqydoobuhege"
+	},
+	{
+		"cpu_weight": "30.0000 EOS",
+		"net_weight": "30.0000 EOS",
+		"to": "testingdebug",
+		"from": "gqydoobuhege"
+	},
+	{
+		"cpu_weight": "20.0000 EOS",
+		"net_weight": "20.0000 EOS",
+		"to": "viterboeosuy",
+		"from": "gqydoobuhege"
+	},
+	{
+		"cpu_weight": "31.6500 EOS",
+		"net_weight": "0.2000 EOS",
+		"to": "deniscarrier",
+		"from": "deniscarrier"
+	},
+	{
+		"cpu_weight": "150.0000 EOS",
+		"net_weight": "50.0000 EOS",
+		"to": "guydsnjxgege",
+		"from": "guydsnjxgege"
+	},
+	{
+		"cpu_weight": "9525.8461 EOS",
+		"net_weight": "9525.8460 EOS",
+		"to": "ge3domjzgage",
+		"from": "ge3domjzgage"
+	},
+	{
+		"cpu_weight": "2.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "eosnproxvote",
+		"from": "eosnproxvote"
+	},
+	{
+		"cpu_weight": "10.0000 EOS",
+		"net_weight": "0.5000 EOS",
+		"to": "g4zdaobvgyge",
+		"from": "g4zdaobvgyge"
+	},
+	{
+		"cpu_weight": "0.2000 EOS",
+		"net_weight": "0.2000 EOS",
+		"to": "adoptionprox",
+		"from": "haleythomson"
+	},
+	{
+		"cpu_weight": "5.2000 EOS",
+		"net_weight": "0.2000 EOS",
+		"to": "eosdemoaccnt",
+		"from": "haleythomson"
+	},
+	{
+		"cpu_weight": "19.3600 EOS",
+		"net_weight": "7.1000 EOS",
+		"to": "haleythomson",
+		"from": "haleythomson"
+	},
+	{
+		"cpu_weight": "0.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "htnanoledger",
+		"from": "haleythomson"
+	},
+	{
+		"cpu_weight": "0.2000 EOS",
+		"net_weight": "0.2000 EOS",
+		"to": "leadersproxy",
+		"from": "haleythomson"
+	},
+	{
+		"cpu_weight": "0.2000 EOS",
+		"net_weight": "0.2000 EOS",
+		"to": "valuaddproxy",
+		"from": "haleythomson"
+	},
+	{
+		"cpu_weight": "285.9228 EOS",
+		"net_weight": "285.9227 EOS",
+		"to": "ge3tgmbvgage",
+		"from": "ge3tgmbvgage"
+	},
+	{
+		"cpu_weight": "14.1908 EOS",
+		"net_weight": "14.1908 EOS",
+		"to": "gqztoobwhage",
+		"from": "gqztoobwhage"
+	},
+	{
+		"cpu_weight": "1.5000 EOS",
+		"net_weight": "0.5000 EOS",
+		"to": "astronomised",
+		"from": "astronomised"
+	},
+	{
+		"cpu_weight": "2.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "eosnproxvote",
+		"from": "eosnproxvote"
+	},
+	{
+		"cpu_weight": "1.0000 EOS",
+		"net_weight": "0.2000 EOS",
+		"to": "joshkauffman",
+		"from": "testkauffman"
+	},
+	{
+		"cpu_weight": "0.6001 EOS",
+		"net_weight": "0.1001 EOS",
+		"to": "testkauffman",
+		"from": "testkauffman"
+	},
+	{
+		"cpu_weight": "9.1000 EOS",
+		"net_weight": "9.1000 EOS",
+		"to": "freedomlover",
+		"from": "freedomlover"
+	},
+	{
+		"cpu_weight": "0.1500 EOS",
+		"net_weight": "0.0500 EOS",
+		"to": "atmosdevfund",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "0.1500 EOS",
+		"net_weight": "0.0500 EOS",
+		"to": "atmosloanfnd",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "490.0000 EOS",
+		"net_weight": "10.0000 EOS",
+		"to": "eosforumanon",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "5.0000 EOS",
+		"net_weight": "0.0000 EOS",
+		"to": "hiimcodeblue",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "6.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "morticiasmor",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "0.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "novuspheredb",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "110.1000 EOS",
+		"net_weight": "10.1000 EOS",
+		"to": "novusphereio",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "9.1000 EOS",
+		"net_weight": "9.1000 EOS",
+		"to": "freedomlover",
+		"from": "freedomlover"
+	},
+	{
+		"cpu_weight": "699.1101 EOS",
+		"net_weight": "189.1101 EOS",
+		"to": "geydknzwgqge",
+		"from": "geydknzwgqge"
+	},
+	{
+		"cpu_weight": "280.1000 EOS",
+		"net_weight": "275.1000 EOS",
+		"to": "eosnationdan",
+		"from": "eosnationdan"
+	},
+	{
+		"cpu_weight": "1.8354 EOS",
+		"net_weight": "1.8354 EOS",
+		"to": "heytsmrrhage",
+		"from": "heytsmrrhage"
+	},
+	{
+		"cpu_weight": "68.6611 EOS",
+		"net_weight": "14.5102 EOS",
+		"to": "gi2dknrygege",
+		"from": "gi2dknrygege"
+	},
+	{
+		"cpu_weight": "0.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "todor1111111",
+		"from": "gi2dknrygege"
+	},
+	{
+		"cpu_weight": "58.6456 EOS",
+		"net_weight": "58.6456 EOS",
+		"to": "gi4dombsgyge",
+		"from": "gi4dombsgyge"
+	},
+	{
+		"cpu_weight": "130.1401 EOS",
+		"net_weight": "0.5000 EOS",
+		"to": "ha4dmmjqhage",
+		"from": "ha4dmmjqhage"
+	},
+	{
+		"cpu_weight": "0.2500 EOS",
+		"net_weight": "0.2500 EOS",
+		"to": "iamkevinrose",
+		"from": "iamkevinrose"
+	},
+	{
+		"cpu_weight": "20.0000 EOS",
+		"net_weight": "0.0000 EOS",
+		"to": "andrewcoutts",
+		"from": "andrewcoutts"
+	},
+	{
+		"cpu_weight": "5.0000 EOS",
+		"net_weight": "5.0000 EOS",
+		"to": "cleosbeosram",
+		"from": "andrewcoutts"
+	},
+	{
+		"cpu_weight": "20.5724 EOS",
+		"net_weight": "20.5724 EOS",
+		"to": "heytcnzqgige",
+		"from": "heytcnzqgige"
+	},
+	{
+		"cpu_weight": "1.0000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "eosdrconsfnd",
+		"from": "larosenonaka"
+	},
+	{
+		"cpu_weight": "1329.1000 EOS",
+		"net_weight": "5.1000 EOS",
+		"to": "larosenonaka",
+		"from": "larosenonaka"
+	},
+	{
+		"cpu_weight": "280.1000 EOS",
+		"net_weight": "275.1000 EOS",
+		"to": "eosnationdan",
+		"from": "eosnationdan"
+	},
+	{
+		"cpu_weight": "240.1407 EOS",
+		"net_weight": "159.1106 EOS",
+		"to": "joshkauffman",
+		"from": "joshkauffman"
+	},
+	{
+		"cpu_weight": "1.8101 EOS",
+		"net_weight": "1.8101 EOS",
+		"to": "testkauffman",
+		"from": "joshkauffman"
+	},
+	{
+		"cpu_weight": "0.5000 EOS",
+		"net_weight": "0.5000 EOS",
+		"to": "votekauffman",
+		"from": "joshkauffman"
+	},
+	{
+		"cpu_weight": "25.0000 EOS",
+		"net_weight": "5.0000 EOS",
+		"to": "natenatenate",
+		"from": "natenatenate"
+	},
+	{
+		"cpu_weight": "12.1000 EOS",
+		"net_weight": "2.0000 EOS",
+		"to": "eosnavigator",
+		"from": "eosnavigator"
+	},
+	{
+		"cpu_weight": "194.0898 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "jbucksteiner",
+		"from": "jbucksteiner"
+	},
+	{
+		"cpu_weight": "10.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "testymctesty",
+		"from": "testymctesty"
+	},
+	{
+		"cpu_weight": "10.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "testymctesty",
+		"from": "testymctesty"
+	},
+	{
+		"cpu_weight": "3.0100 EOS",
+		"net_weight": "1.0100 EOS",
+		"to": "hezhhe123321",
+		"from": "hezhhe123321"
+	},
+	{
+		"cpu_weight": "20.0000 EOS",
+		"net_weight": "15.0001 EOS",
+		"to": "heydimbrguge",
+		"from": "heydimbrguge"
+	},
+	{
+		"cpu_weight": "0.2500 EOS",
+		"net_weight": "0.2500 EOS",
+		"to": "jestaaaaaaaa",
+		"from": "heydimbrguge"
+	},
+	{
+		"cpu_weight": "1.0000 EOS",
+		"net_weight": "0.2500 EOS",
+		"to": "propositions",
+		"from": "heydimbrguge"
+	},
+	{
+		"cpu_weight": "3.0000 EOS",
+		"net_weight": "0.0000 EOS",
+		"to": "ronaldbetaal",
+		"from": "heydimbrguge"
+	},
+	{
+		"cpu_weight": "0.0250 EOS",
+		"net_weight": "0.0100 EOS",
+		"to": "solveforanyx",
+		"from": "heydimbrguge"
+	},
+	{
+		"cpu_weight": "4.0000 EOS",
+		"net_weight": "4.0000 EOS",
+		"to": "teamgreymass",
+		"from": "heydimbrguge"
+	},
+	{
+		"cpu_weight": "0.1300 EOS",
+		"net_weight": "0.0900 EOS",
+		"to": "gy3dgmrzhaga",
+		"from": "gy3dgmrzhage"
+	},
+	{
+		"cpu_weight": "15.0000 EOS",
+		"net_weight": "6.0000 EOS",
+		"to": "gy3dgmrzhage",
+		"from": "gy3dgmrzhage"
+	},
+	{
+		"cpu_weight": "1.2000 EOS",
+		"net_weight": "0.0000 EOS",
+		"to": "megroaccount",
+		"from": "gy3dgmrzhage"
+	},
+	{
+		"cpu_weight": "752.5000 EOS",
+		"net_weight": "752.5000 EOS",
+		"to": "gu4tanrvg4ge",
+		"from": "gu4tanrvg4ge"
+	},
+	{
+		"cpu_weight": "240.1407 EOS",
+		"net_weight": "159.1106 EOS",
+		"to": "joshkauffman",
+		"from": "joshkauffman"
+	},
+	{
+		"cpu_weight": "1.8101 EOS",
+		"net_weight": "1.8101 EOS",
+		"to": "testkauffman",
+		"from": "joshkauffman"
+	},
+	{
+		"cpu_weight": "0.5000 EOS",
+		"net_weight": "0.5000 EOS",
+		"to": "votekauffman",
+		"from": "joshkauffman"
+	},
+	{
+		"cpu_weight": "1.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "pramodeosdac",
+		"from": "pramodeosdac"
+	},
+	{
+		"cpu_weight": "15.4239 EOS",
+		"net_weight": "15.4239 EOS",
+		"to": "gu2tgnzxgege",
+		"from": "gu2tgnzxgege"
+	},
+	{
+		"cpu_weight": "3.0000 EOS",
+		"net_weight": "0.2501 EOS",
+		"to": "developjesta",
+		"from": "developjesta"
+	},
+	{
+		"cpu_weight": "5.0000 EOS",
+		"net_weight": "5.0000 EOS",
+		"to": "gu3dsnzrgige",
+		"from": "gu3dsnzrgige"
+	},
+	{
+		"cpu_weight": "240.1407 EOS",
+		"net_weight": "159.1106 EOS",
+		"to": "joshkauffman",
+		"from": "joshkauffman"
+	},
+	{
+		"cpu_weight": "1.8101 EOS",
+		"net_weight": "1.8101 EOS",
+		"to": "testkauffman",
+		"from": "joshkauffman"
+	},
+	{
+		"cpu_weight": "0.5000 EOS",
+		"net_weight": "0.5000 EOS",
+		"to": "votekauffman",
+		"from": "joshkauffman"
+	},
+	{
+		"cpu_weight": "3.0000 EOS",
+		"net_weight": "0.2501 EOS",
+		"to": "developjesta",
+		"from": "developjesta"
+	},
+	{
+		"cpu_weight": "3.0100 EOS",
+		"net_weight": "1.0100 EOS",
+		"to": "hezhhe123321",
+		"from": "hezhhe123321"
+	},
+	{
+		"cpu_weight": "0.1500 EOS",
+		"net_weight": "0.0500 EOS",
+		"to": "atmosdevfund",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "0.1500 EOS",
+		"net_weight": "0.0500 EOS",
+		"to": "atmosloanfnd",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "490.0000 EOS",
+		"net_weight": "10.0000 EOS",
+		"to": "eosforumanon",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "5.0000 EOS",
+		"net_weight": "0.0000 EOS",
+		"to": "hiimcodeblue",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "6.0000 EOS",
+		"net_weight": "1.0000 EOS",
+		"to": "morticiasmor",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "0.1000 EOS",
+		"net_weight": "0.1000 EOS",
+		"to": "novuspheredb",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "110.1000 EOS",
+		"net_weight": "10.1000 EOS",
+		"to": "novusphereio",
+		"from": "novusphereio"
+	},
+	{
+		"cpu_weight": "280.1000 EOS",
+		"net_weight": "275.1000 EOS",
+		"to": "eosnationdan",
+		"from": "eosnationdan"
+	}
+]

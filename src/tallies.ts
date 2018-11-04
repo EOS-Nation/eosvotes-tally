@@ -146,13 +146,13 @@ export function generateTally(proposal: Proposal, accounts: Accounts, proxies: A
         if (votes[proposal_name]) {
             const { vote } = votes[proposal_name];
             // Set to 0 if undefined
-            if (!stats.accounts[vote]) stats.accounts[vote] = 0;
+            if (!stats.proxies[vote]) stats.proxies[vote] = 0;
             if (!stats.staked[vote]) stats.staked[vote] = 0;
             if (!stats.votes[vote]) stats.votes[vote] = 0;
 
             // Add voting weights
-            stats.accounts[vote] += staked;
-            stats.accounts.total += staked;
+            stats.proxies[vote] += staked;
+            stats.proxies.total += staked;
             stats.staked[vote] += staked;
             stats.staked.total += staked;
 

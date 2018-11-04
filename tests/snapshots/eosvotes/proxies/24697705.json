@@ -1,0 +1,123 @@
+{
+	"testkauffman": {
+		"votes": {
+			"testforumnow": {
+				"updated_at": "2018-09-19T03:21:00",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "testkauffman",
+				"proposal_name": "testforumnow",
+				"id": 3
+			},
+			"tallytest": {
+				"updated_at": "2018-10-20T04:48:17",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "testkauffman",
+				"proposal_name": "tallytest",
+				"id": 64
+			}
+		},
+		"staked": 19002,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"blockbuilder": {
+		"votes": {
+			"testforumnow": {
+				"updated_at": "2018-09-20T01:29:31",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "blockbuilder",
+				"proposal_name": "testforumnow",
+				"id": 11
+			},
+			"longformtest": {
+				"updated_at": "2018-11-01T17:44:25",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "blockbuilder",
+				"proposal_name": "longformtest",
+				"id": 104
+			}
+		},
+		"staked": 122000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"igazedottech": {
+		"votes": {
+			"testforumnow": {
+				"updated_at": "2018-09-20T03:56:09",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "igazedottech",
+				"proposal_name": "testforumnow",
+				"id": 16
+			}
+		},
+		"staked": 25000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"thedeveloper": {
+		"votes": {
+			"tbbvwquzyvex": {
+				"updated_at": "2018-10-02T06:16:57",
+				"vote_json": "{}",
+				"vote": 0,
+				"voter": "thedeveloper",
+				"proposal_name": "tbbvwquzyvex",
+				"id": 28
+			}
+		},
+		"staked": 935000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"astronomised": {
+		"votes": {
+			"tbbvwquzyvex": {
+				"updated_at": "2018-10-20T04:34:21",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "astronomised",
+				"proposal_name": "tbbvwquzyvex",
+				"id": 60
+			}
+		},
+		"staked": 20000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"gi4dombsgyge": {
+		"votes": {
+			"tallytest": {
+				"updated_at": "2018-10-20T07:33:19",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gi4dombsgyge",
+				"proposal_name": "tallytest",
+				"id": 72
+			}
+		},
+		"staked": 1172912,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"natenatenate": {
+		"votes": {
+			"tallytest": {
+				"updated_at": "2018-10-21T16:08:47",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "natenatenate",
+				"proposal_name": "tallytest",
+				"id": 82
+			}
+		},
+		"staked": 300000,
+		"proxy": "",
+		"is_proxy": true
+	}
+}

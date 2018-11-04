@@ -1,0 +1,272 @@
+{
+	"checkmd": {
+		"proposal": {
+			"expires_at": "2018-10-26T18:59:00",
+			"created_at": "2018-10-26T18:32:33",
+			"proposal_json": "{\"type\":\"bps-proposal-v1\",\"content\":\"This proposal will help us run **one last test** before launching *the* referendum contract. \\n ###Do you believe that [Block.one](https://block.one) created the **greatest** blockchain? \\n Vote using the numbers next to your selection. \\n No (0) or Yes (1)?\"}",
+			"title": "seehowthemarkdownholdsup",
+			"proposer": "joshkauffman",
+			"proposal_name": "checkmd"
+		},
+		"stats": {
+			"votes": {
+				"1": 1,
+				"total": 1,
+				"proxies": 0,
+				"accounts": 1
+			},
+			"accounts": {
+				"1": 4038715,
+				"total": 4038715
+			},
+			"proxies": {
+				"total": 0
+			},
+			"staked": {
+				"1": 4038715,
+				"total": 4038715
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0
+		}
+	},
+	"longformtest": {
+		"proposal": {
+			"expires_at": "2018-11-06T04:00:00",
+			"created_at": "2018-10-29T18:24:54",
+			"proposal_json": "{\"content\":\"A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content.\\n\\nA test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content.\\n\\nA test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content.\\n\\nA test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content.\\n\\nA test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content.\\n\\nA test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content.\\n\\n\"}",
+			"title": "Some long form content",
+			"proposer": "developjesta",
+			"proposal_name": "longformtest"
+		},
+		"stats": {
+			"votes": {
+				"0": 3,
+				"1": 2,
+				"total": 5,
+				"proxies": 0,
+				"accounts": 5
+			},
+			"accounts": {
+				"0": 11982000,
+				"1": 72701,
+				"total": 12054701
+			},
+			"proxies": {
+				"total": 0
+			},
+			"staked": {
+				"0": 11982000,
+				"1": 72701,
+				"total": 12054701
+			},
+			"vote_participation": false,
+			"more_yes": false,
+			"sustained_days": 0
+		}
+	},
+	"ramusetest": {
+		"proposal": {
+			"expires_at": "2018-10-30T17:12:59",
+			"created_at": "2018-10-29T17:14:17",
+			"proposal_json": "{\"type\":\"bps-proposal-v1\",\"content\":\"\"}",
+			"title": "r",
+			"proposer": "joshkauffman",
+			"proposal_name": "ramusetest"
+		},
+		"stats": {
+			"votes": {
+				"0": 1,
+				"total": 1,
+				"proxies": 0,
+				"accounts": 1
+			},
+			"accounts": {
+				"0": 4038715,
+				"total": 4038715
+			},
+			"proxies": {
+				"total": 0
+			},
+			"staked": {
+				"0": 4038715,
+				"total": 4038715
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0
+		}
+	},
+	"tallytest": {
+		"proposal": {
+			"expires_at": "2018-10-26T15:10:51",
+			"created_at": "2018-10-20T04:43:14",
+			"proposal_json": "{\"type\":\"bps-proposal-v1\",\"content\":\"Should Denis Carriere resign from EOS Nation and spend 100% of his time working to build vote tally mechanisms? Vote No (0) or Yes (1). If No (0) wins, he remains with EOS Nation. If Yes (1) wins, his shares are forfeited and he opens up Uncle Denis' Vote Tally Shoppe.\"}",
+			"title": "almostthere!",
+			"proposer": "joshkauffman",
+			"proposal_name": "tallytest"
+		},
+		"stats": {
+			"votes": {
+				"0": 8,
+				"1": 13,
+				"total": 21,
+				"proxies": 3,
+				"accounts": 18
+			},
+			"accounts": {
+				"0": 28517650,
+				"1": 31854400,
+				"total": 60372050
+			},
+			"proxies": {
+				"1": 126603376,
+				"total": 126603376
+			},
+			"staked": {
+				"0": 28517650,
+				"1": 158457776,
+				"total": 186975426
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0
+		}
+	},
+	"tbbvwquzyvex": {
+		"proposal": {
+			"expires_at": "2018-10-30T04:00:00",
+			"created_at": "2018-09-30T23:15:20",
+			"proposal_json": "{\"content\":\"Test proposal 2\",\"src\":\"novusphere-forum\"}",
+			"title": "Test proposal (2)",
+			"proposer": "novusphereio",
+			"proposal_name": "tbbvwquzyvex"
+		},
+		"stats": {
+			"votes": {
+				"0": 6,
+				"1": 35,
+				"total": 41,
+				"proxies": 2,
+				"accounts": 39
+			},
+			"accounts": {
+				"0": 7485189,
+				"1": 689384775,
+				"total": 696869964
+			},
+			"proxies": {
+				"0": 90000,
+				"1": 0,
+				"total": 90000
+			},
+			"staked": {
+				"0": 7575189,
+				"1": 689384775,
+				"total": 696959964
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0
+		}
+	},
+	"testforumnow": {
+		"proposal": {
+			"expires_at": "2018-09-25T00:00:00",
+			"created_at": "2018-09-18T14:08:51",
+			"proposal_json": "{\"content\":\"# eosio.forum Release Candidate\\nThis is a test proposal.\"}",
+			"title": "EOS Canada invites you to test the Release Candidate forum",
+			"proposer": "eoscanadaops",
+			"proposal_name": "testforumnow"
+		},
+		"stats": {
+			"votes": {
+				"0": 4,
+				"1": 16,
+				"total": 20,
+				"proxies": 3,
+				"accounts": 17
+			},
+			"accounts": {
+				"0": 9401704,
+				"1": 17057001,
+				"total": 26458705
+			},
+			"proxies": {
+				"0": 4038715,
+				"1": 102000,
+				"total": 4140715
+			},
+			"staked": {
+				"0": 13440419,
+				"1": 17159001,
+				"total": 30599420
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0
+		}
+	},
+	"tuafrudzyfqx": {
+		"proposal": {
+			"expires_at": "2018-10-02T23:00:00",
+			"created_at": "2018-10-02T18:17:29",
+			"proposal_json": "{\"content\":\"<b><i>test from eos-forum.org</i></b>\",\"src\":\"novusphere-forum\"}",
+			"title": "test from eos-forum.org",
+			"proposer": "ha4dmmjqhage",
+			"proposal_name": "tuafrudzyfqx"
+		},
+		"stats": {
+			"votes": {
+				"total": 0,
+				"proxies": 0,
+				"accounts": 0
+			},
+			"accounts": {
+				"total": 0
+			},
+			"proxies": {
+				"total": 0
+			},
+			"staked": {
+				"total": 0
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0
+		}
+	},
+	"vrrysyrezauy": {
+		"proposal": {
+			"expires_at": "2018-10-10T15:00:00",
+			"created_at": "2018-10-10T03:57:11",
+			"proposal_json": "{\"content\":\"투표를 한다라... 이거 어거같은 투표 시스템인건가요? 돈도 걸어야 하나? test입니다. \",\"src\":\"novusphere-forum\"}",
+			"title": "이건 뭔가요?",
+			"proposer": "gregoryhouse",
+			"proposal_name": "vrrysyrezauy"
+		},
+		"stats": {
+			"votes": {
+				"1": 1,
+				"total": 1,
+				"proxies": 0,
+				"accounts": 1
+			},
+			"accounts": {
+				"1": 1000198,
+				"total": 1000198
+			},
+			"proxies": {
+				"total": 0
+			},
+			"staked": {
+				"1": 1000198,
+				"total": 1000198
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0
+		}
+	}
+}
