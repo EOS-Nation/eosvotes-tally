@@ -1,5 +1,5 @@
 import { rpc } from "./config";
-import { getScopedSnapshot, getSnapshot, saveSnapshot, snapshotToJSON } from "./snapshots";
+import { getScopedSnapshot, getSnapshot, saveSnapshot } from "./snapshots";
 import { log, getCurrencySupply } from "./utils";
 import { Voters, Delband } from "../types/eosio";
 import { Vote, Proposal } from "../types/eosforumrcpp";

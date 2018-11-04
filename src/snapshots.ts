@@ -2,14 +2,16 @@ import qs from "querystring";
 import path from "path";
 import fetch from "node-fetch";
 import * as write from "write-json-file";
+import { JSONStringifyable } from "write-json-file";
 import { log } from "./utils";
 import { Snapshot } from "../types/snapshot";
 import { SNAPSHOT_URL } from "./config";
+import { uploadS3 } from "./aws";
 
 /**
  * Save snapshot as JSON
  */
-export function saveSnapshot<T>(json: any, block_num: number, account: string, table: string) {
+export function saveSnapshot(json: JSONStringifyable, block_num: number, account: string, table: string) {
     const baseDir = defaultBaseDir(account, table);
 
     // Snapshot folder structure
@@ -20,6 +22,10 @@ export function saveSnapshot<T>(json: any, block_num: number, account: string, t
     write.sync(baseDir + "latest.json", json);
     write.sync(baseDir + `${block_num}.json`, json);
     log({ref, message: `${name} JSON saved`});
+
+    // Upload to AWS Bucket
+    uploadS3(`${account}/${table}/${block_num}.json`, json);
+    uploadS3(`${account}/${table}/latest.json`, json);
 }
 
 /**

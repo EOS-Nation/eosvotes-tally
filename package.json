@@ -20,6 +20,7 @@
         "typescript": "*"
     },
     "dependencies": {
+        "aws-sdk": "*",
         "chalk": "*",
         "cron": "*",
         "dotenv": "*",
