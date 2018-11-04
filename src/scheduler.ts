@@ -14,7 +14,12 @@ export default async function scheduler() {
     const info = await rpc.get_info();
 
     // 30 minute delay from LIB & rounded to 7200 (hourly)
-    const block_num = Math.round((info.last_irreversible_block_num - 3600) / 7200) * 7200;
+    // 7200 = 60 minutes
+    // 3600 = 30 minutes
+    // 1200 = 10 minutes
+    // 600 = 5 minutes
+    const block_interval = 600;
+    const block_num = Math.round((info.last_irreversible_block_num - block_interval) / block_interval) * block_interval;
 
     // Prevent re-downloading existing data
     const filepath = path.join("snapshots", "eosvotes", "tallies", `${block_num}.json`);
