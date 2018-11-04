@@ -51,5 +51,3 @@ export default async function scheduler() {
     saveSnapshot(voters, block_num, "eosio", "voters");
     saveSnapshot(delband, block_num, "eosio", "delband");
 }
-
-scheduler();
