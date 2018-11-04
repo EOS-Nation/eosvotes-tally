@@ -1,6 +1,8 @@
+import * as fs from "fs";
+import * as path from "path";
 import { rpc } from "./config";
 import { getScopedSnapshot, getSnapshot, saveSnapshot } from "./snapshots";
-import { log, getCurrencySupply } from "./utils";
+import { log, getCurrencySupply, warning } from "./utils";
 import { Voters, Delband } from "../types/eosio";
 import { Vote, Proposal } from "../types/eosforumrcpp";
 import { generateAccounts, generateTallies, filterVotersByVotes } from "./tallies";
@@ -10,10 +12,13 @@ export default async function scheduler() {
 
     // Get Latest Block
     const info = await rpc.get_info();
-    const currency_supply = await getCurrencySupply();
 
     // 30 minute delay from LIB & rounded to 7200 (hourly)
     const block_num = Math.round((info.last_irreversible_block_num - 3600) / 7200) * 7200;
+
+    // Prevent re-downloading existing data
+    const filepath = path.join("snapshots", "eosvotes", "tallies", `${block_num}.json`);
+    if (fs.existsSync(filepath)) return warning({ref: "scheduler", message: `${filepath} already exists`});
 
     // Fetch voters
     const votes = await getSnapshot<Vote>({block_num, account: "eosforumrcpp", scope: "eosforumrcpp", table: "vote"});
@@ -31,6 +36,7 @@ export default async function scheduler() {
     const proxies = generateAccounts(votes, delband, voters, true);
     saveSnapshot(proxies, block_num, "eosvotes", "proxies");
 
+    const currency_supply = await getCurrencySupply();
     const tallies = generateTallies(proposals, accounts, proxies, currency_supply);
     saveSnapshot(tallies, block_num, "eosvotes", "tallies");
 
