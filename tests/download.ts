@@ -1,6 +1,7 @@
 import scheduler from "../src/scheduler";
 
 const block_nums = [
+    // Test Cases 001-011
     24693101,
     24693201,
     24694479,
@@ -14,10 +15,31 @@ const block_nums = [
     24698180,
     24709229,
     24709329,
+    // Test Cases 012-029
+    25368786,
+    25368886,
+    25369411,
+    25369479,
+    25369651,
+    25372602,
+    25372700,
+    25372764,
+    25372885,
+    25373153,
+    25373331,
+    25373472,
+    25373586,
+    25373686,
+    25373872,
+    25374144,
+    25376290,
+    25376526,
+    25376923,
+    25377833,
 ];
 
 (async () => {
     for (const block_num of block_nums) {
-        await scheduler(block_num);
+        await scheduler(block_num, false);
     }
 })();

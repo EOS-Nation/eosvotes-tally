@@ -11,7 +11,7 @@ import { uploadS3 } from "./aws";
 /**
  * Save snapshot as JSON
  */
-export function saveSnapshot(json: JSONStringifyable, block_num: number, account: string, table: string) {
+export function saveSnapshot(json: JSONStringifyable, block_num: number, account: string, table: string, latest = false) {
     const baseDir = defaultBaseDir(account, table);
 
     // Snapshot folder structure
@@ -19,13 +19,13 @@ export function saveSnapshot(json: JSONStringifyable, block_num: number, account
     const name = `snapshot ${account}::${table} ${block_num}`;
 
     // Save as JSON (Default)
-    write.sync(baseDir + "latest.json", json);
     write.sync(baseDir + `${block_num}.json`, json);
+    if (latest) write.sync(baseDir + "latest.json", json);
     log({ref, message: `${name} JSON saved`});
 
     // Upload to AWS Bucket
     uploadS3(`${account}/${table}/${block_num}.json`, json);
-    uploadS3(`${account}/${table}/latest.json`, json);
+    if (latest) uploadS3(`${account}/${table}/latest.json`, json);
 }
 
 /**
