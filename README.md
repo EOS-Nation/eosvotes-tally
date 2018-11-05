@@ -44,6 +44,10 @@ S3 Bucket URL template
 
 - https://s3.amazonaws.com/api.eosvotes.io/eosvotes/accounts/latest.json
 
+`eosvotes::proxies` (proxies details for `eosio.forum` voters)
+
+- https://s3.amazonaws.com/api.eosvotes.io/eosvotes/proxies/latest.json
+
 
 #### `eosio`
 
