@@ -31,7 +31,7 @@ export default async function scheduler(block_num: number) {
     saveSnapshot(proxies, block_num, "eosvotes", "proxies");
 
     const currency_supply = await getCurrencySupply();
-    const tallies = generateTallies(proposals, accounts, proxies, currency_supply);
+    const tallies = generateTallies(block_num, proposals, accounts, proxies, currency_supply);
     saveSnapshot(tallies, block_num, "eosvotes", "tallies");
 
     // Save Snapshots

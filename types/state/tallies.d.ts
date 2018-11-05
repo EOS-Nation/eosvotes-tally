@@ -14,6 +14,14 @@ export interface Tally {
 
 export interface Stats {
     /**
+     * Block Number used for Tally calculations
+     */
+    block_num: number;
+    /**
+     * Currency Supply used for Tally calculations
+     */
+    currency_supply: number;
+    /**
      * No less than 15% vote participation among tokens
      */
     vote_participation: boolean;

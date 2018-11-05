@@ -11,7 +11,7 @@ function defaultAccount() {
     };
 }
 
-export function defaultStats(): Stats {
+export function defaultStats(block_num: number, currency_supply: number): Stats {
     return {
         votes: {
             total: 0,
@@ -30,6 +30,8 @@ export function defaultStats(): Stats {
         vote_participation: false,
         more_yes: false,
         sustained_days: 0,
+        block_num,
+        currency_supply,
     };
 }
 
@@ -102,18 +104,18 @@ export function generateAccounts(votes: Vote[], delband: Eosio.Delband[], voters
     return accounts;
 }
 
-export function generateTallies(proposals: Proposal[], accounts: Accounts, proxies: Accounts, currency_supply = 1000000000): Tallies {
+export function generateTallies(block_num: number, proposals: Proposal[], accounts: Accounts, proxies: Accounts, currency_supply = 1000000000): Tallies {
     const tallies: Tallies = {};
 
     for (const proposal of proposals) {
-        tallies[proposal.proposal_name] = generateTally(proposal, accounts, proxies, currency_supply);
+        tallies[proposal.proposal_name] = generateTally(block_num, proposal, accounts, proxies, currency_supply);
     }
     return tallies;
 }
 
-export function generateTally(proposal: Proposal, accounts: Accounts, proxies: Accounts, currency_supply = 1000000000): Tally {
+export function generateTally(block_num: number, proposal: Proposal, accounts: Accounts, proxies: Accounts, currency_supply = 1000000000): Tally {
     const { proposal_name } = proposal;
-    const stats = defaultStats();
+    const stats = defaultStats(block_num, currency_supply);
 
     // Calculate account's staked
     for (const owner of Object.keys(accounts)) {
