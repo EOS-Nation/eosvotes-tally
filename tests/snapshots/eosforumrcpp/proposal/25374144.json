@@ -1,0 +1,50 @@
+[
+	{
+		"expires_at": "2018-12-01T00:00:00",
+		"created_at": "2018-11-01T18:01:58",
+		"proposal_json": "{\"type\":\"bps-proposal-v1\",\"content\":\"This proposal will help us run **one last test** before launching *the* referendum contract. \\n ###Do you believe that [Block.one](https://block.one) created the **greatest** blockchain? \\n Vote 0 for 'no' or vote 1 for 'yes'.\"}",
+		"title": "This is the BETA test of the Referendum Contract and the vote tallying mechanism. Please cast a vote, vote again with a different response, remove your vote, vote through a proxy, anything you can think of! Let's all help as a community to move the EOS mainnet into the spotlight as being the FIRST blockchain with on-chain governance accessible to all.",
+		"proposer": "joshkauffman",
+		"proposal_name": "betatest"
+	},
+	{
+		"expires_at": "2018-11-06T04:00:00",
+		"created_at": "2018-10-29T18:24:54",
+		"proposal_json": "{\"content\":\"A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content.\\n\\nA test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content.\\n\\nA test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content.\\n\\nA test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content.\\n\\nA test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content.\\n\\nA test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content. A test proposal with a decent amount of content.\\n\\n\"}",
+		"title": "Some long form content",
+		"proposer": "developjesta",
+		"proposal_name": "longformtest"
+	},
+	{
+		"expires_at": "2018-10-30T17:12:59",
+		"created_at": "2018-10-29T17:14:17",
+		"proposal_json": "{\"type\":\"bps-proposal-v1\",\"content\":\"\"}",
+		"title": "r",
+		"proposer": "joshkauffman",
+		"proposal_name": "ramusetest"
+	},
+	{
+		"expires_at": "2018-09-25T00:00:00",
+		"created_at": "2018-09-18T14:08:51",
+		"proposal_json": "{\"content\":\"# eosio.forum Release Candidate\\nThis is a test proposal.\"}",
+		"title": "EOS Canada invites you to test the Release Candidate forum",
+		"proposer": "eoscanadaops",
+		"proposal_name": "testforumnow"
+	},
+	{
+		"expires_at": "2018-10-02T23:00:00",
+		"created_at": "2018-10-02T18:17:29",
+		"proposal_json": "{\"content\":\"<b><i>test from eos-forum.org</i></b>\",\"src\":\"novusphere-forum\"}",
+		"title": "test from eos-forum.org",
+		"proposer": "ha4dmmjqhage",
+		"proposal_name": "tuafrudzyfqx"
+	},
+	{
+		"expires_at": "2018-10-10T15:00:00",
+		"created_at": "2018-10-10T03:57:11",
+		"proposal_json": "{\"content\":\"투표를 한다라... 이거 어거같은 투표 시스템인건가요? 돈도 걸어야 하나? test입니다. \",\"src\":\"novusphere-forum\"}",
+		"title": "이건 뭔가요?",
+		"proposer": "gregoryhouse",
+		"proposal_name": "vrrysyrezauy"
+	}
+]
