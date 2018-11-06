@@ -6,7 +6,7 @@ import { Voters, Delband } from "../types/eosio";
 import { Vote, Proposal } from "../types/eosforumrcpp";
 import { generateAccounts, generateTallies, filterVotersByVotes } from "./tallies";
 
-export default async function scheduler(block_num: number, latest = true) {
+export default async function scheduler(block_num: number, latest = true, root = "aws") {
     log({ref: "scheduler", message: `scheduler activated @ block number ${block_num}`});
 
     // Prevent re-downloading existing data
@@ -24,18 +24,18 @@ export default async function scheduler(block_num: number, latest = true) {
 
     // Calculate Tallies
     const accounts = generateAccounts(votes, delband, voters);
-    saveSnapshot(accounts, block_num, "eosvotes", "accounts", latest);
+    saveSnapshot(accounts, block_num, "eosvotes", "accounts", latest, root);
 
     const proxies = generateAccounts(votes, delband, voters, true);
-    saveSnapshot(proxies, block_num, "eosvotes", "proxies");
+    saveSnapshot(proxies, block_num, "eosvotes", "proxies", latest, root);
 
     const currency_supply = await getCurrencySupply();
     const tallies = generateTallies(block_num, proposals, accounts, proxies, currency_supply);
-    saveSnapshot(tallies, block_num, "eosvotes", "tallies", latest);
+    saveSnapshot(tallies, block_num, "eosvotes", "tallies", latest, root);
 
     // Save Snapshots
-    saveSnapshot(votes, block_num, "eosforumrcpp", "vote", latest);
-    saveSnapshot(proposals, block_num, "eosforumrcpp", "proposal", latest);
-    saveSnapshot(voters, block_num, "eosio", "voters", latest);
-    saveSnapshot(delband, block_num, "eosio", "delband", latest);
+    saveSnapshot(votes, block_num, "eosforumrcpp", "vote", latest, root);
+    saveSnapshot(proposals, block_num, "eosforumrcpp", "proposal", latest, root);
+    saveSnapshot(voters, block_num, "eosio", "voters", latest, root);
+    saveSnapshot(delband, block_num, "eosio", "delband", latest, root);
 }
