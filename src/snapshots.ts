@@ -11,8 +11,8 @@ import { uploadS3 } from "./aws";
 /**
  * Save snapshot as JSON
  */
-export function saveSnapshot(json: JSONStringifyable, block_num: number, account: string, table: string, latest = false) {
-    const baseDir = defaultBaseDir(account, table);
+export function saveSnapshot(json: JSONStringifyable, block_num: number, account: string, table: string, latest = false, root = "aws") {
+    const baseDir = defaultBaseDir(account, table, root);
 
     // Snapshot folder structure
     const ref = "snapshots::saveSnapshot";
@@ -70,8 +70,8 @@ export async function getScopedSnapshot<T>(scopes: string[], options: {
     return snapshot;
 }
 
-export function defaultBaseDir(account: string, table: string) {
-    return path.join(__dirname, "..", "snapshots", account, table) + path.sep;
+export function defaultBaseDir(account: string, table: string, root = "aws") {
+    return path.join(__dirname, "..", root, account, table) + path.sep;
 }
 
 /**

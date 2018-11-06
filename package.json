@@ -16,6 +16,8 @@
         "@types/dotenv": "*",
         "@types/long": "*",
         "@types/node-fetch": "*",
+        "ava": "*",
+        "ts-node": "*",
         "tslint": "*",
         "typescript": "*"
     },
@@ -29,5 +31,14 @@
         "long": "*",
         "node-fetch": "*",
         "write-json-file": "*"
+    },
+    "ava": {
+        "compileEnhancements": false,
+        "extensions": [
+            "ts"
+        ],
+        "require": [
+            "ts-node/register"
+        ]
     }
 }

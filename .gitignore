@@ -3,7 +3,7 @@
 !ecosystem.config.js
 
 # Tally
-snapshots/*
+aws/*
 
 # Logs
 logs
