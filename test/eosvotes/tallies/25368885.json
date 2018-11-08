@@ -1,35 +1,39 @@
 {
-	"checkmd": {
+	"betatest": {
 		"proposal": {
-			"expires_at": "2018-10-26T18:59:00",
-			"created_at": "2018-10-26T18:32:33",
-			"proposal_json": "{\"type\":\"bps-proposal-v1\",\"content\":\"This proposal will help us run **one last test** before launching *the* referendum contract. \\n ###Do you believe that [Block.one](https://block.one) created the **greatest** blockchain? \\n Vote using the numbers next to your selection. \\n No (0) or Yes (1)?\"}",
-			"title": "seehowthemarkdownholdsup",
+			"expires_at": "2018-12-01T00:00:00",
+			"created_at": "2018-11-01T18:01:58",
+			"proposal_json": "{\"type\":\"bps-proposal-v1\",\"content\":\"This proposal will help us run **one last test** before launching *the* referendum contract. \\n ###Do you believe that [Block.one](https://block.one) created the **greatest** blockchain? \\n Vote 0 for 'no' or vote 1 for 'yes'.\"}",
+			"title": "This is the BETA test of the Referendum Contract and the vote tallying mechanism. Please cast a vote, vote again with a different response, remove your vote, vote through a proxy, anything you can think of! Let's all help as a community to move the EOS mainnet into the spotlight as being the FIRST blockchain with on-chain governance accessible to all.",
 			"proposer": "joshkauffman",
-			"proposal_name": "checkmd"
+			"proposal_name": "betatest"
 		},
 		"stats": {
 			"votes": {
-				"1": 1,
-				"total": 1,
-				"proxies": 0,
-				"accounts": 1
+				"0": 3,
+				"1": 17,
+				"total": 20,
+				"proxies": 1,
+				"accounts": 19
 			},
 			"accounts": {
-				"1": 4038715,
-				"total": 4038715
+				"0": 196202522,
+				"1": 82390077,
+				"total": 278592599
 			},
 			"proxies": {
-				"total": 0
+				"1": 20000,
+				"total": 20000
 			},
 			"staked": {
-				"1": 4038715,
-				"total": 4038715
+				"0": 196202522,
+				"1": 82410077,
+				"total": 278612599
 			},
 			"vote_participation": false,
-			"more_yes": true,
+			"more_yes": false,
 			"sustained_days": 0,
-			"block_num": 24693101,
+			"block_num": 25368885,
 			"currency_supply": 1019649634.6824
 		}
 	},
@@ -44,29 +48,29 @@
 		},
 		"stats": {
 			"votes": {
-				"0": 1,
-				"1": 2,
-				"total": 3,
+				"0": 5,
+				"1": 14,
+				"total": 19,
 				"proxies": 0,
-				"accounts": 3
+				"accounts": 19
 			},
 			"accounts": {
-				"0": 6328000,
-				"1": 72701,
-				"total": 6400701
+				"0": 176193624,
+				"1": 82883265,
+				"total": 259076889
 			},
 			"proxies": {
 				"total": 0
 			},
 			"staked": {
-				"0": 6328000,
-				"1": 72701,
-				"total": 6400701
+				"0": 176193624,
+				"1": 82883265,
+				"total": 259076889
 			},
 			"vote_participation": false,
 			"more_yes": false,
 			"sustained_days": 0,
-			"block_num": 24693101,
+			"block_num": 25368885,
 			"currency_supply": 1019649634.6824
 		}
 	},
@@ -87,97 +91,20 @@
 				"accounts": 1
 			},
 			"accounts": {
-				"0": 4038715,
-				"total": 4038715
+				"0": 288713,
+				"total": 288713
 			},
 			"proxies": {
 				"total": 0
 			},
 			"staked": {
-				"0": 4038715,
-				"total": 4038715
+				"0": 288713,
+				"total": 288713
 			},
 			"vote_participation": false,
 			"more_yes": true,
 			"sustained_days": 0,
-			"block_num": 24693101,
-			"currency_supply": 1019649634.6824
-		}
-	},
-	"tallytest": {
-		"proposal": {
-			"expires_at": "2018-10-26T15:10:51",
-			"created_at": "2018-10-20T04:43:14",
-			"proposal_json": "{\"type\":\"bps-proposal-v1\",\"content\":\"Should Denis Carriere resign from EOS Nation and spend 100% of his time working to build vote tally mechanisms? Vote No (0) or Yes (1). If No (0) wins, he remains with EOS Nation. If Yes (1) wins, his shares are forfeited and he opens up Uncle Denis' Vote Tally Shoppe.\"}",
-			"title": "almostthere!",
-			"proposer": "joshkauffman",
-			"proposal_name": "tallytest"
-		},
-		"stats": {
-			"votes": {
-				"0": 8,
-				"1": 13,
-				"total": 21,
-				"proxies": 3,
-				"accounts": 18
-			},
-			"accounts": {
-				"0": 28467650,
-				"1": 30362486,
-				"total": 58830136
-			},
-			"proxies": {
-				"1": 128095290,
-				"total": 128095290
-			},
-			"staked": {
-				"0": 28467650,
-				"1": 158457776,
-				"total": 186925426
-			},
-			"vote_participation": false,
-			"more_yes": true,
-			"sustained_days": 0,
-			"block_num": 24693101,
-			"currency_supply": 1019649634.6824
-		}
-	},
-	"tbbvwquzyvex": {
-		"proposal": {
-			"expires_at": "2018-10-30T04:00:00",
-			"created_at": "2018-09-30T23:15:20",
-			"proposal_json": "{\"content\":\"Test proposal 2\",\"src\":\"novusphere-forum\"}",
-			"title": "Test proposal (2)",
-			"proposer": "novusphereio",
-			"proposal_name": "tbbvwquzyvex"
-		},
-		"stats": {
-			"votes": {
-				"0": 6,
-				"1": 35,
-				"total": 41,
-				"proxies": 2,
-				"accounts": 39
-			},
-			"accounts": {
-				"0": 6550189,
-				"1": 689314775,
-				"total": 695864964
-			},
-			"proxies": {
-				"0": 1025000,
-				"1": 20000,
-				"total": 1045000
-			},
-			"staked": {
-				"0": 7575189,
-				"1": 689334775,
-				"total": 696909964
-			},
-			"vote_participation": false,
-			"more_yes": true,
-			"sustained_days": 0,
-			"block_num": 24693101,
+			"block_num": 25368885,
 			"currency_supply": 1019649634.6824
 		}
 	},
@@ -195,28 +122,28 @@
 				"0": 4,
 				"1": 16,
 				"total": 20,
-				"proxies": 3,
-				"accounts": 17
+				"proxies": 2,
+				"accounts": 18
 			},
 			"accounts": {
 				"0": 9382702,
-				"1": 16910001,
-				"total": 26292703
+				"1": 18854001,
+				"total": 28236703
 			},
 			"proxies": {
-				"0": 4057717,
-				"1": 249000,
-				"total": 4306717
+				"0": 19002,
+				"1": 25000,
+				"total": 44002
 			},
 			"staked": {
-				"0": 13440419,
-				"1": 17159001,
-				"total": 30599420
+				"0": 9401704,
+				"1": 18879001,
+				"total": 28280705
 			},
 			"vote_participation": false,
 			"more_yes": true,
 			"sustained_days": 0,
-			"block_num": 24693101,
+			"block_num": 25368885,
 			"currency_supply": 1019649634.6824
 		}
 	},
@@ -247,7 +174,7 @@
 			"vote_participation": false,
 			"more_yes": true,
 			"sustained_days": 0,
-			"block_num": 24693101,
+			"block_num": 25368885,
 			"currency_supply": 1019649634.6824
 		}
 	},
@@ -281,7 +208,7 @@
 			"vote_participation": false,
 			"more_yes": true,
 			"sustained_days": 0,
-			"block_num": 24693101,
+			"block_num": 25368885,
 			"currency_supply": 1019649634.6824
 		}
 	}

@@ -10,7 +10,7 @@ export default async function scheduler(block_num: number, latest = true, root =
     log({ref: "scheduler", message: `scheduler activated @ block number ${block_num}`});
 
     // Prevent re-downloading existing data
-    const filepath = path.join("snapshots", "eosvotes", "tallies", `${block_num}.json`);
+    const filepath = path.join(root, "eosvotes", "tallies", `${block_num}.json`);
     if (fs.existsSync(filepath)) return warning({ref: "scheduler", message: `${filepath} already exists`});
 
     // Fetch voters

@@ -7,7 +7,7 @@
     "scripts": {
         "start": "tsc && node index.js",
         "lint": "tslint --project .",
-        "test": "tsc && ava"
+        "test": "tsc && ava -v"
     },
     "author": "Denis Carriere <denis@eosnation.io>",
     "license": "MIT",

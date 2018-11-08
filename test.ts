@@ -112,18 +112,44 @@ test("Test Case 011", async (t) => {
 
 // joshkauffman	No current BP vote registered
 test("Test Case 012", async (t) => {
-    const before = loadBlock(25368786);
+    const before = loadBlock(25368885);
     const after = loadBlock(25368886);
 
-    // vote 1 with 24.2511 EOS
-    t.is(after.stats.accounts[1] - before.stats.accounts[1], 24.2511 * 10000); // yes vote
+    // vote 1 with 28.8713 EOS
+    t.is(after.stats.accounts[1] - before.stats.accounts[1], 28.8713 * 10000); // yes vote
 });
 
-// joshkauffman	No current BP vote registered
-test("Test Case 012", async (t) => {
-    const before = loadBlock(25368786);
-    const after = loadBlock(25368886);
+// cast BP vote
+test("Test Case 013", async (t) => {
+    const before = loadBlock(25368886);
+    const after = loadBlock(25369411);
 
-    // vote 1 with 24.2511 EOS
-    t.is(after.stats.accounts[1] - before.stats.accounts[1], 24.2511 * 10000); // yes vote
+    // no change in vote totals
+    t.is(after.stats.staked[1] - before.stats.staked[1], 0 * 10000); // staked
+});
+
+test("Test Case 014", async (t) => {
+    const before = loadBlock(25369411);
+    const after = loadBlock(25369479);
+
+    // change vote to no
+    t.is(after.stats.accounts[0] - before.stats.accounts[0], 28.8713 * 10000); // no vote
+    t.is(after.stats.accounts[1] - before.stats.accounts[1], -28.8713 * 10000); // yes vote
+});
+
+test("Test Case 015", async (t) => {
+    const before = loadBlock(25369479);
+    const after = loadBlock(25369651);
+
+    // change stake (add 0.7489 stake to CPU)
+    t.is(after.stats.accounts[0] - before.stats.accounts[0], 0.7489 * 10000); // no vote
+});
+
+// testkauffman as proxy and are both voting for 0 (after this action)
+test("Test Case 017", async (t) => {
+    const before = loadBlock(25372602);
+    const after = loadBlock(25372700);
+
+    // proxy vote 0
+    t.is((after.stats.proxies[0] || 0) - (before.stats.proxies[0] || 0), 10.7002 * 10000); // no vote
 });

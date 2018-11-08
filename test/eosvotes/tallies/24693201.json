@@ -28,7 +28,9 @@
 			},
 			"vote_participation": false,
 			"more_yes": true,
-			"sustained_days": 0
+			"sustained_days": 0,
+			"block_num": 24693201,
+			"currency_supply": 1019649634.6824
 		}
 	},
 	"longformtest": {
@@ -63,7 +65,9 @@
 			},
 			"vote_participation": false,
 			"more_yes": false,
-			"sustained_days": 0
+			"sustained_days": 0,
+			"block_num": 24693201,
+			"currency_supply": 1019649634.6824
 		}
 	},
 	"ramusetest": {
@@ -95,7 +99,9 @@
 			},
 			"vote_participation": false,
 			"more_yes": true,
-			"sustained_days": 0
+			"sustained_days": 0,
+			"block_num": 24693201,
+			"currency_supply": 1019649634.6824
 		}
 	},
 	"tallytest": {
@@ -117,12 +123,12 @@
 			},
 			"accounts": {
 				"0": 28467650,
-				"1": 31854400,
-				"total": 60322050
+				"1": 30362486,
+				"total": 58830136
 			},
 			"proxies": {
-				"1": 126603376,
-				"total": 126603376
+				"1": 128095290,
+				"total": 128095290
 			},
 			"staked": {
 				"0": 28467650,
@@ -131,7 +137,9 @@
 			},
 			"vote_participation": false,
 			"more_yes": true,
-			"sustained_days": 0
+			"sustained_days": 0,
+			"block_num": 24693201,
+			"currency_supply": 1019649634.6824
 		}
 	},
 	"tbbvwquzyvex": {
@@ -152,14 +160,14 @@
 				"accounts": 39
 			},
 			"accounts": {
-				"0": 7485189,
-				"1": 689334775,
-				"total": 696819964
+				"0": 6550189,
+				"1": 689314775,
+				"total": 695864964
 			},
 			"proxies": {
-				"0": 90000,
-				"1": 0,
-				"total": 90000
+				"0": 1025000,
+				"1": 20000,
+				"total": 1045000
 			},
 			"staked": {
 				"0": 7575189,
@@ -168,7 +176,9 @@
 			},
 			"vote_participation": false,
 			"more_yes": true,
-			"sustained_days": 0
+			"sustained_days": 0,
+			"block_num": 24693201,
+			"currency_supply": 1019649634.6824
 		}
 	},
 	"testforumnow": {
@@ -189,14 +199,14 @@
 				"accounts": 17
 			},
 			"accounts": {
-				"0": 9401704,
-				"1": 17057001,
-				"total": 26458705
+				"0": 9382702,
+				"1": 16910001,
+				"total": 26292703
 			},
 			"proxies": {
-				"0": 4038715,
-				"1": 102000,
-				"total": 4140715
+				"0": 4057717,
+				"1": 249000,
+				"total": 4306717
 			},
 			"staked": {
 				"0": 13440419,
@@ -205,7 +215,9 @@
 			},
 			"vote_participation": false,
 			"more_yes": true,
-			"sustained_days": 0
+			"sustained_days": 0,
+			"block_num": 24693201,
+			"currency_supply": 1019649634.6824
 		}
 	},
 	"tuafrudzyfqx": {
@@ -234,7 +246,9 @@
 			},
 			"vote_participation": false,
 			"more_yes": true,
-			"sustained_days": 0
+			"sustained_days": 0,
+			"block_num": 24693201,
+			"currency_supply": 1019649634.6824
 		}
 	},
 	"vrrysyrezauy": {
@@ -266,7 +280,9 @@
 			},
 			"vote_participation": false,
 			"more_yes": true,
-			"sustained_days": 0
+			"sustained_days": 0,
+			"block_num": 24693201,
+			"currency_supply": 1019649634.6824
 		}
 	}
 }
