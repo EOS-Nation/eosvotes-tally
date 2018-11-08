@@ -3,7 +3,7 @@ import path from "path";
 import fetch from "node-fetch";
 import * as write from "write-json-file";
 import { JSONStringifyable } from "write-json-file";
-import { log } from "./utils";
+import { log, error } from "./utils";
 import { Snapshot } from "../types/snapshot";
 import { DFUSE_URL, DFUSE_IO_API_KEY } from "./config";
 import { uploadS3 } from "./aws";
@@ -42,7 +42,7 @@ export async function getSnapshot<T>(options: {
     token?: string,
 }): Promise<T[]> {
     if (options.json === undefined) { options.json = true; }
-    if (options.key_type === undefined) { options.key_type = "intstr"; }
+    if (options.key_type === undefined) { options.key_type = "uint64"; }
     if (options.with_block_num === undefined && options.block_num) { options.with_block_num = true; }
     const token = options.token || DFUSE_IO_API_KEY;
 
@@ -52,7 +52,15 @@ export async function getSnapshot<T>(options: {
     const url = `${DFUSE_URL}/v0/state/table?${qs.stringify(options)}`;
     log({ref: "snapshots::getSnapshot", message: url});
     const data = await fetch(url, {headers});
-    return snapshotToJSON<T>(await data.json());
+    const text = await data.text();
+    let json: any = [];
+
+    try {
+        json = JSON.parse(text);
+    } catch (e) {
+        error({ref: "snapshot::getSnapshot", message: text });
+    }
+    return snapshotToJSON<T>(json);
 }
 
 /**
