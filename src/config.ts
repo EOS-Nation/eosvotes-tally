@@ -11,12 +11,12 @@ dotenv.config({path: envPath});
 // EOSIO configurations
 export const EOSIO_API = process.env.EOSIO_API || "https://api.eosn.io";
 
-// DFuse configurations
+// dfuse.io configurations
 export const DFUSE_IO_API_KEY = process.env.DFUSE_IO_API_KEY;
 if (!DFUSE_IO_API_KEY) console.error("DFUSE_IO_API_KEY is missing in `.env`");
 
-export const SNAPSHOT_URL = process.env.SNAPSHOT_URL;
-if (!SNAPSHOT_URL) throw new Error("SNAPSHOT_URL is missing in `.env`");
+export const DFUSE_URL = process.env.DFUSE_URL;
+if (!DFUSE_URL) console.error("DFUSE_URL is missing in `.env`");
 
 // Optional Logging configs
 export const EOSVOTES_LOGGING = (process.env.EOSVOTES_LOGGING || "").split(",") || ["error", "log", "warning"];

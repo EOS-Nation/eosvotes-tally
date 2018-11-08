@@ -5,7 +5,7 @@ import * as write from "write-json-file";
 import { JSONStringifyable } from "write-json-file";
 import { log } from "./utils";
 import { Snapshot } from "../types/snapshot";
-import { SNAPSHOT_URL } from "./config";
+import { DFUSE_URL, DFUSE_IO_API_KEY } from "./config";
 import { uploadS3 } from "./aws";
 
 /**
@@ -39,14 +39,19 @@ export async function getSnapshot<T>(options: {
     json?: boolean,
     key_type?: string,
     with_block_num?: boolean,
+    token?: string,
 }): Promise<T[]> {
     if (options.json === undefined) { options.json = true; }
     if (options.key_type === undefined) { options.key_type = "intstr"; }
     if (options.with_block_num === undefined && options.block_num) { options.with_block_num = true; }
+    const token = options.token || DFUSE_IO_API_KEY;
 
-    const url = `${SNAPSHOT_URL}/v1/read?${qs.stringify(options)}`;
+    const headers = {
+        Authorization: `Bearer ${token}`,
+    };
+    const url = `${DFUSE_URL}/v0/state/table?${qs.stringify(options)}`;
     log({ref: "snapshots::getSnapshot", message: url});
-    const data = await fetch(url);
+    const data = await fetch(url, {headers});
     return snapshotToJSON<T>(await data.json());
 }
 
