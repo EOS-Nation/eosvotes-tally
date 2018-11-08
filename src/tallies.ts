@@ -19,12 +19,18 @@ export function defaultStats(block_num: number, currency_supply: number): Stats 
             accounts: 0,
         },
         accounts: {
+            0: 0,
+            1: 0,
             total: 0,
         },
         proxies: {
+            0: 0,
+            1: 0,
             total: 0,
         },
         staked: {
+            0: 0,
+            1: 0,
             total: 0,
         },
         vote_participation: false,
