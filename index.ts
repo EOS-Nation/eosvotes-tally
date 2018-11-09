@@ -11,13 +11,13 @@ async function latestBlock() {
     // 3600 = 30 minutes
     // 1200 = 10 minutes
     // 600 = 5 minutes
-    const block_interval = 1200;
+    const block_interval = 1000;
     const block_num = Math.round((info.last_irreversible_block_num - block_interval) / block_interval) * block_interval;
     return block_num;
 }
 
 // Update snapshots every 10 minutes
-const cronjob = new CronJob("*/10 * * * *", async () => {
+const cronjob = new CronJob("* * * * *", async () => {
     await scheduler(await latestBlock());
 }, undefined, true, "America/Toronto");
 
