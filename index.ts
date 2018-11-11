@@ -16,11 +16,14 @@ async function latestBlock() {
     return block_num;
 }
 
-// Update snapshots every 5 minutes
-const cronjob = new CronJob("*/5 * * * *", async () => {
-    await scheduler(await latestBlock());
-}, undefined, true, "America/Toronto");
+async function schedule() {
+    const block_num = await latestBlock();
+    await scheduler(block_num);
 
-(async () => {
-    scheduler(await latestBlock());
-})();
+    // Wait 1 minute before restarting
+    setTimeout(() => {
+        schedule();
+    }, 1000 * 60);
+}
+
+schedule();
