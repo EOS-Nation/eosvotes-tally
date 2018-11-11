@@ -24,7 +24,7 @@ $ npm start
 
 All the related EOSVotes datasets/snapshots are stored as Amazon S3 buckets.
 
-All snapshots (historical data) are stored using `block_num % 7200` (every 1 hour).
+All snapshots (historical data) are stored in 1000 `block_num` intervals (every ~8 minutes).
 
 Use `latest.json` for the latest uploaded dataset.
 
