@@ -1,4 +1,3 @@
-import { CronJob } from "cron";
 import { rpc } from "./src/config";
 import scheduler from "./src/scheduler";
 

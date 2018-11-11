@@ -66,7 +66,7 @@ export async function getSnapshot<T>(options: {
 /**
  * Fetch Scoped Snapshot & save to JSON
  */
-export async function getScopedSnapshot<T>(scopes: string[], options: {
+export async function getScopedSnapshot<T>(scopes: string[] | Set<string>, options: {
     block_num: number,
     account: string,
     table: string,

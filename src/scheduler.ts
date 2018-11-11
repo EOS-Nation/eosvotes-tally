@@ -15,7 +15,7 @@ export default async function scheduler(block_num: number, latest = true, root =
 
     // Fetch voters
     const votes = await getSnapshot<Vote>({block_num, account: "eosforumrcpp", scope: "eosforumrcpp", table: "vote"});
-    const account_names = votes.map((row) => row.voter);
+    const account_names = new Set(votes.map((row) => row.voter));
 
     // Get Snapshots
     const proposals = await getSnapshot<Proposal>({block_num, account: "eosforumrcpp", scope: "eosforumrcpp", table: "proposal"});
