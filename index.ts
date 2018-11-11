@@ -16,8 +16,8 @@ async function latestBlock() {
     return block_num;
 }
 
-// Update snapshots every 10 minutes
-const cronjob = new CronJob("* * * * *", async () => {
+// Update snapshots every 5 minutes
+const cronjob = new CronJob("*/5 * * * *", async () => {
     await scheduler(await latestBlock());
 }, undefined, true, "America/Toronto");
 
