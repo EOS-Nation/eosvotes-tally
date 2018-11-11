@@ -28,9 +28,51 @@ All snapshots (historical data) are stored using `block_num % 7200` (every 1 hou
 
 Use `latest.json` for the latest uploaded dataset.
 
-### 📊 Schema
+## 📊 Schema
 
-S3 Bucket URL template
+```typescript
+interface Tallies {
+    proposal: Proposal;
+    stats:    Stats;
+}
+
+interface Proposal {
+    expires_at:    string;
+    created_at:    string;
+    proposal_json: string;
+    title:         string;
+    proposer:      string;
+    proposal_name: string;
+}
+
+interface Stats {
+    votes:              Votes;
+    accounts:           Accounts;
+    proxies:            Accounts;
+    staked:             Accounts;
+    vote_participation: boolean;
+    more_yes:           boolean;
+    sustained_days:     number;
+    block_num:          number;
+    currency_supply:    number;
+}
+
+interface Accounts {
+    "0":    number;
+    "1":    number;
+    total:  number;
+}
+
+interface Votes {
+    "0"?:     number;
+    "1":      number;
+    proxies:  number;
+    accounts: number;
+    total:    number;
+}
+```
+
+## S3 Bucket URL template
 
 - [https://s3.amazonaws.com/api.eosvotes.io/{scope}/{table}/{block_num}.json](https://s3.amazonaws.com/api.eosvotes.io/eosvotes/tallies/latest.json)
 
