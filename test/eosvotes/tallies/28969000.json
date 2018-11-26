@@ -1,0 +1,1012 @@
+{
+	"anothertest": {
+		"proposal": {
+			"expires_at": "2018-11-23T07:42:00",
+			"created_at": "2018-11-21T08:10:31",
+			"proposal_json": "{\"content\":\"# This is a heading!\\n|Column 1|Column 2|Column 3|\\n|-|-|-|\\n|content1|content2|content3|\\n\\n![default64.png](0) will this image show?\\n> test quote\\n\\n![](https://www.pineswcd.com/vertical/Sites/%7BB4CF315C-B365-47D6-A226-5F80C04C0D48%7D/uploads/tree_clipart.gif) will this image show?\",\"type\":\"bps-proposal-v1\"}",
+			"title": "Will this test work?",
+			"proposer": "eossincerity",
+			"proposal_name": "anothertest"
+		},
+		"stats": {
+			"votes": {
+				"1": 8,
+				"total": 8,
+				"proxies": 0,
+				"accounts": 8
+			},
+			"accounts": {
+				"0": 0,
+				"1": 584930868,
+				"total": 584930868
+			},
+			"proxies": {
+				"0": 0,
+				"1": 0,
+				"total": 0
+			},
+			"staked": {
+				"0": 0,
+				"1": 584930868,
+				"total": 584930868
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"awesomemandu": {
+		"proposal": {
+			"expires_at": "2019-03-15T12:29:04",
+			"created_at": "2018-11-15T03:29:13",
+			"proposal_json": "{\"content\":\"Referendums is good?\\n\\nYes or No\",\"type\":\"bps-proposal-v1\"}",
+			"title": "Referendums is good?",
+			"proposer": "awesomemandu",
+			"proposal_name": "awesomemandu"
+		},
+		"stats": {
+			"votes": {
+				"0": 4,
+				"1": 109,
+				"total": 113,
+				"proxies": 1,
+				"accounts": 112
+			},
+			"accounts": {
+				"0": 5762690,
+				"1": "307035894215011900000470000001779000021183115000000904020069365645490243680000054188000115881429000007004000400000017840000895136151939687002003740080199910070000127000030000009706100005100000",
+				"total": "307612163215011900000470000001779000021183115000000904020069365645490243680000054188000115881429000007004000400000017840000895136151939687002003740080199910070000127000030000009706100005100000"
+			},
+			"proxies": {
+				"0": 0,
+				"1": 45000,
+				"total": 45000
+			},
+			"staked": {
+				"0": 5762690,
+				"1": "307035894215011900000470000001779000021183115000000904020069365645490243680000054188000115881429000007004000400000017840000895136151939687002003740080199910070000127000030000009706100005100000450000",
+				"total": "307612163215011900000470000001779000021183115000000904020069365645490243680000054188000115881429000007004000400000017840000895136151939687002003740080199910070000127000030000009706100005100000450000"
+			},
+			"vote_participation": true,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"besttoolkit1": {
+		"proposal": {
+			"expires_at": "2019-03-07T03:52:47",
+			"created_at": "2018-11-07T03:53:00",
+			"proposal_json": "{\"type\": \"bps-proposal-v1\", \"question\":Is eostoolkit the best toolkit?, \"content\":\"Some people say eostoolkit is the best. Others disagree. What do you think?\"}",
+			"title": "Is eostoolkit the best toolkit",
+			"proposer": "myeostoolkit",
+			"proposal_name": "besttoolkit1"
+		},
+		"stats": {
+			"votes": {
+				"0": 8,
+				"1": 48,
+				"total": 56,
+				"proxies": 9,
+				"accounts": 47
+			},
+			"accounts": {
+				"0": 136922388,
+				"1": 445377402,
+				"total": 582299790
+			},
+			"proxies": {
+				"0": 192993968,
+				"1": 995453896,
+				"total": 1188447864
+			},
+			"staked": {
+				"0": 329916356,
+				"1": 1440831298,
+				"total": 1770747654
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"betatest": {
+		"proposal": {
+			"expires_at": "2018-12-01T00:00:00",
+			"created_at": "2018-11-01T18:01:58",
+			"proposal_json": "{\"type\":\"bps-proposal-v1\",\"content\":\"This proposal will help us run **one last test** before launching *the* referendum contract. \\n ###Do you believe that [Block.one](https://block.one) created the **greatest** blockchain? \\n Vote 0 for 'no' or vote 1 for 'yes'.\"}",
+			"title": "This is the BETA test of the Referendum Contract and the vote tallying mechanism. Please cast a vote, vote again with a different response, remove your vote, vote through a proxy, anything you can think of! Let's all help as a community to move the EOS mainnet into the spotlight as being the FIRST blockchain with on-chain governance accessible to all.",
+			"proposer": "joshkauffman",
+			"proposal_name": "betatest"
+		},
+		"stats": {
+			"votes": {
+				"0": 25,
+				"1": 261,
+				"2": 1,
+				"255": 1,
+				"total": 288,
+				"proxies": 18,
+				"accounts": 270
+			},
+			"accounts": {
+				"0": 262012372,
+				"1": "517851046447544634692767026655031172410000801999400000100700001270000406630539400016472883000000970610000",
+				"2": 109997,
+				"255": 12000,
+				"total": "544064483347544634692767026655031172410000801999400000100700001270000406630539400016472883000000970610000"
+			},
+			"proxies": {
+				"0": 17217107,
+				"1": 2492584623,
+				"total": 2509801730
+			},
+			"staked": {
+				"0": 279229479,
+				"1": "517851046447544634692767026655031172410000801999400000100700001270000406630539400016472883000000970610000150000010200010000001002000000154400030000012627900236000020000015452000110000027907085280000002500019000001100004500019149396817500004650002020000017275067459563091122028055818500001509100001701856346758065050000153515200",
+				"2": 109997,
+				"255": 12000,
+				"total": "544064483347544634692767026655031172410000801999400000100700001270000406630539400016472883000000970610000150000010200010000001002000000154400030000012627900236000020000015452000110000010101567279070852800000025000190000011000045000191493968175000046500020200000172750674595630911220280558185000015091000017018563711554046758065050000153515200"
+			},
+			"vote_participation": true,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"betest1": {
+		"proposal": {
+			"expires_at": "2019-03-08T02:22:11",
+			"created_at": "2018-11-08T19:22:37",
+			"proposal_json": "{\"content\":\"# Meos commemorat sustinet nocet\\n\\n## Spargit arboreo spreto Phoebeos\\n\\nLorem markdownum tangi portans conplexibus vidit flumina ignis meritisne; se. Imagine in tegi manuque genae insiluit solis. Potuit supinis monstratum forte altera: luce cum dicitur petitus Iunonis.\\n\\n1. Usquam dubio praesignia circumfusa illic eo Aconteus\\n2. Caeruleus dea somnos turribus aureus signa\\n3. Nubila fulminis\\n\\n## Parens est arcu pererrato bracchia condidit et\\n\\nConsolor aequora usque fecundus rapit. Et fuit *occupat*, ullum tepido, alienaque versa veras erat abit aera addit.\\n\\n## Necemque medio tantaeque accipit\\n\\nCiet sparsas solet, arma et per places quodsi meas ipsum nomenque. Inpulerat alis percensuit paulatim veloxque limitibus, inplerat rubentia movit? Vita dexteriore secunda mandato; metu moveri navigat et gentem veni, me ignibus. Altae an vulnus talibus quam ditem ubi ovantem feret. Tanta recognoscit foribusque lacus praetentaque ut dicere alvum pelagoque stabat omnis Achaemeniden magni relinquunt Cythereide dextra.\\n\\n1. Gente nec Proteus gratus\\n2. Superba lubrica\\n3. Dedit nullique\\n4. Nec lateantque claro\\n5. Videt stetit agros interdum gratissima auras velle\\n6. Fulmina sanguine cornua usque mole\\n\\n## Revinctam Laelapa vidit\\n\\nRetro enim Cymeli Aeaciden quam cognoscite; erat victus Eleusin et illa! Est arsisses sedit ego bellum Ephyre **ramis** etiamnum adclivis coarguit. Properabat soceri, quaque quo possim: musta numen fructus domino!\\n\\n1. Cunis temeraria si tremulo quem nisi maestae\\n2. Cratera certamina fuit sententia locum\\n3. Humi est cedunt summis intemptata orbi mugitus\\n4. Locat vellem viri vulnera\\n\\nIubendo acui: est tibi pectore saxum saxoque rexit curvataque ergo accessisse exoratis.\",\"type\":\"bps-proposal-v1\"}",
+			"title": "Should Branden Espinoza get an EOS tattoo? (0) No (1) Yes",
+			"proposer": "imblackbeard",
+			"proposal_name": "betest1"
+		},
+		"stats": {
+			"votes": {
+				"0": 27,
+				"1": 53,
+				"total": 80,
+				"proxies": 10,
+				"accounts": 70
+			},
+			"accounts": {
+				"0": 1808419955,
+				"1": 1421773813,
+				"total": 3230193768
+			},
+			"proxies": {
+				"0": 715839311,
+				"1": 1208855674,
+				"total": 1924694985
+			},
+			"staked": {
+				"0": 2524259266,
+				"1": 2630629487,
+				"total": 5154888753
+			},
+			"vote_participation": false,
+			"more_yes": false,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"blokstest": {
+		"proposal": {
+			"expires_at": "2019-03-07T10:27:29",
+			"created_at": "2018-11-08T05:27:35",
+			"proposal_json": "{\"content\":\"Test Bloks\",\"type\":\"chat\"}",
+			"title": "Testing for Bloks",
+			"proposer": "gyydsnbtguge",
+			"proposal_name": "blokstest"
+		},
+		"stats": {
+			"votes": {
+				"0": 12,
+				"1": 24,
+				"total": 36,
+				"proxies": 5,
+				"accounts": 31
+			},
+			"accounts": {
+				"0": 108384584,
+				"1": 348138820,
+				"total": 456523404
+			},
+			"proxies": {
+				"0": 0,
+				"1": 164099311,
+				"total": 164099311
+			},
+			"staked": {
+				"0": 108384584,
+				"1": 512238131,
+				"total": 620622715
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"boc111111111": {
+		"proposal": {
+			"expires_at": "2018-12-24T01:28:51",
+			"created_at": "2018-11-24T01:29:49",
+			"proposal_json": "{\"content\":\"BOC\",\"type\":\"BOC货币\"}",
+			"title": "BOC",
+			"proposer": "boc111111111",
+			"proposal_name": "boc111111111"
+		},
+		"stats": {
+			"votes": {
+				"1": 2,
+				"total": 2,
+				"proxies": 1,
+				"accounts": 1
+			},
+			"accounts": {
+				"0": 0,
+				"1": 200000,
+				"total": 200000
+			},
+			"proxies": {
+				"0": 0,
+				"1": 45000,
+				"total": 45000
+			},
+			"staked": {
+				"0": 0,
+				"1": 245000,
+				"total": 245000
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"bpvoting": {
+		"proposal": {
+			"expires_at": "2018-11-15T17:03:20",
+			"created_at": "2018-11-11T19:17:53",
+			"proposal_json": "",
+			"title": "Should block.one vote for block producers on EOS main net?",
+			"proposer": "eoscustodian",
+			"proposal_name": "bpvoting"
+		},
+		"stats": {
+			"votes": {
+				"0": 2,
+				"1": 3,
+				"total": 5,
+				"proxies": 1,
+				"accounts": 4
+			},
+			"accounts": {
+				"0": 60000,
+				"1": 58288529,
+				"total": 58348529
+			},
+			"proxies": {
+				"0": 392860710,
+				"1": 0,
+				"total": 392860710
+			},
+			"staked": {
+				"0": 392920710,
+				"1": 58288529,
+				"total": 451209239
+			},
+			"vote_participation": false,
+			"more_yes": false,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"buytherabbit": {
+		"proposal": {
+			"expires_at": "2018-11-23T12:00:00",
+			"created_at": "2018-11-15T20:16:56",
+			"proposal_json": "{\"type\":\"bps-proposal-v1\",\"content\":\"{\\\"type\\\":\\\"internal-company\\\",\\\"content\\\":\\\"This proposal is the first proposal for to propose some usage of dfuse employee's pot\\\\n ###Do you agree to use the employee pot to buy a rabbit metallic poster (See poster here)[https://displate.com/displate/667433] ?\\\\n Vote 0 for 'no' or vote 1 for 'yes'.\\\"}\"}",
+			"title": "Do you agree to use the employee pot to buy a rabbit metallic poster?",
+			"proposer": "eoslegoblock",
+			"proposal_name": "buytherabbit"
+		},
+		"stats": {
+			"votes": {
+				"0": 4,
+				"1": 12,
+				"total": 16,
+				"proxies": 1,
+				"accounts": 15
+			},
+			"accounts": {
+				"0": 8557239,
+				"1": 32102119,
+				"total": 40659358
+			},
+			"proxies": {
+				"0": 0,
+				"1": 0,
+				"total": 0
+			},
+			"staked": {
+				"0": 8557239,
+				"1": 32102119,
+				"total": 40659358
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"dabbleubi": {
+		"proposal": {
+			"expires_at": "2019-03-13T10:26:17",
+			"created_at": "2018-11-13T01:26:22",
+			"proposal_json": "{\"content\":\"<H2> Dabble UBI </H2>\\n아시겠지만, UBI는 인간 세상에서 매우 어려운 난제 입니다. 즉 조건부가 아닌 무조건적으로\\n국민, 또는 시민에게 돈을 나누어 주는 것이죠.\\n\\nDabble에도 이와 같은 것을 도입하면 어떨까요?\",\"type\":\"dabble-ubi\"}",
+			"title": "Dabble에 UBI를 적용하는 것이 필요할까요?",
+			"proposer": "eoscafekorea",
+			"proposal_name": "dabbleubi"
+		},
+		"stats": {
+			"votes": {
+				"0": 2,
+				"1": 16,
+				"total": 18,
+				"proxies": 2,
+				"accounts": 16
+			},
+			"accounts": {
+				"0": 310000,
+				"1": 128975498,
+				"total": 129285498
+			},
+			"proxies": {
+				"0": 45000,
+				"1": 1544000,
+				"total": 1589000
+			},
+			"staked": {
+				"0": 355000,
+				"1": 130519498,
+				"total": 130874498
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"demotest": {
+		"proposal": {
+			"expires_at": "2019-03-23T13:36:15",
+			"created_at": "2018-11-23T13:36:25",
+			"proposal_json": "{\"type\":\"bps-proposal-v1\",\"question\":\"proposal_question\",\"content\":\"proposal_content\"}",
+			"title": "proposal_title",
+			"proposer": "eoshasdoneit",
+			"proposal_name": "demotest"
+		},
+		"stats": {
+			"votes": {
+				"1": 2,
+				"total": 2,
+				"proxies": 1,
+				"accounts": 1
+			},
+			"accounts": {
+				"0": 0,
+				"1": 200000,
+				"total": 200000
+			},
+			"proxies": {
+				"0": 0,
+				"1": 45000,
+				"total": 45000
+			},
+			"staked": {
+				"0": 0,
+				"1": 245000,
+				"total": 245000
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"eos": {
+		"proposal": {
+			"expires_at": "2018-12-09T14:51:57",
+			"created_at": "2018-11-09T14:52:25",
+			"proposal_json": "{\"content\":\"Is EOS a Blockchain?\",\"type\":\"simple\"}",
+			"title": "Is EOS a Blockchain?",
+			"proposer": "jerryfanelli",
+			"proposal_name": "eos"
+		},
+		"stats": {
+			"votes": {
+				"0": 11,
+				"1": 189,
+				"total": 200,
+				"proxies": 12,
+				"accounts": 188
+			},
+			"accounts": {
+				"0": 69407435,
+				"1": 4908867726,
+				"total": 4978275161
+			},
+			"proxies": {
+				"0": 45000,
+				"1": 1017688568,
+				"total": 1017733568
+			},
+			"staked": {
+				"0": 69452435,
+				"1": 5926556294,
+				"total": 5996008729
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"firstforum": {
+		"proposal": {
+			"expires_at": "2019-05-07T13:19:49",
+			"created_at": "2018-11-07T13:20:00",
+			"proposal_json": "{\"type\":\"bps-proposal-v1\",\"question\":\"firstforum question\",\"content\":\"firstforum content\"}",
+			"title": "firstforum title",
+			"proposer": "eoshasdoneit",
+			"proposal_name": "firstforum"
+		},
+		"stats": {
+			"votes": {
+				"0": 5,
+				"1": 7,
+				"total": 12,
+				"proxies": 1,
+				"accounts": 11
+			},
+			"accounts": {
+				"0": 36703639,
+				"1": 81643192,
+				"total": 118346831
+			},
+			"proxies": {
+				"0": 1544000,
+				"1": 0,
+				"total": 1544000
+			},
+			"staked": {
+				"0": 38247639,
+				"1": 81643192,
+				"total": 119890831
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"genesis12345": {
+		"proposal": {
+			"expires_at": "2019-03-12T12:13:33",
+			"created_at": "2018-11-12T03:13:40",
+			"proposal_json": "{\"content\":\"Proposal document for revision of EOS Constitution V4\\n\",\"type\":\"bps-proposal-v4\"}",
+			"title": "go to ",
+			"proposer": "genesis12345",
+			"proposal_name": "genesis12345"
+		},
+		"stats": {
+			"votes": {
+				"0": 1,
+				"1": 6,
+				"total": 7,
+				"proxies": 1,
+				"accounts": 6
+			},
+			"accounts": {
+				"0": 10000,
+				"1": 32109192,
+				"total": 32119192
+			},
+			"proxies": {
+				"0": 0,
+				"1": 582050000,
+				"total": 582050000
+			},
+			"staked": {
+				"0": 10000,
+				"1": 614159192,
+				"total": 614169192
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"gu3dmmrugqge": {
+		"proposal": {
+			"expires_at": "2019-03-24T07:08:39",
+			"created_at": "2018-11-24T10:08:48",
+			"proposal_json": "{\"content\":\"Yes or No\",\"type\":\"bps-proposal-v1\"}",
+			"title": "Should  I give rewards to voters?",
+			"proposer": "gu3dmmrugqge",
+			"proposal_name": "gu3dmmrugqge"
+		},
+		"stats": {
+			"votes": {
+				"1": 4,
+				"total": 4,
+				"proxies": 0,
+				"accounts": 4
+			},
+			"accounts": {
+				"0": 0,
+				"1": 11904000,
+				"total": 11904000
+			},
+			"proxies": {
+				"0": 0,
+				"1": 0,
+				"total": 0
+			},
+			"staked": {
+				"0": 0,
+				"1": 11904000,
+				"total": 11904000
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"hackathonpnw": {
+		"proposal": {
+			"expires_at": "2018-12-14T19:09:22",
+			"created_at": "2018-11-14T19:33:36",
+			"proposal_json": "{\"content\":\"Worker proposal fund should donate $100K towards a Pacific Northwest EOS hackathon.\\nIt's great that Block.One funded the first round of hackathons around the world and now it's time to drive local hackathons around the world.\\nThis proposal is to fund the Hackathon in Seattle or nearby to drive EOS adoption and projects in the Pacific Northwest of USA.\\nPacific Northwest (PNW) includes Seattle, Everett, Bellevue, Tacoma, and even Portland and beyond.  PNW includes technologists from leading companies in the region such as Microsoft, Amazon, Boeing, Expedia, Google, Facebook and many more who should be brought into the EOS ecosystem.  The hackathon would be open to anyone around the world to participate.\\nFunding:  $100K for all expenses including hackathon coordinators, venue, food, swag, drinks, and basic prizes such as $10K 1st prize, $5K second prize, $2K third prize.\\nSponsors can fund the hackathon to \\\"power-up\\\" prizes or create new prizes.  For example block producers could join together for best application voted by or for block producers.  Sponsors could also donate to 1st prize to increase awards or contribute to a Espresso bar since we need Espresso drinks in Pacific Northwest!!\\nEvent coordinators would share best practices and template for other local hackathons throughout the world.\\n\\nIt's understood that this is beta referendum, just want to get the idea out their and test the referendum for something real.\",\"type\":\"worker proposal fund\"}",
+			"title": "Pacific Northwest USA Hackathon",
+			"proposer": "joy2theworld",
+			"proposal_name": "hackathonpnw"
+		},
+		"stats": {
+			"votes": {
+				"1": 10,
+				"total": 10,
+				"proxies": 0,
+				"accounts": 10
+			},
+			"accounts": {
+				"0": 0,
+				"1": 75653618,
+				"total": 75653618
+			},
+			"proxies": {
+				"0": 0,
+				"1": 0,
+				"total": 0
+			},
+			"staked": {
+				"0": 0,
+				"1": 75653618,
+				"total": 75653618
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"happylazycat": {
+		"proposal": {
+			"expires_at": "2019-03-15T12:58:22",
+			"created_at": "2018-11-15T03:58:37",
+			"proposal_json": "{\"content\":\"고양이를 쓰다듬으며 여생을 보냅시다. 고양이를 위해 지구를 지킵시다. 고양이를 위해 전지구적인 기본소득을 도입하여 고양이에게 맛있는 음식과 따뜻한 집을 제공합시다.\",\"type\":\"bps-proposal-v1\"}",
+			"title": "고양이는 귀엽습니다.",
+			"proposer": "gu4tgnrvg4ge",
+			"proposal_name": "happylazycat"
+		},
+		"stats": {
+			"votes": {
+				"1": 7,
+				"total": 7,
+				"proxies": 0,
+				"accounts": 7
+			},
+			"accounts": {
+				"0": 0,
+				"1": 109787223,
+				"total": 109787223
+			},
+			"proxies": {
+				"0": 0,
+				"1": 0,
+				"total": 0
+			},
+			"staked": {
+				"0": 0,
+				"1": 109787223,
+				"total": 109787223
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"haytmmbxgege": {
+		"proposal": {
+			"expires_at": "2019-03-15T06:28:15",
+			"created_at": "2018-11-15T09:28:33",
+			"proposal_json": "{\"content\":\"\\nIn everyday life, transaction alarms are received unnecessarily.\\nDo you need the advertising transaction rejection function?\\nThank you\",\"type\":\"bps-proposal-v1\"}",
+			"title": "Do you need the advertising transaction rejection function?",
+			"proposer": "haytmmbxgege",
+			"proposal_name": "haytmmbxgege"
+		},
+		"stats": {
+			"votes": {
+				"0": 1,
+				"1": 5,
+				"total": 6,
+				"proxies": 1,
+				"accounts": 5
+			},
+			"accounts": {
+				"0": 28640000,
+				"1": 114599170,
+				"total": 143239170
+			},
+			"proxies": {
+				"0": 0,
+				"1": 1465000,
+				"total": 1465000
+			},
+			"staked": {
+				"0": 28640000,
+				"1": 116064170,
+				"total": 144704170
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"myeoskittest": {
+		"proposal": {
+			"expires_at": "2018-11-09T13:29:43",
+			"created_at": "2018-11-07T13:23:01",
+			"proposal_json": "{\"content\":\"# Lorem ipsum dolor sit amet, consectetur adipisicing elit\\n\\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\n\\n## Eprehenderit in voluptate velit esse\\n\\nLorem ipsum dolor sit amet, consectetur adipisicing elit, [myeoskit.com](https://www.myeoskit.com/tools/referendums) sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\n\\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation *ullamco laboris nisi ut aliquip* ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\\n\\n## Excepteur sint occaecat \\n\\n* Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna \\n* Aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis * Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\"type\":\"test\"}",
+			"title": "Sample proposal from myeoskit.com",
+			"proposer": "dexteryy5555",
+			"proposal_name": "myeoskittest"
+		},
+		"stats": {
+			"votes": {
+				"0": 2,
+				"1": 5,
+				"total": 7,
+				"proxies": 0,
+				"accounts": 7
+			},
+			"accounts": {
+				"0": 1070000,
+				"1": 28039200,
+				"total": 29109200
+			},
+			"proxies": {
+				"0": 0,
+				"1": 0,
+				"total": 0
+			},
+			"staked": {
+				"0": 1070000,
+				"1": 28039200,
+				"total": 29109200
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"proptest1": {
+		"proposal": {
+			"expires_at": "2018-11-16T08:32:46",
+			"created_at": "2018-11-16T07:28:31",
+			"proposal_json": "{\"type\": \"bps-proposal-v1\", \"question\":\"Should the forum contract be moved from Beta?\", \"content\":\"#Yes = Move to Prod\n#No = Status Quo\"}",
+			"title": "THis is the title of my poll.",
+			"proposer": "imblackbeard",
+			"proposal_name": "proptest1"
+		},
+		"stats": {
+			"votes": {
+				"total": 0,
+				"proxies": 0,
+				"accounts": 0
+			},
+			"accounts": {
+				"0": 0,
+				"1": 0,
+				"total": 0
+			},
+			"proxies": {
+				"0": 0,
+				"1": 0,
+				"total": 0
+			},
+			"staked": {
+				"0": 0,
+				"1": 0,
+				"total": 0
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"redbull": {
+		"proposal": {
+			"expires_at": "2018-12-09T09:02:11",
+			"created_at": "2018-11-09T09:08:47",
+			"proposal_json": "{\"content\":\"Does Redbull gives you wings?\",\"type\":\"simple\"}",
+			"title": "Does Redbull give you wings?",
+			"proposer": "jerryfanelli",
+			"proposal_name": "redbull"
+		},
+		"stats": {
+			"votes": {
+				"0": 60,
+				"1": 30,
+				"total": 90,
+				"proxies": 8,
+				"accounts": 82
+			},
+			"accounts": {
+				"0": 1747213787,
+				"1": 511634174,
+				"total": 2258847961
+			},
+			"proxies": {
+				"0": 1601597190,
+				"1": 396700416,
+				"total": 1998297606
+			},
+			"staked": {
+				"0": 3348810977,
+				"1": 908334590,
+				"total": 4257145567
+			},
+			"vote_participation": false,
+			"more_yes": false,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"startjungles": {
+		"proposal": {
+			"expires_at": "2019-03-09T09:35:11",
+			"created_at": "2018-11-09T19:35:10",
+			"proposal_json": "{\"content\":\"just for test this system\\ntest by CryptoLions\",\"type\":\"bps-proposal-v1\"}",
+			"title": "Start new Jungle 2.0 testnet Chain",
+			"proposer": "bohdanbohdan",
+			"proposal_name": "startjungles"
+		},
+		"stats": {
+			"votes": {
+				"0": 1,
+				"1": 22,
+				"total": 23,
+				"proxies": 1,
+				"accounts": 22
+			},
+			"accounts": {
+				"0": 33779442,
+				"1": 1144221195,
+				"total": 1178000637
+			},
+			"proxies": {
+				"0": 0,
+				"1": 582050000,
+				"total": 582050000
+			},
+			"staked": {
+				"0": 33779442,
+				"1": 1726271195,
+				"total": 1760050637
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"tangsuyookkr": {
+		"proposal": {
+			"expires_at": "2019-03-12T09:41:42",
+			"created_at": "2018-11-12T12:41:48",
+			"proposal_json": "{\"content\":\"전 인류의 풀리지않는 숙제!\\n\\n과연 탕수육은 '찍어먹어야 하는가?' VS '부어먹어야 하는가?'\\n\\n여러분들의 선택은?\\n\\nYES - 찍먹\\nNO - 부먹\",\"type\":\"bps-proposal-v1\"}",
+			"title": "탕수육에 대한 고찰",
+			"proposer": "g42tknzvhege",
+			"proposal_name": "tangsuyookkr"
+		},
+		"stats": {
+			"votes": {
+				"0": 5,
+				"1": 18,
+				"total": 23,
+				"proxies": 1,
+				"accounts": 22
+			},
+			"accounts": {
+				"0": 71182541,
+				"1": 281882474,
+				"total": 353065015
+			},
+			"proxies": {
+				"0": 0,
+				"1": 1544000,
+				"total": 1544000
+			},
+			"staked": {
+				"0": 71182541,
+				"1": 283426474,
+				"total": 354609015
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"testing": {
+		"proposal": {
+			"expires_at": "2019-03-15T09:41:48",
+			"created_at": "2018-11-15T12:42:10",
+			"proposal_json": "{\"content\":\"동의하면 투표 눌러주세요. 가즈아!!!!\",\"type\":\"bps-proposal-v1\"}",
+			"title": "2019년 이오스 가격 50만원 예상합니다.",
+			"proposer": "hakunamatata",
+			"proposal_name": "testing"
+		},
+		"stats": {
+			"votes": {
+				"1": 6,
+				"total": 6,
+				"proxies": 0,
+				"accounts": 6
+			},
+			"accounts": {
+				"0": 0,
+				"1": 80185025,
+				"total": 80185025
+			},
+			"proxies": {
+				"0": 0,
+				"1": 0,
+				"total": 0
+			},
+			"staked": {
+				"0": 0,
+				"1": 80185025,
+				"total": 80185025
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"untestable": {
+		"proposal": {
+			"expires_at": "2018-11-22T08:08:00",
+			"created_at": "2018-11-21T13:09:26",
+			"proposal_json": "{\"content\":\"# Hello\\n## Lorem\\n### ipsum\\n++Underline++\\n~~strikethrough~~\\n**bold**\\n==highlighted==\\n^Superscript^\\n~Subscript~\\n*Italic*\\n::: hljs-left\\n\\nClamp text to the left\\n\\n:::\\n::: hljs-center\\n\\nCenter text\\n\\n:::\\n::: hljs-right\\n\\nClamp text to the right\\n\\n:::\\n\\n> Quote\\n\\n\\n1. one\\n2. two\\n3. three\\n\\n- bullet1\\n- bullet2\\n- bullet3\\n\\n```javascript\\nsudo dontdoit -rf\\n\\n```\\n\\n|column1|column2|column3|\\n|-|-|-|\\n|content1|content2|content3|\\n|content1|content2|content3|\\n|content1|content2|content3|\\n\\n\\n[google](https://google.com)\\n\\n\\n\\n\",\"type\":\"Test\"}",
+			"title": "testing",
+			"proposer": "shaqnotfound",
+			"proposal_name": "untestable"
+		},
+		"stats": {
+			"votes": {
+				"1": 2,
+				"total": 2,
+				"proxies": 0,
+				"accounts": 2
+			},
+			"accounts": {
+				"0": 0,
+				"1": 8610246,
+				"total": 8610246
+			},
+			"proxies": {
+				"0": 0,
+				"1": 0,
+				"total": 0
+			},
+			"staked": {
+				"0": 0,
+				"1": 8610246,
+				"total": 8610246
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	},
+	"votetrackert": {
+		"proposal": {
+			"expires_at": "2018-12-20T00:00:00",
+			"created_at": "2018-11-08T06:10:34",
+			"proposal_json": "{\"content\":\"#### JSON Structure Guidelines\\n\\nYou can use any vocabulary you want when creating posts, proposals and\\nvotes, there is no specification yet for the JSON. However, by following\\nsome simple guidelines, you can simplify your life and the life of those\\nbuilding UIs around these messages.\\n\\nFor all `json` prefixed or suffixed fields in `propose`, `vote` and\\n`post`, the `type` field should determine a higher order protocol, and\\ndetermines what other sibling fields will be required.\\n\\n##### In a `propose`'s `proposal_json` field\\n\\n* `type` is a required field to distinguish protocol. See types in the section below.\\n\\n* `question` means the reference language question of a\\n  proposition.\\n\\n* `content` is a Markdown document, detailing everything there is to know about the proposal\\n   (tally methods, time frame, references, required etc..)\\n\\n##### In a `vote`'s `vote_json` field\\n\\n* `type` is optional. Defaults to `simple` if not present.\\n\\n###### `type` values\\n\\n* `simple` is the same as no `type` at all. The value of the vote is\\n  the boolean `vote` field of the _action_.\\n\\n##### In a `post`'s `json_metadata` field\\n\\n* `type` is a required field to distinguish protocol.  See below for\\n  sample types\\n\\nThe following fields attempt to standardize the meaning of certain\\nkeys. If you specify your own `type`, you can define whatever you\\nwant.\\n\\n* `title` is a title that will be shown above a message, often used in\\n  clickable headlines. Similar to a Reddit post's title.\\n\\n* `tags` is a list of strings, prefixed or not with a `#`.\\n\\n###### `type` values\\n\\n* `chat`, which is a simple chat, pushing a message out.\\n\\n* `eos-bps-roll-call`, this is used within EOS Block Producers calls\\n  to indicate they are present.\\n\\n* `eos-bps-emergency`, once **3** block producers send a message of\\n  this type within an hour, all block producers can trigger a wake-up\\n  alarm within 1h. Do not abuse this message to avoid alert\\n  fatigue. ##### Example serious vulnerability requires mitigation, serious\\n  network issues, immediate action required, etc..\\n\\n* `eos-bps-notify`, once **7** block producers send a message of this type\\n  within an hour, other block producers can trigger a notification to\\n  get their attention in the **next 24h**. ##### Example new ECAF order requires\\n  attention.\\n\\n* `eos-arbitration-order`, BPs can watch for known Arbitration forums\\n  accounts, and alert themselves of required action.  Further fields\\n  could be defined like a link to the PDF format order; a reference to\\n  a ready-made `eosio.msig` transaction proposition; etc..\\n\",\"type\":\"test\"}",
+			"title": "Votetracker test",
+			"proposer": "funooooooooo",
+			"proposal_name": "votetrackert"
+		},
+		"stats": {
+			"votes": {
+				"0": 3,
+				"1": 36,
+				"total": 39,
+				"proxies": 2,
+				"accounts": 37
+			},
+			"accounts": {
+				"0": 36327639,
+				"1": 401289262,
+				"total": 437616901
+			},
+			"proxies": {
+				"0": 0,
+				"1": 599267107,
+				"total": 599267107
+			},
+			"staked": {
+				"0": 36327639,
+				"1": 1000556369,
+				"total": 1036884008
+			},
+			"vote_participation": false,
+			"more_yes": true,
+			"sustained_days": 0,
+			"block_num": 28969000,
+			"currency_supply": 1022358777.1566
+		}
+	}
+}

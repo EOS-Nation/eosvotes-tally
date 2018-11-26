@@ -4,7 +4,6 @@ module.exports = {
     script: 'index.ts',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
-    autorestart: true,
-    watch: true,
+    autorestart: true
   }],
 };
