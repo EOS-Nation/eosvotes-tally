@@ -36,6 +36,8 @@ const block_nums = [
     25376526,
     25376923,
     25377833,
+    // Weird Numbers - awesomemandu
+    28969000,
 ];
 
 (async () => {
