@@ -1,10 +1,23 @@
 import * as load from "load-json-file";
 import path from "path";
 import test from "ava";
-import { Tallies } from "./types/state";
+import { Proposal, Vote } from "./types/eosforumrcpp";
+import { Delband, VoterInfo } from "./types/eosio";
+import { generateAccounts, generateTallies } from "./src/tallies";
 
 function loadBlock(block_num: number, proposal = "longformtest") {
-    return load.sync<Tallies>(path.join(__dirname, "test", "eosvotes", "tallies", `${block_num}.json`))[proposal];
+    const basedir = path.join(__dirname, "test");
+    const votes = load.sync<Vote[]>(path.join(basedir, "eosforumrcpp", "vote", `${block_num}.json`));
+    const delband = load.sync<Delband[]>(path.join(basedir, "eosio", "delband", `${block_num}.json`));
+    const voters = load.sync<VoterInfo[]>(path.join(basedir, "eosio", "voters", `${block_num}.json`));
+    const proposals = load.sync<Proposal[]>(path.join(basedir, "eosforumrcpp", "proposal", `${block_num}.json`));
+
+    // Generate Accounts & Proxies
+    const accounts = generateAccounts(votes, delband, voters);
+    const proxies = generateAccounts(votes, delband, voters, true);
+    const tallies = generateTallies(block_num, proposals, accounts, proxies);
+
+    return tallies[proposal];
 }
 
 // eosnationdan	No Proxy - 001 to 003
@@ -145,11 +158,17 @@ test("Test Case 015", async (t) => {
     t.is(after.stats.accounts[0] - before.stats.accounts[0], 0.7489 * 10000); // no vote
 });
 
-// testkauffman as proxy and are both voting for 0 (after this action)
-test("Test Case 017", async (t) => {
-    const before = loadBlock(25372602);
-    const after = loadBlock(25372700);
+// // testkauffman as proxy and are both voting for 0 (after this action)
+// test("Test Case 017", async (t) => {
+//     const before = loadBlock(25372602);
+//     const after = loadBlock(25372700);
 
-    // proxy vote 0
-    t.is((after.stats.proxies[0] || 0) - (before.stats.proxies[0] || 0), 10.7002 * 10000); // no vote
+//     // proxy vote 0
+//     t.is((after.stats.proxies[0] || 0) - (before.stats.proxies[0] || 0), 10.7002 * 10000); // no vote
+// });
+
+// odd numbers - awesomemandu
+test("Test Case [str => number]", async (t) => {
+    const current = loadBlock(28969000, "awesomemandu");
+    t.is(current.stats.staked.total, 19392372546);
 });

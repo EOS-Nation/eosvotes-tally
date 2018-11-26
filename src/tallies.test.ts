@@ -6,25 +6,34 @@ import { Userres, Delband, VoterInfo } from "../types/eosio";
 import { Vote, Proposal } from "../types/eosforumrcpp";
 
 (() => {
-    const block_num = 24523200;
+    const block_num = 28969000;
+    const proposal = "awesomemandu";
 
     // Load Snapshot Data
-    const basedir = path.join(__dirname, "..", "snapshots");
-    const votes = load.sync<Vote[]>(path.join(basedir, "eosforumrcpp", "vote", "latest.json"));
-    const delband = load.sync<Delband[]>(path.join(basedir, "eosio", "delband", "latest.json"));
-    const voters = load.sync<VoterInfo[]>(path.join(basedir, "eosio", "voters", "latest.json"));
-    const proposals = load.sync<Proposal[]>(path.join(basedir, "eosforumrcpp", "proposal", "latest.json"));
+    const basedir = path.join(__dirname, "..", "test");
+    const votes = load.sync<Vote[]>(path.join(basedir, "eosforumrcpp", "vote", `${block_num}.json`));
+    const delband = load.sync<Delband[]>(path.join(basedir, "eosio", "delband", `${block_num}.json`));
+    const voters = load.sync<VoterInfo[]>(path.join(basedir, "eosio", "voters", `${block_num}.json`));
+    const proposals = load.sync<Proposal[]>(path.join(basedir, "eosforumrcpp", "proposal", `${block_num}.json`));
 
     // Generate Accounts & Proxies
     const accounts = generateAccounts(votes, delband, voters);
-    saveSnapshot(accounts, block_num, "eosvotes", "accounts");
     console.log("accounts:", Object.keys(accounts).length);
 
     const proxies = generateAccounts(votes, delband, voters, true);
-    saveSnapshot(proxies, block_num, "eosvotes", "proxies");
     console.log("proxies:", Object.keys(proxies).length);
 
-    const tallies = generateTallies(proposals, accounts, proxies);
-    saveSnapshot(tallies, block_num, "eosvotes", "tallies");
+    const tallies = generateTallies(block_num, proposals, accounts, proxies);
     console.log("tallies:", Object.keys(tallies).length);
+
+    // Report per user
+    for (const username of Object.keys(accounts)) {
+        const account = accounts[username];
+        if (account.votes[proposal]) {
+            console.log(username, account.staked);
+        }
+    }
+
+    // Report per proposal
+    console.log(tallies[proposal]);
 })();

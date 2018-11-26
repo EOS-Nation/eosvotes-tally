@@ -125,7 +125,9 @@ export function generateTally(block_num: number, proposal: Proposal, accounts: A
 
     // Calculate account's staked
     for (const owner of Object.keys(accounts)) {
-        const { staked, votes } = accounts[owner];
+        const account = accounts[owner];
+        const { votes } = account;
+        const staked = Number(account.staked);
 
         if (votes[proposal_name]) {
             const { vote } = votes[proposal_name];
@@ -149,7 +151,9 @@ export function generateTally(block_num: number, proposal: Proposal, accounts: A
     // Calculate proxies's staked
     // TO-DO: Create a method to support both accounts & proxies staked portion (removes 15 lines of code)
     for (const owner of Object.keys(proxies)) {
-        const { staked, votes } = proxies[owner];
+        const account = proxies[owner];
+        const { votes } = account;
+        const staked = Number(account.staked);
 
         if (votes[proposal_name]) {
             const { vote } = votes[proposal_name];
@@ -190,7 +194,7 @@ export function generateTally(block_num: number, proposal: Proposal, accounts: A
             if (account.votes[proposal_name]) continue;
 
             // Add user's stake to proxies
-            staked += account.staked;
+            staked += Number(account.staked);
         }
 
         // Set to 0 if undefined
