@@ -1,0 +1,713 @@
+{
+	"astronomised": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-10T03:20:47",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "astronomised",
+				"proposal_name": "betatest",
+				"id": 121
+			},
+			"besttoolkit1": {
+				"updated_at": "2018-11-10T03:22:20",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "astronomised",
+				"proposal_name": "besttoolkit1",
+				"id": 337
+			}
+		},
+		"staked": 1500000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"testymctesty": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-05T20:59:28",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "testymctesty",
+				"proposal_name": "betatest",
+				"id": 145
+			}
+		},
+		"staked": 102000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"gy4dqmrrgene": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-09T22:38:41",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gy4dqmrrgene",
+				"proposal_name": "betatest",
+				"id": 155
+			},
+			"betest1": {
+				"updated_at": "2018-11-09T05:12:56",
+				"vote_json": "{\"src\":\"novusphere-forum\"}",
+				"vote": 1,
+				"voter": "gy4dqmrrgene",
+				"proposal_name": "betest1",
+				"id": 214
+			},
+			"besttoolkit1": {
+				"updated_at": "2018-11-12T03:50:15",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gy4dqmrrgene",
+				"proposal_name": "besttoolkit1",
+				"id": 313
+			},
+			"haytmmbxgege": {
+				"updated_at": "2018-11-22T21:47:32",
+				"vote_json": "{\"src\":\"novusphere-forum\"}",
+				"vote": 1,
+				"voter": "gy4dqmrrgene",
+				"proposal_name": "haytmmbxgege",
+				"id": 1033
+			}
+		},
+		"staked": 1000000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"g44daobxgene": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-06T13:54:13",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "g44daobxgene",
+				"proposal_name": "betatest",
+				"id": 167
+			},
+			"betest1": {
+				"updated_at": "2018-11-09T10:12:00",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "g44daobxgene",
+				"proposal_name": "betest1",
+				"id": 241
+			},
+			"redbull": {
+				"updated_at": "2018-11-09T10:12:26",
+				"vote_json": "{}",
+				"vote": 0,
+				"voter": "g44daobxgene",
+				"proposal_name": "redbull",
+				"id": 242
+			}
+		},
+		"staked": 1002000000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"gu4tcobsg4ge": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-09T05:27:26",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gu4tcobsg4ge",
+				"proposal_name": "betatest",
+				"id": 215
+			},
+			"betest1": {
+				"updated_at": "2018-11-09T05:15:59",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "gu4tcobsg4ge",
+				"proposal_name": "betest1",
+				"id": 217
+			},
+			"besttoolkit1": {
+				"updated_at": "2018-11-09T05:27:14",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gu4tcobsg4ge",
+				"proposal_name": "besttoolkit1",
+				"id": 223
+			},
+			"blokstest": {
+				"updated_at": "2018-11-09T05:27:42",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gu4tcobsg4ge",
+				"proposal_name": "blokstest",
+				"id": 224
+			},
+			"firstforum": {
+				"updated_at": "2018-11-09T05:28:31",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "gu4tcobsg4ge",
+				"proposal_name": "firstforum",
+				"id": 225
+			},
+			"dabbleubi": {
+				"updated_at": "2018-11-14T11:37:50",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "gu4tcobsg4ge",
+				"proposal_name": "dabbleubi",
+				"id": 481
+			},
+			"tangsuyookkr": {
+				"updated_at": "2018-11-14T11:38:20",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "gu4tcobsg4ge",
+				"proposal_name": "tangsuyookkr",
+				"id": 482
+			}
+		},
+		"staked": 1544000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"natenatenate": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-09T05:27:19",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "natenatenate",
+				"proposal_name": "betatest",
+				"id": 218
+			},
+			"betest1": {
+				"updated_at": "2018-11-09T05:26:42",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "natenatenate",
+				"proposal_name": "betest1",
+				"id": 222
+			}
+		},
+		"staked": 300000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"gi4tanbrgige": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-09T06:04:19",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gi4tanbrgige",
+				"proposal_name": "betatest",
+				"id": 231
+			},
+			"betest1": {
+				"updated_at": "2018-11-09T06:04:58",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "gi4tanbrgige",
+				"proposal_name": "betest1",
+				"id": 232
+			},
+			"blokstest": {
+				"updated_at": "2018-11-09T06:05:18",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gi4tanbrgige",
+				"proposal_name": "blokstest",
+				"id": 233
+			}
+		},
+		"staked": 126279002,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"soleoneoneos": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-09T07:29:51",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "soleoneoneos",
+				"proposal_name": "betatest",
+				"id": 235
+			},
+			"eos": {
+				"updated_at": "2018-11-12T05:03:29",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "soleoneoneos",
+				"proposal_name": "eos",
+				"id": 443
+			}
+		},
+		"staked": 360000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"proxygermany": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-09T09:47:29",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "proxygermany",
+				"proposal_name": "betatest",
+				"id": 240
+			},
+			"besttoolkit1": {
+				"updated_at": "2018-11-09T18:34:49",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "proxygermany",
+				"proposal_name": "besttoolkit1",
+				"id": 290
+			},
+			"betest1": {
+				"updated_at": "2018-11-12T13:03:00",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "proxygermany",
+				"proposal_name": "betest1",
+				"id": 291
+			},
+			"eos": {
+				"updated_at": "2018-11-12T13:02:24",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "proxygermany",
+				"proposal_name": "eos",
+				"id": 292
+			},
+			"genesis12345": {
+				"updated_at": "2018-11-12T13:04:36",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "proxygermany",
+				"proposal_name": "genesis12345",
+				"id": 462
+			},
+			"startjungles": {
+				"updated_at": "2018-11-12T13:05:02",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "proxygermany",
+				"proposal_name": "startjungles",
+				"id": 463
+			},
+			"votetrackert": {
+				"updated_at": "2018-11-12T13:05:37",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "proxygermany",
+				"proposal_name": "votetrackert",
+				"id": 464
+			}
+		},
+		"staked": 200000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"chrisjsconey": {
+		"votes": {
+			"redbull": {
+				"updated_at": "2018-11-09T11:31:58",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "chrisjsconey",
+				"proposal_name": "redbull",
+				"id": 244
+			},
+			"besttoolkit1": {
+				"updated_at": "2018-11-09T11:27:28",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "chrisjsconey",
+				"proposal_name": "besttoolkit1",
+				"id": 245
+			},
+			"eos": {
+				"updated_at": "2018-11-16T19:29:18",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "chrisjsconey",
+				"proposal_name": "eos",
+				"id": 604
+			}
+		},
+		"staked": 208200,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"mapleleafcap": {
+		"votes": {
+			"redbull": {
+				"updated_at": "2018-11-09T14:04:13",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "mapleleafcap",
+				"proposal_name": "redbull",
+				"id": 265
+			},
+			"betatest": {
+				"updated_at": "2018-11-20T21:11:15",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "mapleleafcap",
+				"proposal_name": "betatest",
+				"id": 266
+			}
+		},
+		"staked": 15452000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"gy3tsnbzguge": {
+		"votes": {
+			"besttoolkit1": {
+				"updated_at": "2018-11-09T15:55:01",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gy3tsnbzguge",
+				"proposal_name": "besttoolkit1",
+				"id": 272
+			},
+			"betatest": {
+				"updated_at": "2018-11-09T15:55:22",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gy3tsnbzguge",
+				"proposal_name": "betatest",
+				"id": 273
+			},
+			"eos": {
+				"updated_at": "2018-11-09T15:55:41",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gy3tsnbzguge",
+				"proposal_name": "eos",
+				"id": 274
+			},
+			"redbull": {
+				"updated_at": "2018-11-09T15:55:54",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "gy3tsnbzguge",
+				"proposal_name": "redbull",
+				"id": 275
+			}
+		},
+		"staked": 1100000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"gmytqobsgege": {
+		"votes": {
+			"besttoolkit1": {
+				"updated_at": "2018-11-09T17:15:19",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gmytqobsgege",
+				"proposal_name": "besttoolkit1",
+				"id": 279
+			},
+			"betatest": {
+				"updated_at": "2018-11-09T17:15:35",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "gmytqobsgege",
+				"proposal_name": "betatest",
+				"id": 280
+			},
+			"eos": {
+				"updated_at": "2018-11-09T17:16:08",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gmytqobsgege",
+				"proposal_name": "eos",
+				"id": 281
+			},
+			"redbull": {
+				"updated_at": "2018-11-09T17:16:30",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "gmytqobsgege",
+				"proposal_name": "redbull",
+				"id": 282
+			},
+			"votetrackert": {
+				"updated_at": "2018-11-09T17:16:54",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gmytqobsgege",
+				"proposal_name": "votetrackert",
+				"id": 283
+			}
+		},
+		"staked": 10101567,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"gm2diobtgmge": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-09T21:58:42",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gm2diobtgmge",
+				"proposal_name": "betatest",
+				"id": 309
+			}
+		},
+		"staked": 28007085,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"g42tknjtgene": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-10T03:30:10",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "g42tknjtgene",
+				"proposal_name": "betatest",
+				"id": 341
+			},
+			"betest1": {
+				"updated_at": "2018-11-10T03:30:18",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "g42tknjtgene",
+				"proposal_name": "betest1",
+				"id": 342
+			},
+			"blokstest": {
+				"updated_at": "2018-11-10T03:30:26",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "g42tknjtgene",
+				"proposal_name": "blokstest",
+				"id": 343
+			},
+			"eos": {
+				"updated_at": "2018-11-10T03:30:33",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "g42tknjtgene",
+				"proposal_name": "eos",
+				"id": 344
+			},
+			"redbull": {
+				"updated_at": "2018-11-10T03:30:44",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "g42tknjtgene",
+				"proposal_name": "redbull",
+				"id": 345
+			}
+		},
+		"staked": 28000000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"gy4dambshage": {
+		"votes": {
+			"besttoolkit1": {
+				"updated_at": "2018-11-10T05:26:04",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gy4dambshage",
+				"proposal_name": "besttoolkit1",
+				"id": 352
+			},
+			"eos": {
+				"updated_at": "2018-11-10T05:27:34",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gy4dambshage",
+				"proposal_name": "eos",
+				"id": 353
+			},
+			"redbull": {
+				"updated_at": "2018-11-10T05:27:57",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "gy4dambshage",
+				"proposal_name": "redbull",
+				"id": 354
+			}
+		},
+		"staked": 2958810,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"gy3tcnbqhege": {
+		"votes": {
+			"besttoolkit1": {
+				"updated_at": "2018-11-10T14:52:48",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gy3tcnbqhege",
+				"proposal_name": "besttoolkit1",
+				"id": 374
+			}
+		},
+		"staked": 1000000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"igazedottech": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-10T16:51:35",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "igazedottech",
+				"proposal_name": "betatest",
+				"id": 376
+			},
+			"betest1": {
+				"updated_at": "2018-11-10T16:51:46",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "igazedottech",
+				"proposal_name": "betest1",
+				"id": 377
+			},
+			"blokstest": {
+				"updated_at": "2018-11-10T16:51:56",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "igazedottech",
+				"proposal_name": "blokstest",
+				"id": 378
+			},
+			"eos": {
+				"updated_at": "2018-11-10T16:52:01",
+				"vote_json": "{}",
+				"vote": 1,
+				"voter": "igazedottech",
+				"proposal_name": "eos",
+				"id": 379
+			}
+		},
+		"staked": 25000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"eoswebwallet": {
+		"votes": {
+			"betest1": {
+				"updated_at": "2018-11-12T02:17:37",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "eoswebwallet",
+				"proposal_name": "betest1",
+				"id": 437
+			}
+		},
+		"staked": 10000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"eosnetworkxx": {
+		"votes": {
+			"bpvoting": {
+				"updated_at": "2018-11-14T18:47:04",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "eosnetworkxx",
+				"proposal_name": "bpvoting",
+				"id": 485
+			},
+			"redbull": {
+				"updated_at": "2018-11-14T18:51:59",
+				"vote_json": "",
+				"vote": 0,
+				"voter": "eosnetworkxx",
+				"proposal_name": "redbull",
+				"id": 486
+			}
+		},
+		"staked": 142000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"eoslegoblock": {
+		"votes": {
+			"buytherabbit": {
+				"updated_at": "2018-11-15T20:20:39",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "eoslegoblock",
+				"proposal_name": "buytherabbit",
+				"id": 550
+			}
+		},
+		"staked": 0,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"blockbreaker": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-18T23:27:53",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "blockbreaker",
+				"proposal_name": "betatest",
+				"id": 779
+			}
+		},
+		"staked": 1900000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"cannontest12": {
+		"votes": {
+			"betatest": {
+				"updated_at": "2018-11-19T02:20:42",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "cannontest12",
+				"proposal_name": "betatest",
+				"id": 789
+			}
+		},
+		"staked": 110000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"warpigproxy1": {
+		"votes": {
+			"eos": {
+				"updated_at": "2018-11-19T21:03:44",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "warpigproxy1",
+				"proposal_name": "eos",
+				"id": 847
+			}
+		},
+		"staked": 80000,
+		"proxy": "",
+		"is_proxy": true
+	},
+	"gyzdonbzhege": {
+		"votes": {
+			"eos": {
+				"updated_at": "2018-11-21T04:24:48",
+				"vote_json": "",
+				"vote": 1,
+				"voter": "gyzdonbzhege",
+				"proposal_name": "eos",
+				"id": 943
+			}
+		},
+		"staked": 4578867,
+		"proxy": "",
+		"is_proxy": true
+	}
+}
