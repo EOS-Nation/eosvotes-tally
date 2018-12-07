@@ -8,6 +8,7 @@ export interface Tallies {
 }
 
 export interface Tally {
+    id: string;
     stats: Stats;
     proposal: Proposal;
 }

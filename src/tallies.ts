@@ -223,7 +223,13 @@ export function generateTally(block_num: number, proposal: Proposal, accounts: A
     // Sustained for 30 continuous days within a 120 day period. (true/false)
     // To-Do
 
+    // Proposal unique ID
+    // ProposalName_YYYYMMDD // awesomeprop_20181206
+    const date = proposal.created_at.split("T")[0].replace(/-/g, "");
+    const id = `${proposal_name}_${date}`;
+
     return {
+        id,
         proposal,
         stats,
     };

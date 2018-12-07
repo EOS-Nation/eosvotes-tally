@@ -172,3 +172,9 @@ test("Test Case [str => number]", async (t) => {
     const current = loadBlock(28969000, "awesomemandu");
     t.is(current.stats.staked.total, 19392372546);
 });
+
+// proposal id
+test("Test Case [proposal id]", async (t) => {
+    const current = loadBlock(28969000, "awesomemandu");
+    t.is(current.id, "awesomemandu_20181115");
+});
