@@ -3,7 +3,7 @@ import * as path from "path";
 import { getScopedSnapshot, getSnapshot, saveSnapshot } from "./snapshots";
 import { log, getCurrencySupply, warning } from "./utils";
 import { Voters, Delband } from "./types/eosio";
-import { Vote, Proposal } from "./types/eosforumrcpp";
+import { Vote, Proposal } from "./types/eosio.forum";
 import { generateAccounts, generateTallies, filterVotersByVotes } from "./tallies";
 
 export default async function scheduler(block_num: number, latest = true, root = "aws") {
@@ -14,11 +14,11 @@ export default async function scheduler(block_num: number, latest = true, root =
     if (fs.existsSync(filepath)) return warning({ref: "scheduler", message: `${filepath} already exists`});
 
     // Fetch voters
-    const votes = await getSnapshot<Vote>({block_num, account: "eosforumrcpp", scope: "eosforumrcpp", table: "vote"});
+    const votes = await getSnapshot<Vote>({block_num, account: "eosio.forum", scope: "eosio.forum", table: "vote"});
     const account_names = new Set(votes.map((row) => row.voter));
 
     // Get Snapshots
-    const proposals = await getSnapshot<Proposal>({block_num, account: "eosforumrcpp", scope: "eosforumrcpp", table: "proposal"});
+    const proposals = await getSnapshot<Proposal>({block_num, account: "eosio.forum", scope: "eosio.forum", table: "proposal"});
     const delband = await getScopedSnapshot<Delband>(account_names, {block_num, account: "eosio", table: "delband"});
     const voters = filterVotersByVotes(await getSnapshot<Voters>({block_num, account: "eosio", scope: "eosio", table: "voters"}), votes);
 
@@ -34,8 +34,8 @@ export default async function scheduler(block_num: number, latest = true, root =
     saveSnapshot(tallies, block_num, "eosvotes", "tallies", latest, root);
 
     // Save Snapshots
-    saveSnapshot(votes, block_num, "eosforumrcpp", "vote", latest, root);
-    saveSnapshot(proposals, block_num, "eosforumrcpp", "proposal", latest, root);
+    saveSnapshot(votes, block_num, "eosio.forum", "vote", latest, root);
+    saveSnapshot(proposals, block_num, "eosio.forum", "proposal", latest, root);
     saveSnapshot(voters, block_num, "eosio", "voters", latest, root);
     saveSnapshot(delband, block_num, "eosio", "delband", latest, root);
 }

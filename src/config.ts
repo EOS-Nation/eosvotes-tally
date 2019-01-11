@@ -21,16 +21,6 @@ if (!DFUSE_URL) console.error("DFUSE_URL is missing in `.env`");
 // Optional Logging configs
 export const EOSVOTES_LOGGING = (process.env.EOSVOTES_LOGGING || "").split(",") || ["error", "log", "warning"];
 
-// Save .env if does not exist
-if (!fs.existsSync(envPath)) {
-    fs.writeFileSync(envPath, `
-EOSVOTES_LOGGING="log,warning,error"
-EOSIO_API=${EOSIO_API}
-DFUSE_IO_API_KEY=
-SNAPSHOT_URL=
-`);
-}
-
 // Typescript issues
 const args: any = { fetch };
 
