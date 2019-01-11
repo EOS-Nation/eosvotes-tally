@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  app:
+    restart: always
+    build: .
+    container_name: eosvotes
+    volumes:
+      - .env:/.env
+    logging:
+      driver: syslog
+      options:
+        syslog-facility: daemon
+        tag: eosvotes
