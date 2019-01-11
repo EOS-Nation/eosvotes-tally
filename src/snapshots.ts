@@ -4,7 +4,7 @@ import fetch from "node-fetch";
 import * as write from "write-json-file";
 import { JSONStringifyable } from "write-json-file";
 import { log, error } from "./utils";
-import { Snapshot } from "../types/snapshot";
+import { Snapshot } from "./types/snapshot";
 import { DFUSE_URL, DFUSE_IO_API_KEY } from "./config";
 import { uploadS3 } from "./aws";
 

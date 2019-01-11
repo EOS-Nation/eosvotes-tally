@@ -1,7 +1,7 @@
 import Long from "long";
 import chalk from "chalk";
 import { EOSVOTES_LOGGING, rpc } from "./config";
-import { CurrencyStats } from "../types/eosio.token";
+import { CurrencyStats } from "./types/eosio.token";
 
 /**
  * Parse Token String

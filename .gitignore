@@ -1,6 +1,7 @@
 # Typescript
 *.js
 !ecosystem.config.js
+dist
 
 # Tally
 aws/*

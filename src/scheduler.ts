@@ -2,8 +2,8 @@ import * as fs from "fs";
 import * as path from "path";
 import { getScopedSnapshot, getSnapshot, saveSnapshot } from "./snapshots";
 import { log, getCurrencySupply, warning } from "./utils";
-import { Voters, Delband } from "../types/eosio";
-import { Vote, Proposal } from "../types/eosforumrcpp";
+import { Voters, Delband } from "./types/eosio";
+import { Vote, Proposal } from "./types/eosforumrcpp";
 import { generateAccounts, generateTallies, filterVotersByVotes } from "./tallies";
 
 export default async function scheduler(block_num: number, latest = true, root = "aws") {

@@ -1,9 +1,8 @@
 import path from "path";
 import * as load from "load-json-file";
 import { generateAccounts, generateTallies } from "./tallies";
-import { saveSnapshot } from "./snapshots";
-import { Userres, Delband, VoterInfo } from "../types/eosio";
-import { Vote, Proposal } from "../types/eosforumrcpp";
+import { Delband, VoterInfo } from "./types/eosio";
+import { Vote, Proposal } from "./types/eosforumrcpp";
 
 (() => {
     const block_num = 28969000;

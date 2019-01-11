@@ -1,9 +1,9 @@
 import * as load from "load-json-file";
 import path from "path";
 import test from "ava";
-import { Proposal, Vote } from "./types/eosforumrcpp";
-import { Delband, VoterInfo } from "./types/eosio";
-import { generateAccounts, generateTallies } from "./src/tallies";
+import { Proposal, Vote } from "../src/types/eosforumrcpp";
+import { Delband, VoterInfo } from "../src/types/eosio";
+import { generateAccounts, generateTallies } from "../src/tallies";
 
 function loadBlock(block_num: number, proposal = "longformtest") {
     const basedir = path.join(__dirname, "test");

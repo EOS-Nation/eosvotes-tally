@@ -1,6 +1,6 @@
-import { Accounts, Vote, Proposal, Tallies, Tally, Stats } from "../types/state";
+import { Accounts, Vote, Proposal, Tallies, Tally, Stats } from "./types/state";
 import { parseTokenString } from "./utils";
-import * as Eosio from "../types/eosio";
+import * as Eosio from "./types/eosio";
 
 function defaultAccount() {
     return {

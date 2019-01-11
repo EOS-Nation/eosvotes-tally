@@ -1,5 +1,5 @@
-import { rpc } from "./src/config";
-import scheduler from "./src/scheduler";
+import { rpc } from "./config";
+import scheduler from "./scheduler";
 
 async function latestBlock() {
     // Get Latest Block

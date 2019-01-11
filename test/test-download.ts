@@ -1,4 +1,4 @@
-import scheduler from "./src/scheduler";
+import scheduler from "../src/scheduler";
 
 const block_nums = [
     // Test Cases 001-011
