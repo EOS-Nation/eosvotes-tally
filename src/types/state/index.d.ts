@@ -1,5 +1,5 @@
 import { Accounts } from "./accounts";
-import { Vote, Proposal } from "../eosforumrcpp";
+import { Vote, Proposal } from "../eosio.forum";
 import { Tallies, Tally, Stats } from "./tallies";
 import { Global } from "./global";
 

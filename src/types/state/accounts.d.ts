@@ -1,5 +1,5 @@
 import { VoterInfo, Userres, Delband } from "../eosio";
-import { Vote } from "../eosforumrcpp";
+import { Vote } from "../eosio.forum";
 
 export interface Accounts {
     /**

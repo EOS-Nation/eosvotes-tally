@@ -1,16 +1,16 @@
 import * as load from "load-json-file";
 import path from "path";
 import test from "ava";
-import { Proposal, Vote } from "../src/types/eosforumrcpp";
+import { Proposal, Vote } from "../src/types/eosio.forum";
 import { Delband, VoterInfo } from "../src/types/eosio";
 import { generateAccounts, generateTallies } from "../src/tallies";
 
 function loadBlock(block_num: number, proposal = "longformtest") {
     const basedir = path.join(__dirname, "test");
-    const votes = load.sync<Vote[]>(path.join(basedir, "eosforumrcpp", "vote", `${block_num}.json`));
+    const votes = load.sync<Vote[]>(path.join(basedir, "eosio.forum", "vote", `${block_num}.json`));
     const delband = load.sync<Delband[]>(path.join(basedir, "eosio", "delband", `${block_num}.json`));
     const voters = load.sync<VoterInfo[]>(path.join(basedir, "eosio", "voters", `${block_num}.json`));
-    const proposals = load.sync<Proposal[]>(path.join(basedir, "eosforumrcpp", "proposal", `${block_num}.json`));
+    const proposals = load.sync<Proposal[]>(path.join(basedir, "eosio.forum", "proposal", `${block_num}.json`));
 
     // Generate Accounts & Proxies
     const accounts = generateAccounts(votes, delband, voters);

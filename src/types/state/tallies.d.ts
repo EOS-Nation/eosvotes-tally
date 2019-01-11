@@ -1,4 +1,4 @@
-import { Proposal } from "../eosforumrcpp/proposal";
+import { Proposal } from "../eosio.forum/proposal";
 
 export interface Tallies {
     /**

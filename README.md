@@ -2,7 +2,7 @@
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/EOS-Nation/eosvotes-tally-eosws/master/LICENSE)
 
-EOS Votes tally quickly retrieves all proposals and votes from [`eosforumrcpp`](https://github.com/eoscanada/eosio.forum) and generate a simple to understand voting tally statistics in JSON format.
+EOS Votes tally quickly retrieves all proposals and votes from [`eosio.forum`](https://github.com/eoscanada/eosio.forum) and generate a simple to understand voting tally statistics in JSON format.
 
 > Leveraging [dfuse.io](https://dfuse.io) under the hood to easily handle table deltas & snapshots.
 
@@ -102,13 +102,13 @@ interface Votes {
 - https://s3.amazonaws.com/api.eosvotes.io/eosio/voters/latest.json
 
 
-#### `eosforumrcpp`
+#### `eosio.forum`
 
-`eosforumrcpp::vote` (all votes)
+`eosio.forum::vote` (all votes)
 
-- https://s3.amazonaws.com/api.eosvotes.io/eosforumrcpp/vote/latest.json
+- https://s3.amazonaws.com/api.eosvotes.io/eosio.forum/vote/latest.json
 
-`eosforumrcpp::proposal` (all proposals)
+`eosio.forum::proposal` (all proposals)
 
-- https://s3.amazonaws.com/api.eosvotes.io/eosforumrcpp/proposal/latest.json
+- https://s3.amazonaws.com/api.eosvotes.io/eosio.forum/proposal/latest.json
 
