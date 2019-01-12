@@ -3,12 +3,13 @@ version: '3.4'
 services:
   app:
     restart: always
+    image: image.eosn.io/eosnation/eosvotes-tally
     build: .
-    container_name: eosvotes
+    container_name: eosvotes-tally
     volumes:
       - .env:/.env
     logging:
       driver: syslog
       options:
         syslog-facility: daemon
-        tag: eosvotes
+        tag: eosvotes-tally
