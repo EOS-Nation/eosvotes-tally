@@ -1,6 +1,6 @@
-import { getScopedSnapshot, getSnapshot, saveSnapshot, snapshotToJSON } from "./snapshots";
-import { Proposal, Vote } from "./types/eosio.forum";
-import { Userres, Delband, Voters } from "./types/eosio";
+import { getScopedSnapshot, getSnapshot, saveSnapshot, snapshotToJSON } from "../src/snapshots";
+import { Proposal, Vote } from "../src/types/eosio.forum";
+import { Userres, Delband, Voters } from "../src/types/eosio";
 
 (async () => {
     // Settings
