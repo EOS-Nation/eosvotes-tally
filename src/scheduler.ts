@@ -4,7 +4,7 @@ import { getDelbandSnapshot, getSnapshot, saveSnapshot } from "./snapshots";
 import { log, getCurrencySupply, warning } from "./utils";
 import { Voters, Delband } from "./types/eosio";
 import { Vote, Proposal } from "./types/eosio.forum";
-import { generateAccounts, generateTallies, filterVotersByVotes } from "./tallies";
+import { generateAccounts, generateTallies, filterVotersByVotes, generateProxies } from "./tallies";
 
 export default async function scheduler(block_num: number, latest = true, root = "aws") {
     log({ref: "scheduler", message: `scheduler activated @ block number ${block_num}`});
@@ -29,7 +29,7 @@ export default async function scheduler(block_num: number, latest = true, root =
     const accounts = generateAccounts(votes, delband, voters);
     saveSnapshot(accounts, block_num, "eosvotes", "accounts", latest, root);
 
-    const proxies = generateAccounts(votes, delband, voters, true);
+    const proxies = generateProxies(votes, delband, voters);
     saveSnapshot(proxies, block_num, "eosvotes", "proxies", latest, root);
 
     const currency_supply = await getCurrencySupply();
