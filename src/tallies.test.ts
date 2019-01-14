@@ -1,6 +1,6 @@
 import path from "path";
 import * as load from "load-json-file";
-import { generateAccounts, generateTallies } from "./tallies";
+import { generateAccounts, generateTallies, generateProxies } from "./tallies";
 import { Delband, VoterInfo } from "./types/eosio";
 import { Vote, Proposal } from "./types/eosio.forum";
 
@@ -19,7 +19,7 @@ import { Vote, Proposal } from "./types/eosio.forum";
     const accounts = generateAccounts(votes, delband, voters);
     console.log("accounts:", Object.keys(accounts).length);
 
-    const proxies = generateAccounts(votes, delband, voters, true);
+    const proxies = generateProxies(votes, delband, voters);
     console.log("proxies:", Object.keys(proxies).length);
 
     const tallies = generateTallies(block_num, proposals, accounts, proxies);

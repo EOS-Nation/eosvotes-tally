@@ -1,9 +1,10 @@
 import { Accounts } from "./accounts";
+import { Proxies } from "./proxies";
 import { Vote, Proposal } from "../eosio.forum";
 import { Tallies, Tally, Stats } from "./tallies";
 import { Global } from "./global";
 
-export { Global, Tally, Accounts, Tallies, Vote, Proposal, Stats };
+export { Global, Tally, Accounts, Tallies, Vote, Proposal, Stats, Proxies };
 
 export interface State {
     /**

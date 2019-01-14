@@ -1,4 +1,4 @@
-import { Accounts, Vote, Proposal, Tallies, Tally, Stats } from "./types/state";
+import { Accounts, Vote, Proxies, Proposal, Tallies, Tally, Stats } from "./types/state";
 import { parseTokenString } from "./utils";
 import * as Eosio from "./types/eosio";
 
@@ -64,6 +64,36 @@ export function filterVotersByVotes(voters: Eosio.Voters[], votes: Vote[]) {
         if (voted.has(owner) || voted.has(row.proxy)) results.push(row);
     }
     return results;
+}
+
+export function generateProxies(votes: Vote[], delband: Eosio.Delband[], voters: Eosio.Voters[]): Proxies {
+    const accounts = generateAccounts(votes, delband, voters, false);
+    const accountsProxies: any = generateAccounts(votes, delband, voters, true);
+
+    for (const proxyName of Object.keys(accountsProxies)) {
+        const proxy = accountsProxies[proxyName];
+
+        for (const proposalName of Object.keys(proxy.votes)) {
+            // Initialize `proxy_staked` for each proposal using self delegated EOS from proxy
+            proxy.votes[proposalName].staked_proxy = proxy.staked;
+
+            for (const accountName of Object.keys(accounts)) {
+                const account = accounts[accountName];
+
+                // Check if account belongs to proxy
+                if (account.proxy !== proxyName) continue;
+
+                // Check if user has already voted for proposal
+                // Do not add user `stake` if already voted for same proposal
+                if (account.votes[proposalName]) continue;
+
+                // Add user `staked` to `staked_proxy`
+                accountsProxies[proxyName].votes[proposalName].staked_proxy += account.staked;
+            }
+        }
+    }
+
+    return accountsProxies;
 }
 
 export function generateAccounts(votes: Vote[], delband: Eosio.Delband[], voters: Eosio.Voters[], proxies = false): Accounts {
