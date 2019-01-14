@@ -75,7 +75,7 @@ export function generateProxies(votes: Vote[], delband: Eosio.Delband[], voters:
 
         for (const proposalName of Object.keys(proxy.votes)) {
             // Initialize `proxy_staked` for each proposal using self delegated EOS from proxy
-            proxy.votes[proposalName].staked_proxy = proxy.staked;
+            proxy.votes[proposalName].staked_proxy = Number(proxy.staked);
 
             for (const accountName of Object.keys(accounts)) {
                 const account = accounts[accountName];
@@ -88,7 +88,7 @@ export function generateProxies(votes: Vote[], delband: Eosio.Delband[], voters:
                 if (account.votes[proposalName]) continue;
 
                 // Add user `staked` to `staked_proxy`
-                accountsProxies[proxyName].votes[proposalName].staked_proxy += account.staked;
+                accountsProxies[proxyName].votes[proposalName].staked_proxy += Number(account.staked);
             }
         }
     }
