@@ -1,0 +1,4026 @@
+{
+    "conceptskip1": {
+        "votes": {
+            "tokenpocket": {
+                "updated_at": "2019-01-11T16:22:25",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "conceptskip1",
+                "proposal_name": "tokenpocket",
+                "id": 4,
+                "staked_proxy": 640030
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T17:08:17",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "conceptskip1",
+                "proposal_name": "1token1vote",
+                "id": 14,
+                "staked_proxy": 640030
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T20:59:32",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "conceptskip1",
+                "proposal_name": "rexwithinfla",
+                "id": 328,
+                "staked_proxy": 640030
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T19:25:55",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "conceptskip1",
+                "proposal_name": "rex4all",
+                "id": 2943,
+                "staked_proxy": 640030
+            },
+            "wps": {
+                "updated_at": "2019-01-12T21:52:30",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "conceptskip1",
+                "proposal_name": "wps",
+                "id": 3137,
+                "staked_proxy": 640030
+            }
+        },
+        "staked": 640030,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "testymctesty": {
+        "votes": {
+            "tokenpocket": {
+                "updated_at": "2019-01-11T17:34:08",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "testymctesty",
+                "proposal_name": "tokenpocket",
+                "id": 33,
+                "staked_proxy": 104000
+            }
+        },
+        "staked": 104000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gyztqobzhege": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-11T17:40:39",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gyztqobzhege",
+                "proposal_name": "1token1vote",
+                "id": 38,
+                "staked_proxy": 13020000
+            },
+            "tokenpocket": {
+                "updated_at": "2019-01-11T20:10:58",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gyztqobzhege",
+                "proposal_name": "tokenpocket",
+                "id": 46,
+                "staked_proxy": 35540000
+            },
+            "decaf": {
+                "updated_at": "2019-01-11T20:08:03",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gyztqobzhege",
+                "proposal_name": "decaf",
+                "id": 228,
+                "staked_proxy": 35540000
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-11T20:08:20",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gyztqobzhege",
+                "proposal_name": "burnsaving",
+                "id": 230,
+                "staked_proxy": 35540000
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T20:08:33",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "gyztqobzhege",
+                "proposal_name": "geteos",
+                "id": 231,
+                "staked_proxy": 35540000
+            },
+            "kiliman": {
+                "updated_at": "2019-01-11T20:10:39",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gyztqobzhege",
+                "proposal_name": "kiliman",
+                "id": 236,
+                "staked_proxy": 35540000
+            }
+        },
+        "staked": 7000000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "geytsojuguge": {
+        "votes": {
+            "tokenpocket": {
+                "updated_at": "2019-01-11T18:02:14",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "geytsojuguge",
+                "proposal_name": "tokenpocket",
+                "id": 59,
+                "staked_proxy": 48651180
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T18:02:56",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "geytsojuguge",
+                "proposal_name": "1token1vote",
+                "id": 62,
+                "staked_proxy": 48651180
+            },
+            "decaf": {
+                "updated_at": "2019-01-12T01:30:49",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "geytsojuguge",
+                "proposal_name": "decaf",
+                "id": 1059,
+                "staked_proxy": 48651180
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T01:35:11",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "geytsojuguge",
+                "proposal_name": "burnsaving",
+                "id": 1068,
+                "staked_proxy": 48651180
+            },
+            "geteos": {
+                "updated_at": "2019-01-13T00:54:55",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "geytsojuguge",
+                "proposal_name": "geteos",
+                "id": 3464,
+                "staked_proxy": 48651180
+            }
+        },
+        "staked": 47200000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "ge3tanjxgige": {
+        "votes": {
+            "keepinitreal": {
+                "updated_at": "2019-01-11T18:07:36",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "ge3tanjxgige",
+                "proposal_name": "keepinitreal",
+                "id": 65,
+                "staked_proxy": 2237200000
+            },
+            "decaf": {
+                "updated_at": "2019-01-11T22:52:38",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "ge3tanjxgige",
+                "proposal_name": "decaf",
+                "id": 685,
+                "staked_proxy": 2237200000
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T00:37:55",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "ge3tanjxgige",
+                "proposal_name": "burnsaving",
+                "id": 686,
+                "staked_proxy": 2237200000
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T22:53:12",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "ge3tanjxgige",
+                "proposal_name": "1token1vote",
+                "id": 688,
+                "staked_proxy": 2237200000
+            },
+            "inversevote": {
+                "updated_at": "2019-01-11T22:53:30",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "ge3tanjxgige",
+                "proposal_name": "inversevote",
+                "id": 691,
+                "staked_proxy": 2237200000
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T22:53:47",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "ge3tanjxgige",
+                "proposal_name": "geteos",
+                "id": 694,
+                "staked_proxy": 2237200000
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T22:57:41",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "ge3tanjxgige",
+                "proposal_name": "proxydecay",
+                "id": 703,
+                "staked_proxy": 2237200000
+            },
+            "eosinflation": {
+                "updated_at": "2019-01-12T04:02:01",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "ge3tanjxgige",
+                "proposal_name": "eosinflation",
+                "id": 1457,
+                "staked_proxy": 2237200000
+            }
+        },
+        "staked": 17200000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "villesundell": {
+        "votes": {
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T18:40:06",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "villesundell",
+                "proposal_name": "rexwithinfla",
+                "id": 91,
+                "staked_proxy": 7712408
+            }
+        },
+        "staked": 6730000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "eostitanvote": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-11T18:47:21",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "eostitanvote",
+                "proposal_name": "decaf",
+                "id": 105,
+                "staked_proxy": "1476229141565214131810600020132478000072447800004072337302107591221739145899260063204000001205221467223710012200040000"
+            }
+        },
+        "staked": 40000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "investingwad": {
+        "votes": {
+            "inversevote": {
+                "updated_at": "2019-01-11T23:22:55",
+                "vote_json": "{\"comment\":\"It does not make sense for EOS mainnet as there is no BP filtering and it can be misused.\"}",
+                "vote": 0,
+                "voter": "investingwad",
+                "proposal_name": "inversevote",
+                "id": 121,
+                "staked_proxy": 25539761980
+            },
+            "decaf": {
+                "updated_at": "2019-01-11T19:11:22",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "investingwad",
+                "proposal_name": "decaf",
+                "id": 123,
+                "staked_proxy": 26011615534
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T19:13:14",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "investingwad",
+                "proposal_name": "1token1vote",
+                "id": 124,
+                "staked_proxy": 24629413733
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-11T19:40:40",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "investingwad",
+                "proposal_name": "burnsaving",
+                "id": 166,
+                "staked_proxy": 25812494532
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T19:41:13",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "investingwad",
+                "proposal_name": "geteos",
+                "id": 167,
+                "staked_proxy": 26178976507
+            },
+            "helloeos": {
+                "updated_at": "2019-01-11T19:41:40",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "investingwad",
+                "proposal_name": "helloeos",
+                "id": 169,
+                "staked_proxy": 27381028851
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T20:26:28",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "investingwad",
+                "proposal_name": "proxydecay",
+                "id": 263,
+                "staked_proxy": 26633317570
+            },
+            "kiliman": {
+                "updated_at": "2019-01-11T20:46:37",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "investingwad",
+                "proposal_name": "kiliman",
+                "id": 307,
+                "staked_proxy": 27095479628
+            },
+            "fundeveryone": {
+                "updated_at": "2019-01-12T04:31:51",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "investingwad",
+                "proposal_name": "fundeveryone",
+                "id": 1523,
+                "staked_proxy": 26488959444
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T15:51:01",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "investingwad",
+                "proposal_name": "rex4all",
+                "id": 2516,
+                "staked_proxy": 24721647639
+            },
+            "proposalcost": {
+                "updated_at": "2019-01-14T19:00:21",
+                "vote_json": "{\"comment\":\"Adding cost for referendum proposal is not a good idea. We should think about staking some tokens instead.\"}",
+                "vote": 0,
+                "voter": "investingwad",
+                "proposal_name": "proposalcost",
+                "id": 5777,
+                "staked_proxy": 27138450432
+            },
+            "wps": {
+                "updated_at": "2019-01-14T19:03:02",
+                "vote_json": "{\"comment\":\"Do not support any centralized committees for managing funds This can set a bad precedence for future.\"}",
+                "vote": 0,
+                "voter": "investingwad",
+                "proposal_name": "wps",
+                "id": 5779,
+                "staked_proxy": 27381028851
+            }
+        },
+        "staked": 7100000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "testkauffman": {
+        "votes": {
+            "favengine": {
+                "updated_at": "2019-01-11T19:33:34",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "testkauffman",
+                "proposal_name": "favengine",
+                "id": 148,
+                "staked_proxy": 354363
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-13T15:49:01",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "testkauffman",
+                "proposal_name": "burnsaving",
+                "id": 4422,
+                "staked_proxy": 354363
+            },
+            "wps": {
+                "updated_at": "2019-01-13T15:55:28",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "testkauffman",
+                "proposal_name": "wps",
+                "id": 4432,
+                "staked_proxy": 354363
+            }
+        },
+        "staked": 211002,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gy4dqmrrgene": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-11T20:19:26",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy4dqmrrgene",
+                "proposal_name": "decaf",
+                "id": 242,
+                "staked_proxy": 1606000
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T21:08:07",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy4dqmrrgene",
+                "proposal_name": "rexwithinfla",
+                "id": 347,
+                "staked_proxy": 1606000
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T21:26:31",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy4dqmrrgene",
+                "proposal_name": "proxydecay",
+                "id": 401,
+                "staked_proxy": 1606000
+            },
+            "inversevote": {
+                "updated_at": "2019-01-11T21:26:55",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "gy4dqmrrgene",
+                "proposal_name": "inversevote",
+                "id": 403,
+                "staked_proxy": 1606000
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-11T21:28:58",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy4dqmrrgene",
+                "proposal_name": "burnsaving",
+                "id": 407,
+                "staked_proxy": 1606000
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-12T22:00:18",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy4dqmrrgene",
+                "proposal_name": "1token1vote",
+                "id": 3164,
+                "staked_proxy": 1606000
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T23:33:31",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy4dqmrrgene",
+                "proposal_name": "rex4all",
+                "id": 3373,
+                "staked_proxy": 1606000
+            }
+        },
+        "staked": 1000000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "natenatenate": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-11T20:21:35",
+                "vote_json": "{\"comment\":\"Let's see the outcome of REX first, then revisit this.\"}",
+                "vote": 0,
+                "voter": "natenatenate",
+                "proposal_name": "1token1vote",
+                "id": 251,
+                "staked_proxy": 228667330
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T20:32:08",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "natenatenate",
+                "proposal_name": "geteos",
+                "id": 274,
+                "staked_proxy": 228667330
+            },
+            "favengine": {
+                "updated_at": "2019-01-11T20:34:01",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "natenatenate",
+                "proposal_name": "favengine",
+                "id": 281,
+                "staked_proxy": 228667330
+            },
+            "searchengine": {
+                "updated_at": "2019-01-11T22:32:14",
+                "vote_json": "{}",
+                "vote": 3,
+                "voter": "natenatenate",
+                "proposal_name": "searchengine",
+                "id": 657,
+                "staked_proxy": 228667330
+            },
+            "dontbedumb": {
+                "updated_at": "2019-01-12T08:26:56",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "natenatenate",
+                "proposal_name": "dontbedumb",
+                "id": 1799,
+                "staked_proxy": 228667330
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T18:33:31",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "natenatenate",
+                "proposal_name": "rex4all",
+                "id": 2859,
+                "staked_proxy": 228667330
+            }
+        },
+        "staked": 300000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "thedev.x": {
+        "votes": {
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T20:30:16",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "thedev.x",
+                "proposal_name": "rexwithinfla",
+                "id": 272,
+                "staked_proxy": 449000
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T22:01:05",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "thedev.x",
+                "proposal_name": "1token1vote",
+                "id": 563,
+                "staked_proxy": 3689229
+            },
+            "decaf": {
+                "updated_at": "2019-01-11T22:02:21",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "thedev.x",
+                "proposal_name": "decaf",
+                "id": 565,
+                "staked_proxy": 530100
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T22:03:19",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "thedev.x",
+                "proposal_name": "proxydecay",
+                "id": 569,
+                "staked_proxy": 3689229
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T22:04:21",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "thedev.x",
+                "proposal_name": "geteos",
+                "id": 572,
+                "staked_proxy": 3689229
+            }
+        },
+        "staked": 430000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "legitimizing": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-11T20:36:04",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "legitimizing",
+                "proposal_name": "decaf",
+                "id": 283,
+                "staked_proxy": 16730738
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T20:36:23",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "legitimizing",
+                "proposal_name": "1token1vote",
+                "id": 284,
+                "staked_proxy": 16730738
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T20:36:34",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "legitimizing",
+                "proposal_name": "rexwithinfla",
+                "id": 285,
+                "staked_proxy": 16730738
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-11T20:36:47",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "legitimizing",
+                "proposal_name": "burnsaving",
+                "id": 286,
+                "staked_proxy": 16730738
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T20:55:42",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "legitimizing",
+                "proposal_name": "proxydecay",
+                "id": 322,
+                "staked_proxy": 126730738
+            },
+            "rex4all": {
+                "updated_at": "2019-01-13T22:07:21",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "legitimizing",
+                "proposal_name": "rex4all",
+                "id": 4704,
+                "staked_proxy": 126730738
+            }
+        },
+        "staked": 1052011,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "scumbagsteve": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-11T20:37:12",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "scumbagsteve",
+                "proposal_name": "decaf",
+                "id": 287,
+                "staked_proxy": 70050656
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T20:38:28",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "scumbagsteve",
+                "proposal_name": "1token1vote",
+                "id": 289,
+                "staked_proxy": 70050656
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T20:40:11",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "scumbagsteve",
+                "proposal_name": "rexwithinfla",
+                "id": 292,
+                "staked_proxy": 70149358
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-11T20:43:30",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "scumbagsteve",
+                "proposal_name": "burnsaving",
+                "id": 296,
+                "staked_proxy": 70149358
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T20:43:50",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "scumbagsteve",
+                "proposal_name": "geteos",
+                "id": 298,
+                "staked_proxy": 70149358
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T20:44:03",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "scumbagsteve",
+                "proposal_name": "proxydecay",
+                "id": 300,
+                "staked_proxy": 70149358
+            }
+        },
+        "staked": 2272956,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gu3dcmbzgige": {
+        "votes": {
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T20:59:52",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gu3dcmbzgige",
+                "proposal_name": "rexwithinfla",
+                "id": 329,
+                "staked_proxy": 2760272
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T21:05:07",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gu3dcmbzgige",
+                "proposal_name": "proxydecay",
+                "id": 341,
+                "staked_proxy": 2760272
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T19:26:14",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gu3dcmbzgige",
+                "proposal_name": "rex4all",
+                "id": 2944,
+                "staked_proxy": 2760272
+            }
+        },
+        "staked": 2760272,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "freedomproxy": {
+        "votes": {
+            "proxydecay": {
+                "updated_at": "2019-01-12T20:37:58",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "freedomproxy",
+                "proposal_name": "proxydecay",
+                "id": 402,
+                "staked_proxy": 4902893522
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T19:59:01",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "freedomproxy",
+                "proposal_name": "rex4all",
+                "id": 2987,
+                "staked_proxy": 4902368272
+            }
+        },
+        "staked": 204000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "alabamaproxy": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-11T21:30:38",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "alabamaproxy",
+                "proposal_name": "decaf",
+                "id": 414,
+                "staked_proxy": 1050000
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T21:30:47",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "alabamaproxy",
+                "proposal_name": "1token1vote",
+                "id": 416,
+                "staked_proxy": 1050000
+            },
+            "inversevote": {
+                "updated_at": "2019-01-11T21:30:57",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "alabamaproxy",
+                "proposal_name": "inversevote",
+                "id": 417,
+                "staked_proxy": 1050000
+            },
+            "kiliman": {
+                "updated_at": "2019-01-11T21:31:17",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "alabamaproxy",
+                "proposal_name": "kiliman",
+                "id": 419,
+                "staked_proxy": 1050000
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-11T21:31:37",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "alabamaproxy",
+                "proposal_name": "burnsaving",
+                "id": 420,
+                "staked_proxy": 1050000
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T21:31:50",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "alabamaproxy",
+                "proposal_name": "geteos",
+                "id": 421,
+                "staked_proxy": 1050000
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T21:32:02",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "alabamaproxy",
+                "proposal_name": "proxydecay",
+                "id": 422,
+                "staked_proxy": 1050000
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T21:32:19",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "alabamaproxy",
+                "proposal_name": "rexwithinfla",
+                "id": 423,
+                "staked_proxy": 1050000
+            },
+            "tokenpocket": {
+                "updated_at": "2019-01-11T21:32:44",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "alabamaproxy",
+                "proposal_name": "tokenpocket",
+                "id": 424,
+                "staked_proxy": 1050000
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T15:44:21",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "alabamaproxy",
+                "proposal_name": "rex4all",
+                "id": 2489,
+                "staked_proxy": 1050000
+            }
+        },
+        "staked": 1050000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "pemzijarules": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-11T21:40:17",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "pemzijarules",
+                "proposal_name": "decaf",
+                "id": 466,
+                "staked_proxy": 467200000
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T21:40:43",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "pemzijarules",
+                "proposal_name": "1token1vote",
+                "id": 467,
+                "staked_proxy": 467200000
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T21:43:08",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "pemzijarules",
+                "proposal_name": "geteos",
+                "id": 476,
+                "staked_proxy": 467200000
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T21:44:04",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "pemzijarules",
+                "proposal_name": "proxydecay",
+                "id": 485,
+                "staked_proxy": 467200000
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T21:45:21",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "pemzijarules",
+                "proposal_name": "rexwithinfla",
+                "id": 496,
+                "staked_proxy": 467200000
+            },
+            "kiliman": {
+                "updated_at": "2019-01-11T21:46:14",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "pemzijarules",
+                "proposal_name": "kiliman",
+                "id": 503,
+                "staked_proxy": 467200000
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-11T21:47:31",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "pemzijarules",
+                "proposal_name": "burnsaving",
+                "id": 511,
+                "staked_proxy": 467200000
+            },
+            "tokenpocket": {
+                "updated_at": "2019-01-11T21:48:27",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "pemzijarules",
+                "proposal_name": "tokenpocket",
+                "id": 517,
+                "staked_proxy": 467200000
+            },
+            "inversevote": {
+                "updated_at": "2019-01-11T21:48:56",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "pemzijarules",
+                "proposal_name": "inversevote",
+                "id": 519,
+                "staked_proxy": 467200000
+            }
+        },
+        "staked": 1000000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gi4tanbrgige": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-11T21:55:43",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gi4tanbrgige",
+                "proposal_name": "decaf",
+                "id": 535,
+                "staked_proxy": 142052022
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T21:55:54",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gi4tanbrgige",
+                "proposal_name": "1token1vote",
+                "id": 536,
+                "staked_proxy": 142052022
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T21:56:03",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gi4tanbrgige",
+                "proposal_name": "proxydecay",
+                "id": 537,
+                "staked_proxy": 142052022
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T22:04:24",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gi4tanbrgige",
+                "proposal_name": "rexwithinfla",
+                "id": 573,
+                "staked_proxy": 142052022
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T22:09:52",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "gi4tanbrgige",
+                "proposal_name": "geteos",
+                "id": 596,
+                "staked_proxy": 144090447
+            },
+            "newproposals": {
+                "updated_at": "2019-01-12T15:46:18",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gi4tanbrgige",
+                "proposal_name": "newproposals",
+                "id": 2498,
+                "staked_proxy": 144090447
+            }
+        },
+        "staked": 135337876,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "guzdimzvgege": {
+        "votes": {
+            "proxydecay": {
+                "updated_at": "2019-01-11T21:56:39",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "guzdimzvgege",
+                "proposal_name": "proxydecay",
+                "id": 544,
+                "staked_proxy": 9960000
+            },
+            "kiliman2": {
+                "updated_at": "2019-01-11T22:01:15",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "guzdimzvgege",
+                "proposal_name": "kiliman2",
+                "id": 564,
+                "staked_proxy": 9960000
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T22:05:45",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "guzdimzvgege",
+                "proposal_name": "1token1vote",
+                "id": 566,
+                "staked_proxy": 9960000
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-11T22:06:30",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "guzdimzvgege",
+                "proposal_name": "burnsaving",
+                "id": 585,
+                "staked_proxy": 9960000
+            },
+            "tokenpocket": {
+                "updated_at": "2019-01-11T22:10:23",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "guzdimzvgege",
+                "proposal_name": "tokenpocket",
+                "id": 597,
+                "staked_proxy": 9960000
+            },
+            "eosinflation": {
+                "updated_at": "2019-01-11T22:11:43",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "guzdimzvgege",
+                "proposal_name": "eosinflation",
+                "id": 607,
+                "staked_proxy": 9960000
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T22:12:46",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "guzdimzvgege",
+                "proposal_name": "geteos",
+                "id": 612,
+                "staked_proxy": 9960000
+            }
+        },
+        "staked": 7400000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "androidlinux": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-11T21:57:35",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "androidlinux",
+                "proposal_name": "decaf",
+                "id": 548,
+                "staked_proxy": 3572416
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T21:58:19",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "androidlinux",
+                "proposal_name": "1token1vote",
+                "id": 551,
+                "staked_proxy": 3572416
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T21:58:29",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "androidlinux",
+                "proposal_name": "proxydecay",
+                "id": 552,
+                "staked_proxy": 3572416
+            },
+            "inversevote": {
+                "updated_at": "2019-01-11T21:58:38",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "androidlinux",
+                "proposal_name": "inversevote",
+                "id": 553,
+                "staked_proxy": 3572416
+            },
+            "kiliman": {
+                "updated_at": "2019-01-11T21:58:51",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "androidlinux",
+                "proposal_name": "kiliman",
+                "id": 554,
+                "staked_proxy": 3572416
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-11T21:58:57",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "androidlinux",
+                "proposal_name": "burnsaving",
+                "id": 557,
+                "staked_proxy": 3572416
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T21:59:05",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "androidlinux",
+                "proposal_name": "geteos",
+                "id": 558,
+                "staked_proxy": 3572416
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T21:59:12",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "androidlinux",
+                "proposal_name": "rexwithinfla",
+                "id": 559,
+                "staked_proxy": 3572416
+            }
+        },
+        "staked": 2050000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gy4dambshage": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-12T22:22:59",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy4dambshage",
+                "proposal_name": "decaf",
+                "id": 574,
+                "staked_proxy": 10485405
+            },
+            "inversevote": {
+                "updated_at": "2019-01-11T22:05:03",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy4dambshage",
+                "proposal_name": "inversevote",
+                "id": 579,
+                "staked_proxy": 10485405
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T22:23:23",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy4dambshage",
+                "proposal_name": "burnsaving",
+                "id": 586,
+                "staked_proxy": 10485405
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-12T22:24:37",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy4dambshage",
+                "proposal_name": "rexwithinfla",
+                "id": 592,
+                "staked_proxy": 10485405
+            },
+            "geteos": {
+                "updated_at": "2019-01-12T22:23:39",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "gy4dambshage",
+                "proposal_name": "geteos",
+                "id": 3231,
+                "staked_proxy": 10485405
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-12T22:24:20",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "gy4dambshage",
+                "proposal_name": "proxydecay",
+                "id": 3235,
+                "staked_proxy": 10485405
+            },
+            "kiliman2": {
+                "updated_at": "2019-01-12T22:25:22",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy4dambshage",
+                "proposal_name": "kiliman2",
+                "id": 3240,
+                "staked_proxy": 10485405
+            },
+            "proposalcost": {
+                "updated_at": "2019-01-12T22:26:19",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy4dambshage",
+                "proposal_name": "proposalcost",
+                "id": 3243,
+                "staked_proxy": 10485405
+            },
+            "higherstake": {
+                "updated_at": "2019-01-12T22:26:49",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "gy4dambshage",
+                "proposal_name": "higherstake",
+                "id": 3244,
+                "staked_proxy": 10485405
+            },
+            "dontbedumb": {
+                "updated_at": "2019-01-12T22:27:22",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "gy4dambshage",
+                "proposal_name": "dontbedumb",
+                "id": 3249,
+                "staked_proxy": 10485405
+            },
+            "feeexchange": {
+                "updated_at": "2019-01-12T22:28:57",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "gy4dambshage",
+                "proposal_name": "feeexchange",
+                "id": 3254,
+                "staked_proxy": 10485405
+            }
+        },
+        "staked": 10485405,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "iambillgates": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-11T22:08:13",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "iambillgates",
+                "proposal_name": "1token1vote",
+                "id": 593,
+                "staked_proxy": 2155551
+            },
+            "decaf": {
+                "updated_at": "2019-01-12T01:47:27",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "iambillgates",
+                "proposal_name": "decaf",
+                "id": 1094,
+                "staked_proxy": 2155551
+            }
+        },
+        "staked": 860000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gizdqobrgqge": {
+        "votes": {
+            "proxydecay": {
+                "updated_at": "2019-01-11T22:14:49",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "gizdqobrgqge",
+                "proposal_name": "proxydecay",
+                "id": 620,
+                "staked_proxy": 5030000
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T22:16:10",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gizdqobrgqge",
+                "proposal_name": "rexwithinfla",
+                "id": 623,
+                "staked_proxy": 5030000
+            },
+            "inversevote": {
+                "updated_at": "2019-01-11T22:16:46",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "gizdqobrgqge",
+                "proposal_name": "inversevote",
+                "id": 624,
+                "staked_proxy": 5030000
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T21:51:27",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gizdqobrgqge",
+                "proposal_name": "rex4all",
+                "id": 3133,
+                "staked_proxy": 5030000
+            }
+        },
+        "staked": 2010000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "sonatasystem": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-11T22:48:01",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "sonatasystem",
+                "proposal_name": "decaf",
+                "id": 678,
+                "staked_proxy": 20177837
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T22:51:31",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "sonatasystem",
+                "proposal_name": "1token1vote",
+                "id": 683,
+                "staked_proxy": 20177837
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T22:53:00",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "sonatasystem",
+                "proposal_name": "proxydecay",
+                "id": 687,
+                "staked_proxy": 20177837
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-11T22:53:21",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "sonatasystem",
+                "proposal_name": "burnsaving",
+                "id": 690,
+                "staked_proxy": 20177837
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T22:53:32",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "sonatasystem",
+                "proposal_name": "geteos",
+                "id": 692,
+                "staked_proxy": 20177837
+            },
+            "inversevote": {
+                "updated_at": "2019-01-11T22:53:41",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "sonatasystem",
+                "proposal_name": "inversevote",
+                "id": 693,
+                "staked_proxy": 20177837
+            },
+            "kiliman": {
+                "updated_at": "2019-01-11T22:53:51",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "sonatasystem",
+                "proposal_name": "kiliman",
+                "id": 695,
+                "staked_proxy": 20177837
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-13T00:26:40",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "sonatasystem",
+                "proposal_name": "rexwithinfla",
+                "id": 697,
+                "staked_proxy": 20177837
+            },
+            "fundeveryone": {
+                "updated_at": "2019-01-11T22:54:20",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "sonatasystem",
+                "proposal_name": "fundeveryone",
+                "id": 699,
+                "staked_proxy": 20177837
+            },
+            "eosinflation": {
+                "updated_at": "2019-01-11T22:54:45",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "sonatasystem",
+                "proposal_name": "eosinflation",
+                "id": 700,
+                "staked_proxy": 20177837
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T16:24:18",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "sonatasystem",
+                "proposal_name": "rex4all",
+                "id": 2582,
+                "staked_proxy": 120577837
+            }
+        },
+        "staked": 140000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "mapleleafcap": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-11T23:07:40",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "mapleleafcap",
+                "proposal_name": "decaf",
+                "id": 714,
+                "staked_proxy": 16455000
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T23:07:49",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "mapleleafcap",
+                "proposal_name": "1token1vote",
+                "id": 715,
+                "staked_proxy": 16455000
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T23:07:57",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "mapleleafcap",
+                "proposal_name": "proxydecay",
+                "id": 716,
+                "staked_proxy": 16455000
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-11T23:08:12",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "mapleleafcap",
+                "proposal_name": "burnsaving",
+                "id": 717,
+                "staked_proxy": 16455000
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T23:08:25",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "mapleleafcap",
+                "proposal_name": "geteos",
+                "id": 718,
+                "staked_proxy": 16455000
+            },
+            "inversevote": {
+                "updated_at": "2019-01-11T23:08:30",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "mapleleafcap",
+                "proposal_name": "inversevote",
+                "id": 719,
+                "staked_proxy": 16455000
+            }
+        },
+        "staked": 15454000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "giytinjtgmge": {
+        "votes": {
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T23:28:10",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "giytinjtgmge",
+                "proposal_name": "rexwithinfla",
+                "id": 752,
+                "staked_proxy": 111596488
+            }
+        },
+        "staked": 100000000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "eatherington": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-11T23:29:54",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eatherington",
+                "proposal_name": "decaf",
+                "id": 753,
+                "staked_proxy": 5962022
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T23:30:08",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eatherington",
+                "proposal_name": "proxydecay",
+                "id": 756,
+                "staked_proxy": 5962022
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T23:30:18",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eatherington",
+                "proposal_name": "1token1vote",
+                "id": 757,
+                "staked_proxy": 5962022
+            }
+        },
+        "staked": 200000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "minnowproxys": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-11T23:31:12",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "minnowproxys",
+                "proposal_name": "1token1vote",
+                "id": 761,
+                "staked_proxy": 15046451
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-11T23:31:42",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "minnowproxys",
+                "proposal_name": "rexwithinfla",
+                "id": 762,
+                "staked_proxy": 15046451
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-11T23:32:17",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "minnowproxys",
+                "proposal_name": "proxydecay",
+                "id": 763,
+                "staked_proxy": 15046451
+            },
+            "geteos": {
+                "updated_at": "2019-01-11T23:33:42",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "minnowproxys",
+                "proposal_name": "geteos",
+                "id": 764,
+                "staked_proxy": 15046451
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-11T23:34:32",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "minnowproxys",
+                "proposal_name": "burnsaving",
+                "id": 767,
+                "staked_proxy": 15046451
+            },
+            "bpminrequire": {
+                "updated_at": "2019-01-12T14:13:46",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "minnowproxys",
+                "proposal_name": "bpminrequire",
+                "id": 2246,
+                "staked_proxy": 15046451
+            },
+            "steem2eos": {
+                "updated_at": "2019-01-12T14:16:04",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "minnowproxys",
+                "proposal_name": "steem2eos",
+                "id": 2254,
+                "staked_proxy": 15046451
+            }
+        },
+        "staked": 100000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gmytqobsgege": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-11T23:57:48",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gmytqobsgege",
+                "proposal_name": "decaf",
+                "id": 815,
+                "staked_proxy": 17667107
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-11T23:59:42",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gmytqobsgege",
+                "proposal_name": "1token1vote",
+                "id": 816,
+                "staked_proxy": 17667107
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-12T00:00:17",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gmytqobsgege",
+                "proposal_name": "proxydecay",
+                "id": 818,
+                "staked_proxy": 17667107
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T00:00:37",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gmytqobsgege",
+                "proposal_name": "burnsaving",
+                "id": 821,
+                "staked_proxy": 17667107
+            },
+            "geteos": {
+                "updated_at": "2019-01-12T00:01:49",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "gmytqobsgege",
+                "proposal_name": "geteos",
+                "id": 829,
+                "staked_proxy": 17667107
+            },
+            "kiliman": {
+                "updated_at": "2019-01-12T00:02:54",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gmytqobsgege",
+                "proposal_name": "kiliman",
+                "id": 830,
+                "staked_proxy": 17667107
+            },
+            "fundeveryone": {
+                "updated_at": "2019-01-12T00:05:24",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "gmytqobsgege",
+                "proposal_name": "fundeveryone",
+                "id": 833,
+                "staked_proxy": 17667107
+            },
+            "eosinflation": {
+                "updated_at": "2019-01-12T00:21:13",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "gmytqobsgege",
+                "proposal_name": "eosinflation",
+                "id": 857,
+                "staked_proxy": 17667107
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T15:27:23",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gmytqobsgege",
+                "proposal_name": "rex4all",
+                "id": 2450,
+                "staked_proxy": 17667107
+            },
+            "bpminrequire": {
+                "updated_at": "2019-01-12T15:28:52",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gmytqobsgege",
+                "proposal_name": "bpminrequire",
+                "id": 2453,
+                "staked_proxy": 17667107
+            }
+        },
+        "staked": 10551567,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "haytembxhage": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-12T00:12:04",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "haytembxhage",
+                "proposal_name": "decaf",
+                "id": 845,
+                "staked_proxy": 367520000
+            }
+        },
+        "staked": 500000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gu4tcobsg4ge": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-12T00:29:00",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gu4tcobsg4ge",
+                "proposal_name": "decaf",
+                "id": 878,
+                "staked_proxy": 65000
+            }
+        },
+        "staked": 65000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "eosproxy4you": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-12T00:46:34",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosproxy4you",
+                "proposal_name": "decaf",
+                "id": 937,
+                "staked_proxy": 106360700
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-12T00:47:22",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosproxy4you",
+                "proposal_name": "1token1vote",
+                "id": 939,
+                "staked_proxy": 106360700
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T00:47:50",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosproxy4you",
+                "proposal_name": "burnsaving",
+                "id": 941,
+                "staked_proxy": 106360700
+            },
+            "geteos": {
+                "updated_at": "2019-01-12T00:48:12",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosproxy4you",
+                "proposal_name": "geteos",
+                "id": 942,
+                "staked_proxy": 106360700
+            },
+            "inversevote": {
+                "updated_at": "2019-01-12T00:48:29",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosproxy4you",
+                "proposal_name": "inversevote",
+                "id": 943,
+                "staked_proxy": 106360700
+            },
+            "kiliman": {
+                "updated_at": "2019-01-12T00:49:38",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosproxy4you",
+                "proposal_name": "kiliman",
+                "id": 945,
+                "staked_proxy": 106360700
+            },
+            "fundeveryone": {
+                "updated_at": "2019-01-12T00:52:46",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosproxy4you",
+                "proposal_name": "fundeveryone",
+                "id": 953,
+                "staked_proxy": 106360700
+            },
+            "steem2eos": {
+                "updated_at": "2019-01-12T00:58:47",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosproxy4you",
+                "proposal_name": "steem2eos",
+                "id": 962,
+                "staked_proxy": 106360700
+            },
+            "dontbedumb": {
+                "updated_at": "2019-01-12T00:59:21",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosproxy4you",
+                "proposal_name": "dontbedumb",
+                "id": 963,
+                "staked_proxy": 106360700
+            }
+        },
+        "staked": 158200,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "colintcrypto": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-12T01:13:16",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "colintcrypto",
+                "proposal_name": "decaf",
+                "id": 1001,
+                "staked_proxy": 404802546
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-12T01:14:49",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "colintcrypto",
+                "proposal_name": "1token1vote",
+                "id": 1003,
+                "staked_proxy": 284435801
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T01:16:01",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "colintcrypto",
+                "proposal_name": "burnsaving",
+                "id": 1005,
+                "staked_proxy": 237912546
+            },
+            "geteos": {
+                "updated_at": "2019-01-12T01:16:31",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "colintcrypto",
+                "proposal_name": "geteos",
+                "id": 1008,
+                "staked_proxy": 492335032
+            },
+            "inversevote": {
+                "updated_at": "2019-01-12T01:23:32",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "colintcrypto",
+                "proposal_name": "inversevote",
+                "id": 1010,
+                "staked_proxy": 507510820
+            },
+            "fundeveryone": {
+                "updated_at": "2019-01-12T01:23:48",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "colintcrypto",
+                "proposal_name": "fundeveryone",
+                "id": 1028,
+                "staked_proxy": 1604140166
+            },
+            "eosinflation": {
+                "updated_at": "2019-01-12T01:23:53",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "colintcrypto",
+                "proposal_name": "eosinflation",
+                "id": 1029,
+                "staked_proxy": 1446322055
+            },
+            "rex4all": {
+                "updated_at": "2019-01-13T00:24:52",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "colintcrypto",
+                "proposal_name": "rex4all",
+                "id": 2378,
+                "staked_proxy": 2344448155
+            },
+            "kilimanjalo": {
+                "updated_at": "2019-01-12T15:03:25",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "colintcrypto",
+                "proposal_name": "kilimanjalo",
+                "id": 2385,
+                "staked_proxy": 2462498915
+            },
+            "bpminrequire": {
+                "updated_at": "2019-01-12T15:05:24",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "colintcrypto",
+                "proposal_name": "bpminrequire",
+                "id": 2386,
+                "staked_proxy": 2293498915
+            },
+            "proposalcost": {
+                "updated_at": "2019-01-12T15:33:55",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "colintcrypto",
+                "proposal_name": "proposalcost",
+                "id": 2463,
+                "staked_proxy": 2483498915
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-13T15:18:31",
+                "vote_json": "{\"comment\":\"I am in favor of burning those tokens instead. I'll explain why: Some users will not use REX. These users would ultimately miss out on the REX dividends from the system funds. Conversely, by burning the tokens, ALL users, regardless of participation, are positively affected equally (by reducing total token supply).\"}",
+                "vote": 0,
+                "voter": "colintcrypto",
+                "proposal_name": "rexwithinfla",
+                "id": 3436,
+                "staked_proxy": 550933306
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-13T19:00:33",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "colintcrypto",
+                "proposal_name": "proxydecay",
+                "id": 4552,
+                "staked_proxy": 1471845310
+            }
+        },
+        "staked": 106219,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "hezdmmbsgege": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-12T02:31:53",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "hezdmmbsgege",
+                "proposal_name": "decaf",
+                "id": 1198,
+                "staked_proxy": 309670000
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-12T02:32:34",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "hezdmmbsgege",
+                "proposal_name": "1token1vote",
+                "id": 1200,
+                "staked_proxy": 309670000
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-12T02:33:20",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "hezdmmbsgege",
+                "proposal_name": "proxydecay",
+                "id": 1202,
+                "staked_proxy": 309670000
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T02:34:36",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "hezdmmbsgege",
+                "proposal_name": "burnsaving",
+                "id": 1204,
+                "staked_proxy": 309670000
+            },
+            "geteos": {
+                "updated_at": "2019-01-12T02:34:48",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "hezdmmbsgege",
+                "proposal_name": "geteos",
+                "id": 1205,
+                "staked_proxy": 309670000
+            },
+            "inversevote": {
+                "updated_at": "2019-01-12T02:34:57",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "hezdmmbsgege",
+                "proposal_name": "inversevote",
+                "id": 1206,
+                "staked_proxy": 309670000
+            },
+            "kiliman": {
+                "updated_at": "2019-01-12T02:35:25",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "hezdmmbsgege",
+                "proposal_name": "kiliman",
+                "id": 1209,
+                "staked_proxy": 309670000
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-12T02:36:09",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "hezdmmbsgege",
+                "proposal_name": "rexwithinfla",
+                "id": 1211,
+                "staked_proxy": 309670000
+            },
+            "fundeveryone": {
+                "updated_at": "2019-01-12T02:38:00",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "hezdmmbsgege",
+                "proposal_name": "fundeveryone",
+                "id": 1214,
+                "staked_proxy": 309670000
+            },
+            "eosinflation": {
+                "updated_at": "2019-01-12T02:38:08",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "hezdmmbsgege",
+                "proposal_name": "eosinflation",
+                "id": 1215,
+                "staked_proxy": 309670000
+            },
+            "rex4all": {
+                "updated_at": "2019-01-14T04:24:26",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "hezdmmbsgege",
+                "proposal_name": "rex4all",
+                "id": 5037,
+                "staked_proxy": 309670000
+            }
+        },
+        "staked": 53500000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "soleoneoneos": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-12T03:04:10",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "soleoneoneos",
+                "proposal_name": "1token1vote",
+                "id": 1290,
+                "staked_proxy": 251793336
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T03:04:25",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "soleoneoneos",
+                "proposal_name": "burnsaving",
+                "id": 1291,
+                "staked_proxy": 251793336
+            },
+            "kilimanjalo": {
+                "updated_at": "2019-01-12T03:06:18",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "soleoneoneos",
+                "proposal_name": "kilimanjalo",
+                "id": 1297,
+                "staked_proxy": 251793336
+            },
+            "decaf": {
+                "updated_at": "2019-01-12T03:07:17",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "soleoneoneos",
+                "proposal_name": "decaf",
+                "id": 1299,
+                "staked_proxy": 251793336
+            }
+        },
+        "staked": 460000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "scottowen111": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-14T05:10:55",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "scottowen111",
+                "proposal_name": "decaf",
+                "id": 1410,
+                "staked_proxy": 41786227
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T03:45:39",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "scottowen111",
+                "proposal_name": "burnsaving",
+                "id": 1424,
+                "staked_proxy": 41786227
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-12T10:44:03",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "scottowen111",
+                "proposal_name": "rexwithinfla",
+                "id": 1951,
+                "staked_proxy": 41786227
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-12T22:05:03",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "scottowen111",
+                "proposal_name": "proxydecay",
+                "id": 3180,
+                "staked_proxy": 41786227
+            },
+            "higherstake": {
+                "updated_at": "2019-01-12T22:07:46",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "scottowen111",
+                "proposal_name": "higherstake",
+                "id": 3204,
+                "staked_proxy": 41786227
+            }
+        },
+        "staked": 119535,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "rollsroyslim": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-12T03:49:28",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "rollsroyslim",
+                "proposal_name": "decaf",
+                "id": 1437,
+                "staked_proxy": 20822527
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-12T03:52:54",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "rollsroyslim",
+                "proposal_name": "1token1vote",
+                "id": 1442,
+                "staked_proxy": 20822527
+            }
+        },
+        "staked": 20822527,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "itokenpocket": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-12T04:00:12",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "itokenpocket",
+                "proposal_name": "decaf",
+                "id": 1456,
+                "staked_proxy": 304805033
+            }
+        },
+        "staked": 61501540,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gu4damjxgage": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-12T04:04:31",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "gu4damjxgage",
+                "proposal_name": "1token1vote",
+                "id": 1466,
+                "staked_proxy": 36268801
+            },
+            "decaf": {
+                "updated_at": "2019-01-12T04:04:55",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gu4damjxgage",
+                "proposal_name": "decaf",
+                "id": 1470,
+                "staked_proxy": 36268801
+            }
+        },
+        "staked": 36268801,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "proxygermany": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-12T05:26:45",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "proxygermany",
+                "proposal_name": "1token1vote",
+                "id": 1634,
+                "staked_proxy": 586081000
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T05:29:25",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "proxygermany",
+                "proposal_name": "burnsaving",
+                "id": 1641,
+                "staked_proxy": 586081000
+            },
+            "geteos": {
+                "updated_at": "2019-01-12T05:45:30",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "proxygermany",
+                "proposal_name": "geteos",
+                "id": 1658,
+                "staked_proxy": 586081000
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-12T05:54:00",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "proxygermany",
+                "proposal_name": "proxydecay",
+                "id": 1671,
+                "staked_proxy": 586081000
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T16:45:30",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "proxygermany",
+                "proposal_name": "rex4all",
+                "id": 2623,
+                "staked_proxy": 586081000
+            },
+            "gu3tenbsgqge": {
+                "updated_at": "2019-01-13T07:15:13",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "proxygermany",
+                "proposal_name": "gu3tenbsgqge",
+                "id": 3854,
+                "staked_proxy": 586081000
+            },
+            "b1shoudvote": {
+                "updated_at": "2019-01-13T07:15:53",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "proxygermany",
+                "proposal_name": "b1shoudvote",
+                "id": 3855,
+                "staked_proxy": 586081000
+            },
+            "fundeveryone": {
+                "updated_at": "2019-01-13T07:16:55",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "proxygermany",
+                "proposal_name": "fundeveryone",
+                "id": 3856,
+                "staked_proxy": 586081000
+            }
+        },
+        "staked": 200000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "weisncweisnc": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-12T07:54:37",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "weisncweisnc",
+                "proposal_name": "1token1vote",
+                "id": 1772,
+                "staked_proxy": 1777751
+            }
+        },
+        "staked": 1777751,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gy3tcnbqhege": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-12T08:17:47",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy3tcnbqhege",
+                "proposal_name": "1token1vote",
+                "id": 1783,
+                "staked_proxy": 9400000
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-12T21:28:37",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "gy3tcnbqhege",
+                "proposal_name": "proxydecay",
+                "id": 3081,
+                "staked_proxy": 9400000
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-12T21:47:28",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy3tcnbqhege",
+                "proposal_name": "rexwithinfla",
+                "id": 3121,
+                "staked_proxy": 9400000
+            }
+        },
+        "staked": 2300000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "astronomised": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-12T09:47:31",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "astronomised",
+                "proposal_name": "decaf",
+                "id": 1887,
+                "staked_proxy": 201493968
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T09:56:58",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "astronomised",
+                "proposal_name": "burnsaving",
+                "id": 1892,
+                "staked_proxy": 201493968
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-12T09:57:42",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "astronomised",
+                "proposal_name": "1token1vote",
+                "id": 1893,
+                "staked_proxy": 201493968
+            },
+            "rex4all": {
+                "updated_at": "2019-01-13T08:12:42",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "astronomised",
+                "proposal_name": "rex4all",
+                "id": 3925,
+                "staked_proxy": 201493968
+            }
+        },
+        "staked": 10000000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "ge4damzzg4ge": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-12T13:12:29",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "ge4damzzg4ge",
+                "proposal_name": "1token1vote",
+                "id": 2135,
+                "staked_proxy": 52850292
+            },
+            "rex4all": {
+                "updated_at": "2019-01-14T15:28:09",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "ge4damzzg4ge",
+                "proposal_name": "rex4all",
+                "id": 5605,
+                "staked_proxy": 52850292
+            },
+            "geteos": {
+                "updated_at": "2019-01-14T15:30:59",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "ge4damzzg4ge",
+                "proposal_name": "geteos",
+                "id": 5614,
+                "staked_proxy": 52850292
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-14T15:34:00",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "ge4damzzg4ge",
+                "proposal_name": "rexwithinfla",
+                "id": 5623,
+                "staked_proxy": 52850292
+            }
+        },
+        "staked": 52850292,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "eosstarterde": {
+        "votes": {
+            "burnsaving": {
+                "updated_at": "2019-01-12T14:08:09",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosstarterde",
+                "proposal_name": "burnsaving",
+                "id": 2232,
+                "staked_proxy": 14208237
+            },
+            "geteos": {
+                "updated_at": "2019-01-12T14:10:17",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosstarterde",
+                "proposal_name": "geteos",
+                "id": 2236,
+                "staked_proxy": 14208237
+            },
+            "decaf": {
+                "updated_at": "2019-01-12T14:11:07",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosstarterde",
+                "proposal_name": "decaf",
+                "id": 2241,
+                "staked_proxy": 14208237
+            },
+            "fundeveryone": {
+                "updated_at": "2019-01-12T14:12:20",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosstarterde",
+                "proposal_name": "fundeveryone",
+                "id": 2244,
+                "staked_proxy": 14208237
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-12T14:13:33",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosstarterde",
+                "proposal_name": "rexwithinfla",
+                "id": 2245,
+                "staked_proxy": 14208237
+            },
+            "kilimanjalo": {
+                "updated_at": "2019-01-12T14:14:19",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosstarterde",
+                "proposal_name": "kilimanjalo",
+                "id": 2249,
+                "staked_proxy": 14208237
+            },
+            "newproposals": {
+                "updated_at": "2019-01-12T14:14:51",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosstarterde",
+                "proposal_name": "newproposals",
+                "id": 2251,
+                "staked_proxy": 14208237
+            },
+            "addcommentbx": {
+                "updated_at": "2019-01-12T14:17:22",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosstarterde",
+                "proposal_name": "addcommentbx",
+                "id": 2257,
+                "staked_proxy": 14208237
+            },
+            "referrewards": {
+                "updated_at": "2019-01-12T14:18:23",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosstarterde",
+                "proposal_name": "referrewards",
+                "id": 2261,
+                "staked_proxy": 14208237
+            },
+            "higherstake": {
+                "updated_at": "2019-01-12T14:19:20",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosstarterde",
+                "proposal_name": "higherstake",
+                "id": 2263,
+                "staked_proxy": 14208237
+            },
+            "b1shoudvote": {
+                "updated_at": "2019-01-12T14:20:12",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosstarterde",
+                "proposal_name": "b1shoudvote",
+                "id": 2264,
+                "staked_proxy": 14208237
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-12T14:21:18",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosstarterde",
+                "proposal_name": "1token1vote",
+                "id": 2266,
+                "staked_proxy": 14208237
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-12T14:22:07",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosstarterde",
+                "proposal_name": "proxydecay",
+                "id": 2269,
+                "staked_proxy": 14208237
+            }
+        },
+        "staked": 812000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "eosdramaprxy": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-12T15:16:57",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosdramaprxy",
+                "proposal_name": "decaf",
+                "id": 2411,
+                "staked_proxy": 18577471
+            },
+            "decouplebtc1": {
+                "updated_at": "2019-01-12T15:59:39",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosdramaprxy",
+                "proposal_name": "decouplebtc1",
+                "id": 2532,
+                "staked_proxy": 125867667
+            },
+            "bpminrequire": {
+                "updated_at": "2019-01-12T16:00:10",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosdramaprxy",
+                "proposal_name": "bpminrequire",
+                "id": 2535,
+                "staked_proxy": 125867667
+            },
+            "eosdramacaf": {
+                "updated_at": "2019-01-13T00:49:21",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosdramaprxy",
+                "proposal_name": "eosdramacaf",
+                "id": 3448,
+                "staked_proxy": 6477556
+            },
+            "mrdan1": {
+                "updated_at": "2019-01-13T00:52:07",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosdramaprxy",
+                "proposal_name": "mrdan1",
+                "id": 3453,
+                "staked_proxy": 125415671
+            },
+            "proposalcost": {
+                "updated_at": "2019-01-13T00:52:52",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosdramaprxy",
+                "proposal_name": "proposalcost",
+                "id": 3455,
+                "staked_proxy": 125867667
+            },
+            "geteos": {
+                "updated_at": "2019-01-13T00:53:08",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosdramaprxy",
+                "proposal_name": "geteos",
+                "id": 3458,
+                "staked_proxy": 19812671
+            },
+            "rex4all": {
+                "updated_at": "2019-01-13T00:54:14",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosdramaprxy",
+                "proposal_name": "rex4all",
+                "id": 3461,
+                "staked_proxy": 125867667
+            },
+            "fundeveryone": {
+                "updated_at": "2019-01-13T00:54:31",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosdramaprxy",
+                "proposal_name": "fundeveryone",
+                "id": 3462,
+                "staked_proxy": 20264667
+            },
+            "kiliman": {
+                "updated_at": "2019-01-13T00:54:40",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosdramaprxy",
+                "proposal_name": "kiliman",
+                "id": 3463,
+                "staked_proxy": 20264667
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-13T00:55:55",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosdramaprxy",
+                "proposal_name": "rexwithinfla",
+                "id": 3465,
+                "staked_proxy": 20264667
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-13T00:55:24",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosdramaprxy",
+                "proposal_name": "proxydecay",
+                "id": 3466,
+                "staked_proxy": 19812671
+            }
+        },
+        "staked": 4000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "elderberries": {
+        "votes": {
+            "rex4all": {
+                "updated_at": "2019-01-12T15:41:43",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "elderberries",
+                "proposal_name": "rex4all",
+                "id": 2482,
+                "staked_proxy": 149869170
+            },
+            "wps": {
+                "updated_at": "2019-01-12T16:54:54",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "elderberries",
+                "proposal_name": "wps",
+                "id": 2640,
+                "staked_proxy": 149869170
+            },
+            "decaf": {
+                "updated_at": "2019-01-13T14:58:22",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "elderberries",
+                "proposal_name": "decaf",
+                "id": 4371,
+                "staked_proxy": 149869170
+            }
+        },
+        "staked": 1857500,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "g42tknzvhege": {
+        "votes": {
+            "wps": {
+                "updated_at": "2019-01-12T16:46:24",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "g42tknzvhege",
+                "proposal_name": "wps",
+                "id": 2624,
+                "staked_proxy": 2000000
+            },
+            "3tierauction": {
+                "updated_at": "2019-01-12T16:50:45",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "g42tknzvhege",
+                "proposal_name": "3tierauction",
+                "id": 2636,
+                "staked_proxy": 2000000
+            },
+            "b1shoudvote": {
+                "updated_at": "2019-01-13T00:46:50",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "g42tknzvhege",
+                "proposal_name": "b1shoudvote",
+                "id": 3442,
+                "staked_proxy": 2000000
+            },
+            "eosdramacaf": {
+                "updated_at": "2019-01-13T00:54:06",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "g42tknzvhege",
+                "proposal_name": "eosdramacaf",
+                "id": 3460,
+                "staked_proxy": 2000000
+            }
+        },
+        "staked": 2000000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "chrisjsconey": {
+        "votes": {
+            "rex4all": {
+                "updated_at": "2019-01-12T17:18:54",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "chrisjsconey",
+                "proposal_name": "rex4all",
+                "id": 2696,
+                "staked_proxy": 281627157
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T17:30:09",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "chrisjsconey",
+                "proposal_name": "burnsaving",
+                "id": 2732,
+                "staked_proxy": 281627157
+            }
+        },
+        "staked": 736096,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "mortyandrick": {
+        "votes": {
+            "rex4all": {
+                "updated_at": "2019-01-13T15:50:03",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "mortyandrick",
+                "proposal_name": "rex4all",
+                "id": 2823,
+                "staked_proxy": 11470000
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T18:19:13",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "mortyandrick",
+                "proposal_name": "burnsaving",
+                "id": 2835,
+                "staked_proxy": 11470000
+            }
+        },
+        "staked": 370000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "bonaireblast": {
+        "votes": {
+            "fluctuation": {
+                "updated_at": "2019-01-12T18:15:45",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "bonaireblast",
+                "proposal_name": "fluctuation",
+                "id": 2825,
+                "staked_proxy": 132890030
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-12T18:18:45",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "bonaireblast",
+                "proposal_name": "1token1vote",
+                "id": 2833,
+                "staked_proxy": 132890030
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-13T01:31:23",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "bonaireblast",
+                "proposal_name": "burnsaving",
+                "id": 3504,
+                "staked_proxy": 132890030
+            }
+        },
+        "staked": 8320000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "eosbpratings": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-12T18:30:29",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosbpratings",
+                "proposal_name": "decaf",
+                "id": 2845,
+                "staked_proxy": 177125275
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-12T18:36:00",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosbpratings",
+                "proposal_name": "1token1vote",
+                "id": 2866,
+                "staked_proxy": 177125275
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T18:36:19",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosbpratings",
+                "proposal_name": "burnsaving",
+                "id": 2867,
+                "staked_proxy": 177145275
+            },
+            "geteos": {
+                "updated_at": "2019-01-12T18:37:09",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosbpratings",
+                "proposal_name": "geteos",
+                "id": 2871,
+                "staked_proxy": 177145275
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-12T18:38:08",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosbpratings",
+                "proposal_name": "proxydecay",
+                "id": 2873,
+                "staked_proxy": 877145275
+            },
+            "fundeveryone": {
+                "updated_at": "2019-01-12T18:38:51",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosbpratings",
+                "proposal_name": "fundeveryone",
+                "id": 2874,
+                "staked_proxy": 177145275
+            },
+            "kiliman": {
+                "updated_at": "2019-01-12T18:39:41",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosbpratings",
+                "proposal_name": "kiliman",
+                "id": 2877,
+                "staked_proxy": 177145275
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T18:40:33",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosbpratings",
+                "proposal_name": "rex4all",
+                "id": 2878,
+                "staked_proxy": 177125275
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-12T18:41:59",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosbpratings",
+                "proposal_name": "rexwithinfla",
+                "id": 2881,
+                "staked_proxy": 877145275
+            },
+            "kilimanjalo": {
+                "updated_at": "2019-01-12T18:42:34",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosbpratings",
+                "proposal_name": "kilimanjalo",
+                "id": 2883,
+                "staked_proxy": 877145275
+            },
+            "tokenpocket": {
+                "updated_at": "2019-01-12T18:46:21",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosbpratings",
+                "proposal_name": "tokenpocket",
+                "id": 2884,
+                "staked_proxy": 877125275
+            },
+            "bpminrequire": {
+                "updated_at": "2019-01-12T18:43:20",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosbpratings",
+                "proposal_name": "bpminrequire",
+                "id": 2885,
+                "staked_proxy": 177145275
+            },
+            "eosinflation": {
+                "updated_at": "2019-01-12T18:43:57",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosbpratings",
+                "proposal_name": "eosinflation",
+                "id": 2888,
+                "staked_proxy": 877145275
+            },
+            "inflationpol": {
+                "updated_at": "2019-01-12T18:44:39",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eosbpratings",
+                "proposal_name": "inflationpol",
+                "id": 2890,
+                "staked_proxy": 877145275
+            },
+            "b1shoudvote": {
+                "updated_at": "2019-01-12T18:45:53",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "eosbpratings",
+                "proposal_name": "b1shoudvote",
+                "id": 2892,
+                "staked_proxy": 177145275
+            }
+        },
+        "staked": 1000000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "lior11111111": {
+        "votes": {
+            "rex4all": {
+                "updated_at": "2019-01-12T19:55:41",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "lior11111111",
+                "proposal_name": "rex4all",
+                "id": 2980,
+                "staked_proxy": 23789591
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T19:57:25",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "lior11111111",
+                "proposal_name": "burnsaving",
+                "id": 2982,
+                "staked_proxy": 23789591
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-12T19:59:12",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "lior11111111",
+                "proposal_name": "proxydecay",
+                "id": 2989,
+                "staked_proxy": 23789591
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-12T20:01:20",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "lior11111111",
+                "proposal_name": "1token1vote",
+                "id": 3000,
+                "staked_proxy": 23789591
+            },
+            "decaf": {
+                "updated_at": "2019-01-12T20:01:43",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "lior11111111",
+                "proposal_name": "decaf",
+                "id": 3002,
+                "staked_proxy": 23789591
+            },
+            "geteos": {
+                "updated_at": "2019-01-12T20:02:03",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "lior11111111",
+                "proposal_name": "geteos",
+                "id": 3005,
+                "staked_proxy": 23789591
+            },
+            "bpminrequire": {
+                "updated_at": "2019-01-12T20:12:17",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "lior11111111",
+                "proposal_name": "bpminrequire",
+                "id": 3024,
+                "staked_proxy": 23789591
+            },
+            "proposalcost": {
+                "updated_at": "2019-01-12T20:15:42",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "lior11111111",
+                "proposal_name": "proposalcost",
+                "id": 3030,
+                "staked_proxy": 23789591
+            }
+        },
+        "staked": 23750000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "blockbreaker": {
+        "votes": {
+            "geteos": {
+                "updated_at": "2019-01-12T20:08:04",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "blockbreaker",
+                "proposal_name": "geteos",
+                "id": 3015,
+                "staked_proxy": 6020576
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-12T20:08:43",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "blockbreaker",
+                "proposal_name": "rexwithinfla",
+                "id": 3020,
+                "staked_proxy": 6020576
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-12T20:09:03",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "blockbreaker",
+                "proposal_name": "1token1vote",
+                "id": 3022,
+                "staked_proxy": 6020576
+            }
+        },
+        "staked": 5100000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "dexterzzzzzz": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-12T22:04:30",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "decaf",
+                "id": 3175,
+                "staked_proxy": 6983000
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-14T12:25:11",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "1token1vote",
+                "id": 3176,
+                "staked_proxy": 6983000
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T22:04:46",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "burnsaving",
+                "id": 3177,
+                "staked_proxy": 6983000
+            },
+            "geteos": {
+                "updated_at": "2019-01-12T22:04:54",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "geteos",
+                "id": 3178,
+                "staked_proxy": 6983000
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T22:05:02",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "rex4all",
+                "id": 3179,
+                "staked_proxy": 6983000
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-12T22:05:09",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "proxydecay",
+                "id": 3181,
+                "staked_proxy": 6983000
+            },
+            "kiliman": {
+                "updated_at": "2019-01-12T22:05:28",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "kiliman",
+                "id": 3182,
+                "staked_proxy": 6983000
+            },
+            "fundeveryone": {
+                "updated_at": "2019-01-12T22:05:35",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "fundeveryone",
+                "id": 3183,
+                "staked_proxy": 6983000
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-12T22:05:45",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "rexwithinfla",
+                "id": 3185,
+                "staked_proxy": 6983000
+            },
+            "kilimanjalo": {
+                "updated_at": "2019-01-12T22:05:55",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "kilimanjalo",
+                "id": 3187,
+                "staked_proxy": 6983000
+            },
+            "tokenpocket": {
+                "updated_at": "2019-01-12T22:06:01",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "tokenpocket",
+                "id": 3188,
+                "staked_proxy": 6983000
+            },
+            "bpminrequire": {
+                "updated_at": "2019-01-12T22:06:07",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "bpminrequire",
+                "id": 3190,
+                "staked_proxy": 6983000
+            },
+            "eosinflation": {
+                "updated_at": "2019-01-12T22:06:16",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "eosinflation",
+                "id": 3191,
+                "staked_proxy": 6983000
+            },
+            "inflationpol": {
+                "updated_at": "2019-01-12T22:06:25",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "inflationpol",
+                "id": 3192,
+                "staked_proxy": 6983000
+            },
+            "b1shoudvote": {
+                "updated_at": "2019-01-12T22:06:46",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "b1shoudvote",
+                "id": 3193,
+                "staked_proxy": 6983000
+            },
+            "kiliman2": {
+                "updated_at": "2019-01-12T22:06:55",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "kiliman2",
+                "id": 3195,
+                "staked_proxy": 6983000
+            },
+            "newproposals": {
+                "updated_at": "2019-01-12T22:07:02",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "newproposals",
+                "id": 3197,
+                "staked_proxy": 6983000
+            },
+            "fluctuation": {
+                "updated_at": "2019-01-12T22:07:16",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "fluctuation",
+                "id": 3198,
+                "staked_proxy": 10833000
+            },
+            "wps": {
+                "updated_at": "2019-01-12T22:07:22",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "wps",
+                "id": 3200,
+                "staked_proxy": 10833000
+            },
+            "higherstake": {
+                "updated_at": "2019-01-12T22:07:30",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "higherstake",
+                "id": 3201,
+                "staked_proxy": 6983000
+            },
+            "dontbedumb": {
+                "updated_at": "2019-01-12T22:07:36",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "dontbedumb",
+                "id": 3202,
+                "staked_proxy": 10833000
+            },
+            "referrewards": {
+                "updated_at": "2019-01-12T22:07:45",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "referrewards",
+                "id": 3203,
+                "staked_proxy": 10833000
+            },
+            "mrdan1": {
+                "updated_at": "2019-01-12T22:07:54",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "mrdan1",
+                "id": 3205,
+                "staked_proxy": 6983000
+            },
+            "eosdramacaf": {
+                "updated_at": "2019-01-12T22:08:53",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "dexterzzzzzz",
+                "proposal_name": "eosdramacaf",
+                "id": 3208,
+                "staked_proxy": 10833000
+            }
+        },
+        "staked": 3735000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "theeosledger": {
+        "votes": {
+            "bpminrequire": {
+                "updated_at": "2019-01-12T22:20:20",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "theeosledger",
+                "proposal_name": "bpminrequire",
+                "id": 3220,
+                "staked_proxy": 5559202
+            },
+            "addcommentbx": {
+                "updated_at": "2019-01-12T22:21:02",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "theeosledger",
+                "proposal_name": "addcommentbx",
+                "id": 3222,
+                "staked_proxy": 5559202
+            },
+            "rewardvote": {
+                "updated_at": "2019-01-12T22:21:44",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "theeosledger",
+                "proposal_name": "rewardvote",
+                "id": 3226,
+                "staked_proxy": 5559202
+            },
+            "higherstake": {
+                "updated_at": "2019-01-12T22:22:47",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "theeosledger",
+                "proposal_name": "higherstake",
+                "id": 3228,
+                "staked_proxy": 5559202
+            }
+        },
+        "staked": 5240000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gy4tmnzsgene": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-12T22:27:54",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy4tmnzsgene",
+                "proposal_name": "1token1vote",
+                "id": 3221,
+                "staked_proxy": 314025
+            },
+            "geteos": {
+                "updated_at": "2019-01-12T22:21:07",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "gy4tmnzsgene",
+                "proposal_name": "geteos",
+                "id": 3223,
+                "staked_proxy": 314025
+            },
+            "rex4all": {
+                "updated_at": "2019-01-12T22:21:37",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy4tmnzsgene",
+                "proposal_name": "rex4all",
+                "id": 3225,
+                "staked_proxy": 314025
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-12T22:24:50",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "gy4tmnzsgene",
+                "proposal_name": "proxydecay",
+                "id": 3238,
+                "staked_proxy": 314025
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-12T22:27:17",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy4tmnzsgene",
+                "proposal_name": "burnsaving",
+                "id": 3248,
+                "staked_proxy": 314025
+            },
+            "decaf": {
+                "updated_at": "2019-01-12T22:28:52",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy4tmnzsgene",
+                "proposal_name": "decaf",
+                "id": 3253,
+                "staked_proxy": 314025
+            },
+            "fundeveryone": {
+                "updated_at": "2019-01-12T22:36:07",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "gy4tmnzsgene",
+                "proposal_name": "fundeveryone",
+                "id": 3263,
+                "staked_proxy": 314025
+            }
+        },
+        "staked": 314025,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "tokenika4dev": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-13T05:09:37",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "tokenika4dev",
+                "proposal_name": "decaf",
+                "id": 3665,
+                "staked_proxy": 5051687311
+            }
+        },
+        "staked": 0,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gy2tsmzqgege": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-13T10:40:03",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy2tsmzqgege",
+                "proposal_name": "decaf",
+                "id": 4086,
+                "staked_proxy": 1616314
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-13T10:41:33",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy2tsmzqgege",
+                "proposal_name": "1token1vote",
+                "id": 4090,
+                "staked_proxy": 1616314
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-13T10:42:39",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gy2tsmzqgege",
+                "proposal_name": "burnsaving",
+                "id": 4092,
+                "staked_proxy": 1616314
+            }
+        },
+        "staked": 1550000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gqytaobrgene": {
+        "votes": {
+            "burnsaving": {
+                "updated_at": "2019-01-13T10:43:49",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gqytaobrgene",
+                "proposal_name": "burnsaving",
+                "id": 4093,
+                "staked_proxy": 6079950
+            }
+        },
+        "staked": 6079950,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "ottomagiceos": {
+        "votes": {
+            "rex4all": {
+                "updated_at": "2019-01-13T10:43:57",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "ottomagiceos",
+                "proposal_name": "rex4all",
+                "id": 4094,
+                "staked_proxy": 608303118
+            }
+        },
+        "staked": 74000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "eos121daceos": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-13T15:55:25",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "eos121daceos",
+                "proposal_name": "1token1vote",
+                "id": 4431,
+                "staked_proxy": 16080383
+            }
+        },
+        "staked": 16080383,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "aagileproxyy": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-13T20:39:12",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "aagileproxyy",
+                "proposal_name": "1token1vote",
+                "id": 4641,
+                "staked_proxy": 66806057
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-13T20:44:00",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "aagileproxyy",
+                "proposal_name": "rexwithinfla",
+                "id": 4649,
+                "staked_proxy": 66806057
+            }
+        },
+        "staked": 122000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gy2deojrgige": {
+        "votes": {
+            "bpminrequire": {
+                "updated_at": "2019-01-13T22:52:00",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy2deojrgige",
+                "proposal_name": "bpminrequire",
+                "id": 4718,
+                "staked_proxy": 12888724
+            }
+        },
+        "staked": 12888724,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "jiangweifeng": {
+        "votes": {
+            "burnsaving": {
+                "updated_at": "2019-01-14T01:13:10",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "jiangweifeng",
+                "proposal_name": "burnsaving",
+                "id": 4819,
+                "staked_proxy": 115248014
+            },
+            "rex4all": {
+                "updated_at": "2019-01-14T01:13:33",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "jiangweifeng",
+                "proposal_name": "rex4all",
+                "id": 4821,
+                "staked_proxy": 120648014
+            }
+        },
+        "staked": 180000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "superonelleo": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-14T02:36:47",
+                "vote_json": "{\"comment\":\"\"}",
+                "vote": 0,
+                "voter": "superonelleo",
+                "proposal_name": "1token1vote",
+                "id": 4908,
+                "staked_proxy": 91606
+            }
+        },
+        "staked": 91606,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "g44tqojqgage": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-14T04:06:31",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "g44tqojqgage",
+                "proposal_name": "decaf",
+                "id": 5022,
+                "staked_proxy": 1674825
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-14T07:13:51",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "g44tqojqgage",
+                "proposal_name": "1token1vote",
+                "id": 5154,
+                "staked_proxy": 1674825
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-14T07:15:23",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "g44tqojqgage",
+                "proposal_name": "burnsaving",
+                "id": 5157,
+                "staked_proxy": 1674825
+            },
+            "geteos": {
+                "updated_at": "2019-01-14T07:17:36",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "g44tqojqgage",
+                "proposal_name": "geteos",
+                "id": 5158,
+                "staked_proxy": 1674825
+            }
+        },
+        "staked": 1674825,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "crazybitgeek": {
+        "votes": {
+            "rexrexrexrex": {
+                "updated_at": "2019-01-14T05:58:53",
+                "vote_json": "{\"comment\":\"REX is good solution to improve the voting participation \"}",
+                "vote": 1,
+                "voter": "crazybitgeek",
+                "proposal_name": "rexrexrexrex",
+                "id": 5098,
+                "staked_proxy": 240030124
+            },
+            "decaf": {
+                "updated_at": "2019-01-14T06:01:19",
+                "vote_json": "{\"comment\":\"ECAF make eos to be a centralized system,we must remove ecaf from eos\"}",
+                "vote": 1,
+                "voter": "crazybitgeek",
+                "proposal_name": "decaf",
+                "id": 5110,
+                "staked_proxy": 240030124
+            }
+        },
+        "staked": 101000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "igazedottech": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-14T07:21:25",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "igazedottech",
+                "proposal_name": "1token1vote",
+                "id": 5162,
+                "staked_proxy": 25000
+            },
+            "stakereward": {
+                "updated_at": "2019-01-14T07:22:16",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "igazedottech",
+                "proposal_name": "stakereward",
+                "id": 5163,
+                "staked_proxy": 25000
+            }
+        },
+        "staked": 25000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gizdambsgyge": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-14T11:37:29",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gizdambsgyge",
+                "proposal_name": "decaf",
+                "id": 5385,
+                "staked_proxy": 2341633
+            },
+            "1token1vote": {
+                "updated_at": "2019-01-14T11:37:44",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gizdambsgyge",
+                "proposal_name": "1token1vote",
+                "id": 5387,
+                "staked_proxy": 2341633
+            },
+            "rex4all": {
+                "updated_at": "2019-01-14T11:38:08",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gizdambsgyge",
+                "proposal_name": "rex4all",
+                "id": 5388,
+                "staked_proxy": 2341633
+            },
+            "geteos": {
+                "updated_at": "2019-01-14T11:38:28",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "gizdambsgyge",
+                "proposal_name": "geteos",
+                "id": 5389,
+                "staked_proxy": 2341633
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-14T11:38:57",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gizdambsgyge",
+                "proposal_name": "proxydecay",
+                "id": 5390,
+                "staked_proxy": 2341633
+            },
+            "bpminrequire": {
+                "updated_at": "2019-01-14T11:39:30",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gizdambsgyge",
+                "proposal_name": "bpminrequire",
+                "id": 5391,
+                "staked_proxy": 3343633
+            },
+            "b1shoudvote": {
+                "updated_at": "2019-01-14T11:39:55",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gizdambsgyge",
+                "proposal_name": "b1shoudvote",
+                "id": 5392,
+                "staked_proxy": 3343633
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-14T11:41:55",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "gizdambsgyge",
+                "proposal_name": "burnsaving",
+                "id": 5397,
+                "staked_proxy": 2341633
+            }
+        },
+        "staked": 1010833,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "gy4dgmrrgige": {
+        "votes": {
+            "1token1vote": {
+                "updated_at": "2019-01-14T13:18:03",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy4dgmrrgige",
+                "proposal_name": "1token1vote",
+                "id": 5514,
+                "staked_proxy": 1971260000
+            },
+            "bpminrequire": {
+                "updated_at": "2019-01-14T13:18:33",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy4dgmrrgige",
+                "proposal_name": "bpminrequire",
+                "id": 5515,
+                "staked_proxy": 1971260000
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-14T13:18:49",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy4dgmrrgige",
+                "proposal_name": "burnsaving",
+                "id": 5516,
+                "staked_proxy": 1971260000
+            },
+            "decaf": {
+                "updated_at": "2019-01-14T13:19:02",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy4dgmrrgige",
+                "proposal_name": "decaf",
+                "id": 5517,
+                "staked_proxy": 1971260000
+            },
+            "geteos": {
+                "updated_at": "2019-01-14T13:19:46",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "gy4dgmrrgige",
+                "proposal_name": "geteos",
+                "id": 5520,
+                "staked_proxy": 1971260000
+            },
+            "hemlis1": {
+                "updated_at": "2019-01-14T13:20:23",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy4dgmrrgige",
+                "proposal_name": "hemlis1",
+                "id": 5522,
+                "staked_proxy": 1971260000
+            },
+            "moredecent": {
+                "updated_at": "2019-01-14T13:21:06",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy4dgmrrgige",
+                "proposal_name": "moredecent",
+                "id": 5524,
+                "staked_proxy": 1971260000
+            },
+            "proposalcost": {
+                "updated_at": "2019-01-14T13:21:23",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy4dgmrrgige",
+                "proposal_name": "proposalcost",
+                "id": 5525,
+                "staked_proxy": 1971260000
+            },
+            "proxydecay": {
+                "updated_at": "2019-01-14T13:22:09",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "gy4dgmrrgige",
+                "proposal_name": "proxydecay",
+                "id": 5526,
+                "staked_proxy": 1971260000
+            },
+            "referendum": {
+                "updated_at": "2019-01-14T13:22:33",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "gy4dgmrrgige",
+                "proposal_name": "referendum",
+                "id": 5528,
+                "staked_proxy": 1971260000
+            }
+        },
+        "staked": 200000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "isaacvanegas": {
+        "votes": {
+            "rex4all": {
+                "updated_at": "2019-01-14T17:20:13",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "isaacvanegas",
+                "proposal_name": "rex4all",
+                "id": 5724,
+                "staked_proxy": 25721736
+            },
+            "decaf": {
+                "updated_at": "2019-01-14T17:37:59",
+                "vote_json": "{}",
+                "vote": 0,
+                "voter": "isaacvanegas",
+                "proposal_name": "decaf",
+                "id": 5728,
+                "staked_proxy": 25721736
+            },
+            "burnsaving": {
+                "updated_at": "2019-01-14T17:15:57",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "isaacvanegas",
+                "proposal_name": "burnsaving",
+                "id": 5729,
+                "staked_proxy": 25721736
+            },
+            "geteos": {
+                "updated_at": "2019-01-14T17:16:41",
+                "vote_json": "",
+                "vote": 0,
+                "voter": "isaacvanegas",
+                "proposal_name": "geteos",
+                "id": 5730,
+                "staked_proxy": 25721736
+            },
+            "rexwithinfla": {
+                "updated_at": "2019-01-14T17:16:57",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "isaacvanegas",
+                "proposal_name": "rexwithinfla",
+                "id": 5731,
+                "staked_proxy": 25721736
+            }
+        },
+        "staked": 1159002,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "mauriceateos": {
+        "votes": {
+            "rex4all": {
+                "updated_at": "2019-01-14T17:20:39",
+                "vote_json": "{}",
+                "vote": 1,
+                "voter": "mauriceateos",
+                "proposal_name": "rex4all",
+                "id": 5732,
+                "staked_proxy": 22973000
+            }
+        },
+        "staked": 12975000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "proxymereoio": {
+        "votes": {
+            "rex4all": {
+                "updated_at": "2019-01-14T19:16:55",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "proxymereoio",
+                "proposal_name": "rex4all",
+                "id": 5787,
+                "staked_proxy": 1442926103
+            }
+        },
+        "staked": 121000,
+        "proxy": "",
+        "is_proxy": true
+    },
+    "eoscatsproxy": {
+        "votes": {
+            "decaf": {
+                "updated_at": "2019-01-14T20:24:57",
+                "vote_json": "",
+                "vote": 1,
+                "voter": "eoscatsproxy",
+                "proposal_name": "decaf",
+                "id": 5832,
+                "staked_proxy": 511567
+            }
+        },
+        "staked": 24000,
+        "proxy": "",
+        "is_proxy": true
+    }
+}
