@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
-import { getScopedSnapshot, getSnapshot, saveSnapshot } from "./snapshots";
+import { getDelbandSnapshot, getSnapshot, saveSnapshot } from "./snapshots";
 import { log, getCurrencySupply, warning } from "./utils";
 import { Voters, Delband } from "./types/eosio";
 import { Vote, Proposal } from "./types/eosio.forum";
@@ -19,8 +19,11 @@ export default async function scheduler(block_num: number, latest = true, root =
 
     // Get Snapshots
     const proposals = await getSnapshot<Proposal>({block_num, account: "eosio.forum", scope: "eosio.forum", table: "proposal"});
-    const delband = await getScopedSnapshot<Delband>(account_names, {block_num, account: "eosio", table: "delband"});
     const voters = filterVotersByVotes(await getSnapshot<Voters>({block_num, account: "eosio", scope: "eosio", table: "voters"}), votes);
+
+    // Retrieve `staked` from accounts that have not yet voted for BPs
+    const voters_names = new Set(voters.map((row) => row.owner));
+    const delband = await getDelbandSnapshot(account_names, voters_names, {block_num, account: "eosio", table: "delband"});
 
     // Calculate Tallies
     const accounts = generateAccounts(votes, delband, voters);

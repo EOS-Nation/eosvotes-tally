@@ -7,6 +7,7 @@ import { log, error } from "./utils";
 import { Snapshot } from "./types/snapshot";
 import { DFUSE_URL, DFUSE_IO_API_KEY } from "./config";
 import { uploadS3 } from "./aws";
+import { Voters, Delband } from "./types/eosio";
 
 /**
  * Save snapshot as JSON
@@ -64,7 +65,7 @@ export async function getSnapshot<T>(options: {
 }
 
 /**
- * Fetch Scoped Snapshot & save to JSON
+ * Fetch Scoped Snapshot
  */
 export async function getScopedSnapshot<T>(scopes: string[] | Set<string>, options: {
     block_num: number,
@@ -81,6 +82,23 @@ export async function getScopedSnapshot<T>(scopes: string[] | Set<string>, optio
         }
     }
     return snapshot;
+}
+
+/**
+ * Fetch Delband Snapshot
+ */
+export async function getDelbandSnapshot(account_names: Set<string>, voters_names: Set<string>, options: {
+    block_num: number,
+    account: string,
+    table: string,
+}): Promise<Delband[]> {
+    const scopes: string[] = [];
+
+    for (const name of account_names) {
+        if (!voters_names.has(name)) scopes.push(name);
+    }
+
+    return getScopedSnapshot<Delband>(scopes, options);
 }
 
 export function defaultBaseDir(account: string, table: string, root = "aws") {
