@@ -21,7 +21,8 @@ async function latestBlock() {
 
 async function schedule() {
     const block_num = await latestBlock();
-    await scheduler(block_num);
+    await scheduler(block_num)
+        .catch((e) => console.error("scheduler", e));
 
     // Wait 1 minute before restarting
     setTimeout(() => {
@@ -41,6 +42,6 @@ async function reloadDfuseAPI() {
 }
 
 (async () => {
-    await reloadDfuseAPI();
-    await schedule();
+    await reloadDfuseAPI().catch((e) => console.error("main", e));
+    await schedule().catch((e) => console.error("main", e));
 })();
