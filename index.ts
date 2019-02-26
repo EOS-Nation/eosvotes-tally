@@ -2,6 +2,9 @@ import { settings, config } from "./src/config";
 import { log } from "./src/utils";
 import scheduler from "./src/scheduler";
 
+config();
+console.log(settings);
+
 async function latestBlock() {
     // Get Latest Block
     const info = await settings.rpc.get_info();
@@ -17,7 +20,6 @@ async function latestBlock() {
 }
 
 async function schedule() {
-    config();
     const block_num = await latestBlock();
     await scheduler(block_num);
 
@@ -28,7 +30,6 @@ async function schedule() {
 }
 
 async function reloadDfuseAPI() {
-    config();
     const {token} = await settings.dfuseRpc.auth_issue(settings.DFUSE_IO_SERVER_KEY);
     settings.DFUSE_IO_API_KEY = token;
     log({ref: "main::reloadDfuseAPI", message: `dfuse API token    ${token}`});
