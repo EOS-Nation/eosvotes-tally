@@ -42,21 +42,32 @@ export async function getSnapshot<T>(account: string, scope: string, table: stri
 /**
  * Fetch Scoped Snapshot
  */
-export async function getScopedSnapshot<T>(scopes: string[] | Set<string>, options: {
+export async function getScopedSnapshot<T>(account: string, scopes: string[] | Set<string>, table: string, options: {
     block_num: number,
-    account: string,
-    table: string,
 }): Promise<T[]> {
     const snapshot: T[] = [];
-    const account = options.account;
     const block_num = options.block_num;
-    const table = options.table;
+
+    // Create chunks of 1000 scopes
+    const chunks: string[][] = [];
+    const last = Array.from(scopes).reduce<string[]>((prev, current) => {
+        prev.push(current);
+        if (prev.length >= 100) {
+            chunks.push(prev);
+            return [];
+        }
+        return prev;
+    }, []);
+    if (last.length) chunks.push(last);
 
     // Iterate over each account's scope
-    for (const scope of scopes) {
-        const scopedSnapshot = await getSnapshot<T>(account, scope, table, {block_num});
-        for (const row of scopedSnapshot) {
-            snapshot.push(row);
+    for (const chunk of chunks) {
+        const response = await settings.dfuseRpc.state_tables_scopes<T>(account, chunk, table, {block_num, json: true});
+
+        for (const tables of response.tables) {
+            for (const row of tables.rows) {
+                snapshot.push(row.json);
+            }
         }
     }
     return snapshot;
@@ -67,8 +78,6 @@ export async function getScopedSnapshot<T>(scopes: string[] | Set<string>, optio
  */
 export async function getDelbandSnapshot(account_names: Set<string>, voters_names: Set<string>, options: {
     block_num: number,
-    account: string,
-    table: string,
 }): Promise<Delband[]> {
     const scopes: string[] = [];
 
@@ -76,7 +85,7 @@ export async function getDelbandSnapshot(account_names: Set<string>, voters_name
         if (!voters_names.has(name)) scopes.push(name);
     }
 
-    return getScopedSnapshot<Delband>(scopes, options);
+    return getScopedSnapshot<Delband>("eosio", scopes, "delband", options);
 }
 
 export function defaultBaseDir(account: string, table: string, root = "aws") {

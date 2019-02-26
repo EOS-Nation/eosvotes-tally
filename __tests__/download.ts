@@ -55,4 +55,4 @@ const block_nums = [
     for (const block_num of block_nums) {
         await scheduler(block_num, false, "test");
     }
-})();
+})().catch((e) => console.log(e));

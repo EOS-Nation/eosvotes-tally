@@ -10,8 +10,8 @@ const fetch: any = nodeFetch;
 class Settings {
     public DOTENV = path.join(__dirname, "..", ".env");
     public EOSIO_API = "https://api.eosn.io";
-    public DFUSE_IO_SERVER_KEY = "";
-    public DFUSE_IO_API_KEY = "";
+    public DFUSE_IO_SERVER_KEY = process.env.DFUSE_IO_SERVER_KEY || "";
+    public DFUSE_IO_API_KEY = process.env.DFUSE_IO_API_KEY || "";
     public DFUSE_URL = "https://mainnet.eos.dfuse.io";
     public EOSVOTES_LOGGING = "error,log,warning";
     public rpc: JsonRpc = new JsonRpc("https://api.eosn.io", { fetch });
@@ -24,6 +24,7 @@ export function config(options: {
     dotenv?: string,
     EOSIO_API?: string,
     DFUSE_IO_SERVER_KEY?: string,
+    DFUSE_IO_API_KEY?: string,
     DFUSE_URL?: string,
     EOSVOTES_LOGGING?: string,
 } = {}) {
@@ -32,6 +33,7 @@ export function config(options: {
     // Settings
     settings.EOSIO_API = options.EOSIO_API || process.env.EOSIO_API || settings.EOSIO_API;
     settings.DFUSE_IO_SERVER_KEY = options.DFUSE_IO_SERVER_KEY || process.env.DFUSE_IO_SERVER_KEY || settings.DFUSE_IO_SERVER_KEY;
+    settings.DFUSE_IO_API_KEY = options.DFUSE_IO_API_KEY || process.env.DFUSE_IO_API_KEY || settings.DFUSE_IO_API_KEY;
     settings.DFUSE_URL = options.DFUSE_URL || process.env.DFUSE_URL || settings.DFUSE_URL;
     settings.EOSVOTES_LOGGING = options.EOSVOTES_LOGGING || process.env.EOSVOTES_LOGGING || settings.EOSVOTES_LOGGING;
     settings.EOSIO_API = options.EOSIO_API || process.env.EOSIO_API || settings.EOSIO_API;
@@ -47,5 +49,6 @@ export function config(options: {
         EOSVOTES_LOGGING: settings.EOSVOTES_LOGGING,
         rpc: settings.rpc,
         dfuseRpc: settings.dfuseRpc,
+        DFUSE_IO_API_KEY: settings.DFUSE_IO_API_KEY,
     };
 }

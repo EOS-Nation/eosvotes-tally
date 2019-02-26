@@ -19,11 +19,11 @@ export default async function scheduler(block_num: number, latest = true, root =
 
     // Get Snapshots
     const proposals = await getSnapshot<Proposal>("eosio.forum", "eosio.forum", "proposal", {block_num});
-    const voters = filterVotersByVotes(await getSnapshot<Voters>("eosio.forum", "eosio.forum", "voters", {block_num}), votes);
+    const voters = filterVotersByVotes(await getSnapshot<Voters>("eosio", "eosio", "voters", {block_num}), votes);
 
     // Retrieve `staked` from accounts that have not yet voted for BPs
     const voters_names = new Set(voters.map((row) => row.owner));
-    const delband = await getDelbandSnapshot(account_names, voters_names, {block_num, account: "eosio", table: "delband"});
+    const delband = await getDelbandSnapshot(account_names, voters_names, {block_num});
 
     // Calculate Tallies
     const accounts = generateAccounts(votes, delband, voters);
