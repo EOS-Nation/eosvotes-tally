@@ -3,15 +3,13 @@
     /* Basic Options */
     "target": "es6",
     "module": "commonjs",
-    "declaration": true,
-    "sourceMap": true,
+
     /* Strict Type-Checking Options */
     "strict": true,
     "strictNullChecks": true,
 
     /* Module Resolution Options */
-    "esModuleInterop": true,
-    "outDir": "dist"
+    "esModuleInterop": true
   },
   "files": ["index.ts"]
 }
