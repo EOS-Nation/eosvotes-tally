@@ -1,28 +1,51 @@
-import * as fs from "fs";
 import * as path from "path";
-import fetch from "node-fetch";
-import eosjs from "eosjs";
+import * as nodeFetch from "node-fetch";
 import dotenv from "dotenv";
-
-// parse .env file
-const envPath = path.join(__dirname, "..", ".env");
-dotenv.config({path: envPath});
-
-// EOSIO configurations
-export const EOSIO_API = process.env.EOSIO_API || "https://api.eosn.io";
-
-// dfuse.io configurations
-export const DFUSE_IO_API_KEY = process.env.DFUSE_IO_API_KEY;
-if (!DFUSE_IO_API_KEY) console.error("DFUSE_IO_API_KEY is missing in `.env`");
-
-export const DFUSE_URL = process.env.DFUSE_URL;
-if (!DFUSE_URL) console.error("DFUSE_URL is missing in `.env`");
-
-// Optional Logging configs
-export const EOSVOTES_LOGGING = (process.env.EOSVOTES_LOGGING || "").split(",") || ["error", "log", "warning"];
+import { JsonRpc } from "eosjs/dist/eosjs-jsonrpc";
+import { JsonRpc as DfuseRpc } from "dfuse-eoshttp-js";
 
 // Typescript issues
-const args: any = { fetch };
+const fetch: any = nodeFetch;
 
-// eosjs
-export const rpc = new eosjs.Rpc.JsonRpc(EOSIO_API, args);
+class Settings {
+    public DOTENV = path.join(__dirname, "..", ".env");
+    public EOSIO_API = "https://api.eosn.io";
+    public DFUSE_IO_SERVER_KEY = "";
+    public DFUSE_IO_API_KEY = "";
+    public DFUSE_URL = "https://mainnet.eos.dfuse.io";
+    public EOSVOTES_LOGGING = "error,log,warning";
+    public rpc: JsonRpc = new JsonRpc("https://api.eosn.io", { fetch });
+    public dfuseRpc: DfuseRpc = new DfuseRpc(this.DFUSE_URL, { fetch, token: this.DFUSE_IO_API_KEY });
+}
+
+export const settings = new Settings();
+
+export function config(options: {
+    dotenv?: string,
+    EOSIO_API?: string,
+    DFUSE_IO_SERVER_KEY?: string,
+    DFUSE_URL?: string,
+    EOSVOTES_LOGGING?: string,
+} = {}) {
+    dotenv.config({path: options.dotenv || settings.DOTENV});
+
+    // Settings
+    settings.EOSIO_API = options.EOSIO_API || process.env.EOSIO_API || settings.EOSIO_API;
+    settings.DFUSE_IO_SERVER_KEY = options.DFUSE_IO_SERVER_KEY || process.env.DFUSE_IO_SERVER_KEY || settings.DFUSE_IO_SERVER_KEY;
+    settings.DFUSE_URL = options.DFUSE_URL || process.env.DFUSE_URL || settings.DFUSE_URL;
+    settings.EOSVOTES_LOGGING = options.EOSVOTES_LOGGING || process.env.EOSVOTES_LOGGING || settings.EOSVOTES_LOGGING;
+    settings.EOSIO_API = options.EOSIO_API || process.env.EOSIO_API || settings.EOSIO_API;
+
+    // RPC endpoints
+    settings.rpc = new JsonRpc(settings.EOSIO_API, {fetch});
+    settings.dfuseRpc = new DfuseRpc(settings.DFUSE_URL, {fetch, token: settings.DFUSE_IO_API_KEY});
+
+    return {
+        EOSIO_API: settings.EOSIO_API,
+        DFUSE_IO_SERVER_KEY: settings.DFUSE_IO_SERVER_KEY,
+        DFUSE_URL: settings.DFUSE_URL,
+        EOSVOTES_LOGGING: settings.EOSVOTES_LOGGING,
+        rpc: settings.rpc,
+        dfuseRpc: settings.dfuseRpc,
+    };
+}

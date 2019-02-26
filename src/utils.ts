@@ -1,6 +1,6 @@
 import Long from "long";
 import chalk from "chalk";
-import { EOSVOTES_LOGGING, rpc } from "./config";
+import { settings } from "./config";
 import { CurrencyStats } from "./types/eosio.token";
 
 /**
@@ -138,7 +138,7 @@ interface Message {
 }
 
 export async function getCurrencySupply(code = "eosio.token", symbol = "EOS") {
-    const currency: CurrencyStats = await rpc.get_currency_stats(code, symbol);
+    const currency: CurrencyStats = await settings.rpc.get_currency_stats(code, symbol);
     return parseTokenString(currency.EOS.supply).amount;
 }
 
@@ -147,13 +147,13 @@ function formatMessage(message: Message, type: string): string {
 }
 
 export function log(message: Message) {
-    if (EOSVOTES_LOGGING.indexOf("log") !== -1) process.stdout.write(formatMessage(message, "log"));
+    if (settings.EOSVOTES_LOGGING.indexOf("log") !== -1) process.stdout.write(formatMessage(message, "log"));
 }
 
 export function warning(message: Message) {
-    if (EOSVOTES_LOGGING.indexOf("warning") !== -1) process.stdout.write(chalk.yellow(formatMessage(message, "warning")));
+    if (settings.EOSVOTES_LOGGING.indexOf("warning") !== -1) process.stdout.write(chalk.yellow(formatMessage(message, "warning")));
 }
 
 export function error(message: Message) {
-    if (EOSVOTES_LOGGING.indexOf("error") !== -1) process.stderr.write(chalk.red(formatMessage(message, "error")));
+    if (settings.EOSVOTES_LOGGING.indexOf("error") !== -1) process.stderr.write(chalk.red(formatMessage(message, "error")));
 }

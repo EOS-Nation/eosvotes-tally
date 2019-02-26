@@ -13,6 +13,5 @@
     "esModuleInterop": true,
     "outDir": "dist"
   },
-  "files": ["src/index.ts"],
-  "includes": ["./src/**/*.ts"]
+  "files": ["index.ts"]
 }

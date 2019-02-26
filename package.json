@@ -5,7 +5,7 @@
     "description": "EOSVotes Tally",
     "main": "index.js",
     "scripts": {
-        "start": "tsc && node dist/index.js",
+        "start": "ts-node index.ts",
         "lint": "tslint --project .",
         "test": "tsc && ava -v"
     },
@@ -26,8 +26,9 @@
         "aws-sdk": "*",
         "chalk": "*",
         "cron": "*",
+        "dfuse-eoshttp-js": "0.1.x",
         "dotenv": "*",
-        "eosjs": "20.0.0-beta1",
+        "eosjs": "20.0.0-beta3",
         "load-json-file": "*",
         "long": "*",
         "node-fetch": "*",

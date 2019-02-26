@@ -2,7 +2,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { getDelbandSnapshot, getSnapshot, saveSnapshot } from "./snapshots";
 import { log, getCurrencySupply, warning } from "./utils";
-import { Voters, Delband } from "./types/eosio";
+import { Voters } from "./types/eosio";
 import { Vote, Proposal } from "./types/eosio.forum";
 import { generateAccounts, generateTallies, filterVotersByVotes, generateProxies } from "./tallies";
 
@@ -14,12 +14,12 @@ export default async function scheduler(block_num: number, latest = true, root =
     if (fs.existsSync(filepath)) return warning({ref: "scheduler", message: `${filepath} already exists`});
 
     // Fetch voters
-    const votes = await getSnapshot<Vote>({block_num, account: "eosio.forum", scope: "eosio.forum", table: "vote"});
+    const votes = await getSnapshot<Vote>("eosio.forum", "eosio.forum", "vote", {block_num});
     const account_names = new Set(votes.map((row) => row.voter));
 
     // Get Snapshots
-    const proposals = await getSnapshot<Proposal>({block_num, account: "eosio.forum", scope: "eosio.forum", table: "proposal"});
-    const voters = filterVotersByVotes(await getSnapshot<Voters>({block_num, account: "eosio", scope: "eosio", table: "voters"}), votes);
+    const proposals = await getSnapshot<Proposal>("eosio.forum", "eosio.forum", "proposal", {block_num});
+    const voters = filterVotersByVotes(await getSnapshot<Voters>("eosio.forum", "eosio.forum", "voters", {block_num}), votes);
 
     // Retrieve `staked` from accounts that have not yet voted for BPs
     const voters_names = new Set(voters.map((row) => row.owner));

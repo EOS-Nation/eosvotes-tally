@@ -1,13 +1,11 @@
-import qs from "querystring";
 import path from "path";
-import fetch from "node-fetch";
 import * as write from "write-json-file";
 import { JSONStringifyable } from "write-json-file";
-import { log, error } from "./utils";
-import { Snapshot } from "./types/snapshot";
-import { DFUSE_URL, DFUSE_IO_API_KEY } from "./config";
+import { log } from "./utils";
 import { uploadS3 } from "./aws";
-import { Voters, Delband } from "./types/eosio";
+import { Delband } from "./types/eosio";
+import { settings } from "./config";
+import { StateResponse } from "dfuse-eoshttp-js";
 
 /**
  * Save snapshot as JSON
@@ -32,36 +30,13 @@ export function saveSnapshot(json: JSONStringifyable, block_num: number, account
 /**
  * Get snapshot via HTTP GET request
  */
-export async function getSnapshot<T>(options: {
+export async function getSnapshot<T>(account: string, scope: string, table: string, options: {
     block_num: number,
-    account: string,
-    scope: string,
-    table: string,
-    json?: boolean,
-    key_type?: string,
-    with_block_num?: boolean,
-    token?: string,
 }): Promise<T[]> {
-    if (options.json === undefined) { options.json = true; }
-    if (options.key_type === undefined) { options.key_type = "uint64"; }
-    if (options.with_block_num === undefined && options.block_num) { options.with_block_num = true; }
-    const token = options.token || DFUSE_IO_API_KEY;
-
-    const headers = {
-        Authorization: `Bearer ${token}`,
-    };
-    const url = `${DFUSE_URL}/v0/state/table?${qs.stringify(options)}`;
-    log({ref: "snapshots::getSnapshot", message: url});
-    const data = await fetch(url, {headers});
-    const text = await data.text();
-    let json: any = [];
-
-    try {
-        json = JSON.parse(text);
-    } catch (e) {
-        error({ref: "snapshot::getSnapshot", message: text });
-    }
-    return snapshotToJSON<T>(json);
+    const response = await settings.dfuseRpc.state_table<T>(account, scope, table, {block_num: options.block_num, json: true});
+    const message = `${account}::${scope}:${table} @ block number ${options.block_num}`;
+    log({ref: "snapshots::getSnapshot", message});
+    return snapshotToJSON<T>(response);
 }
 
 /**
@@ -73,10 +48,13 @@ export async function getScopedSnapshot<T>(scopes: string[] | Set<string>, optio
     table: string,
 }): Promise<T[]> {
     const snapshot: T[] = [];
+    const account = options.account;
+    const block_num = options.block_num;
+    const table = options.table;
 
     // Iterate over each account's scope
     for (const scope of scopes) {
-        const scopedSnapshot = await getSnapshot<T>({block_num: options.block_num, account: options.account, scope, table: options.table});
+        const scopedSnapshot = await getSnapshot<T>(account, scope, table, {block_num});
         for (const row of scopedSnapshot) {
             snapshot.push(row);
         }
@@ -108,6 +86,6 @@ export function defaultBaseDir(account: string, table: string, root = "aws") {
 /**
  * Snapshot to JSON
  */
-export function snapshotToJSON<T>(snapshot: Snapshot<T>): T[] {
+export function snapshotToJSON<T>(snapshot: StateResponse<T>): T[] {
     return snapshot.rows.map((row) => row.json);
 }
