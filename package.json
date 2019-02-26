@@ -5,7 +5,7 @@
     "description": "EOSVotes Tally",
     "main": "index.js",
     "scripts": {
-        "start": "tsc && node index.js",
+        "start": "ts-node index.ts",
         "lint": "tslint --project .",
         "test": "tsc && ava -v"
     },
