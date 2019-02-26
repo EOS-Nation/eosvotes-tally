@@ -2,9 +2,6 @@ import { settings, config } from "./src/config";
 import { log } from "./src/utils";
 import scheduler from "./src/scheduler";
 
-config();
-console.log(settings);
-
 async function latestBlock() {
     // Get Latest Block
     const info = await settings.rpc.get_info();
@@ -32,7 +29,7 @@ async function schedule() {
 
 async function reloadDfuseAPI() {
     const {token} = await settings.dfuseRpc.auth_issue(settings.DFUSE_IO_SERVER_KEY);
-    settings.DFUSE_IO_API_KEY = token;
+    config({DFUSE_IO_API_KEY: token});
     log({ref: "main::reloadDfuseAPI", message: `dfuse API token    ${token}`});
 
     // Wait 12 hours before restarting
@@ -42,6 +39,7 @@ async function reloadDfuseAPI() {
 }
 
 (async () => {
+    config();
     await reloadDfuseAPI().catch((e) => console.error("main", e));
     await schedule().catch((e) => console.error("main", e));
 })();
