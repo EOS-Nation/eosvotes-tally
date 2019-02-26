@@ -1,7 +1,7 @@
 import * as path from "path";
 import * as nodeFetch from "node-fetch";
 import dotenv from "dotenv";
-import { JsonRpc } from "eosjs/dist/eosjs-jsonrpc";
+import { JsonRpc } from "eosjs";
 import { JsonRpc as DfuseRpc } from "dfuse-eoshttp-js";
 
 // Typescript issues
